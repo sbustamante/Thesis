@@ -1,0 +1,5 @@
+41.351 159.688   0.025
+41.888 159.827 249.935
+
+//  	for( i=0; i<pow(p[NAXE],3); i++ ){
+//  	    printf( "%d\t%d\t%d\t%d\t%d\n", regions[ index[i][0] ][ index[i][1] ][ index[i][2] ].id,regions[ index[i][0] ][ index[i][1] ][ index[i][2] ].Nhalos, index[i][0], index[i][1], index[i][2] );}
