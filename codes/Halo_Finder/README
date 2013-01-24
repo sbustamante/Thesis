@@ -1,0 +1,6 @@
+*Compilation
+$ make Pair_finder
+
+*External data file must be named 'halos.dat'
+
+ 
