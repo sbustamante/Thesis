@@ -1,0 +1,143 @@
+\documentclass[twoside,12pt]{Latex/Classes/PhDthesisPSnPDF}
+
+
+\include{Latex/Macros/Macros}
+
+
+%: ----------------------------------------------------------------------
+%:                  TITLE PAGE: name, degree,..
+% ----------------------------------------------------------------------
+
+\ifpdf  
+    \pdfinfo { /Title  (PhD)
+               /Creator (TeX)
+               /Producer (pdfTeX)
+               /Author (Name surname)
+               /CreationDate (D:YYYYMMDDhhmmss)  %format D:YYYYMMDDhhmmss
+               /ModDate (D:YYYYMMDDhhmm)
+               /Subject (xyz)
+               /Keywords (keyword1, keyword2, keyword3) }
+    \pdfcatalog { /PageMode (/UseOutlines)
+                  /OpenAction (fitbh)  }
+\fi
+
+
+% Title of the dissertation
+%\title{The place of the Milky Way and Andromeda in the cosmic web}
+\title{El lugar de la Vía Láctea y Andrómeda en la red cosmica}
+
+
+
+% ----------------------------------------------------------------------
+% This section below defines front covert (external and internal)
+% Shield logo
+\crest{\includegraphics[width=3cm]{figures/0_frontmatter/UdeA_Shield}}
+% Full logo
+%\crest{\includegraphics[width=6cm]{UDeusto}}
+\university{Universidad de Antioquia \\ Facultad de Ciencias Exactas y Naturales \\ Instituto de Física                                  }
+\degree{}
+\author{\textbf{Sebastian Bustamante Jaramillo}} 
+\collegeordept{Facultad de Ciencias Exactas y Naturales \\ Instituto de Física}
+\textadvisor{Tutor: \\}
+\advisor{\textbf{Prof. Jaime E. Forero-Romero}}
+\textsignaturecandidate{Estudiante}
+\textsignatureadvisor{Tutor}
+\cityofbirth{Medellín}
+%\degreedate{\monthname \ \the\year}
+\degreedate{Enero \the\year}
+% ----------------------------------------------------------------------
+% turn of those nasty overfull and underfull hboxes
+\hbadness=10000
+\hfuzz=50pt
+
+
+%: --------------------------------------------------------------
+%:                  FRONT MATTER: dedications, abstract,..
+% --------------------------------------------------------------
+
+\begin{document}
+
+\selectlanguage{spanish}
+
+% sets line spacing
+\renewcommand\baselinestretch{1.2}
+\baselineskip=18pt plus1pt
+
+
+\maketitle  % command to print the title page with above variables
+
+% Title back
+\include{chapters/0_title_back}
+
+% The frontmatter text starts here
+\frontmatter
+
+\include{chapters/0_dedication}
+
+\include{chapters/0_abstract}
+
+\include{chapters/0_acknowledgement}
+
+\selectlanguage{spanish}
+
+
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+
+\tableofcontents
+
+\listoffigures
+\listoftables
+
+\include{chapters/0_glossary}
+
+\label{sec:glossary}
+
+%: --------------------------------------------------------------
+%:                  MAIN DOCUMENT SECTION
+% --------------------------------------------------------------
+
+\mainmatter
+
+\pagestyle{fancy}
+
+%------------------------- introduction ------------------------
+\include{chapters/1_introduction}
+
+%---------------------- theoretical frame -----------------------
+\include{chapters/2_theoretical_framework}	
+
+%--------------------- Nbody simulations ------------------------
+\include{chapters/3_nbody_simulations}
+			
+%--------------------------- results ----------------------------
+\include{chapters/4_results}
+
+% --------------------------------------------------------------
+%:                  BACK MATTER: appendices, refs,..
+% --------------------------------------------------------------
+
+\backmatter
+
+
+%: ----------------------- appendix ------------------------
+
+%: ----------------------- bibliography ------------------------
+
+
+
+\bibliographystyle{abbrv}
+\bibliography{chapters/references}
+
+\printnomenclature 
+% --------------------------------------------------------------
+
+
+%: Declaration of originality
+\include{chapters/6_declaration}
+
+
+
+
+
+\end{document}
