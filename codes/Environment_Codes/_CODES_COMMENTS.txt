@@ -1,0 +1,19 @@
+All_Lambda_Histogram ------------------------------------------------			|o|
+    Histograms of lambdas eigenvalues of each individual halo in
+    catalogs and for all simulations (Bolshoi and CLUES).
+---------------------------------------------------------------------
+
+
+All_Lambda_Histogram_Variance ---------------------------------------			|o|
+    Histograms of lambdas eigenvalues of each individual halo in 
+    catalogs and for all simulations (Bolshoi and CLUES). And
+    including the cosmic variance in Bolshoi Simulation.
+---------------------------------------------------------------------
+
+
+All_Lambda_Histogram_Comparison -------------------------------------			|o|
+    Histograms of relative error between the smoothed data respect
+    and the non smoothed, this for each halos catalog and for all 
+    simulations (Bolshoi and CLUES). And including the cosmic 
+    variance in Bolshoi Simulation.
+---------------------------------------------------------------------
