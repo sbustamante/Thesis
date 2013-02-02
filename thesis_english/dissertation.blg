@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: dissertation.aux
+A level-1 auxiliary file: chapters/0_title_back.aux
+A level-1 auxiliary file: chapters/0_dedication.aux
+A level-1 auxiliary file: chapters/0_abstract.aux
+A level-1 auxiliary file: chapters/0_acknowledgement.aux
+A level-1 auxiliary file: chapters/0_glossary.aux
+A level-1 auxiliary file: chapters/1_introduction.aux
+A level-1 auxiliary file: chapters/2_theoretical_framework.aux
+A level-1 auxiliary file: chapters/3_nbody_simulations.aux
+A level-1 auxiliary file: chapters/4_results.aux
+The style file: abbrv.bst
+A level-1 auxiliary file: chapters/6_declaration.aux
+Database file #1: chapters/references.bib
+You've used 2 entries,
+            2118 wiz_defined-function locations,
+            523 strings with 4217 characters,
+and the built_in function-call counts, 544 in all, are:
+= -- 54
+> -- 14
+< -- 0
++ -- 6
+- -- 4
+* -- 35
+:= -- 98
+add.period$ -- 6
+call.type$ -- 2
+change.case$ -- 8
+chr.to.int$ -- 0
+cite$ -- 2
+duplicate$ -- 23
+empty$ -- 50
+format.name$ -- 4
+if$ -- 111
+int.to.chr$ -- 0
+int.to.str$ -- 2
+missing$ -- 3
+newline$ -- 13
+num.names$ -- 4
+pop$ -- 8
+preamble$ -- 1
+purify$ -- 6
+quote$ -- 0
+skip$ -- 13
+stack$ -- 0
+substring$ -- 35
+swap$ -- 2
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 6
+warning$ -- 0
+while$ -- 6
+width$ -- 3
+write$ -- 25
