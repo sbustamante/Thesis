@@ -1,0 +1,53 @@
+===============================================================================
+			   THESIS FIGURES
+===============================================================================
+
+TITLE: The place of the Milky Way and Andromeda in the cosmic web
+AUTHOR: Sebastian Bustamante 		(Universidad de Antioquia)
+ADVISOR: Jaime E. Forero-Romero		(Universidad de los Andes) 
+
+
+
+INTRODUCTION
+------------
+*	Herschel's model of our galaxy.
+*	Different geometries with variation of fifth Euclides postulate.
+*	
+
+
+THEORETICAL FRAMEWORK
+---------------------
+*	Metric of a 2D sphere
+
+
+N-BODY SIMULATIONS AND ENVIRONMENT CHARACTERIZATION
+---------------------------------------------------
+
+
+
+RESULTS AND CONCLUSIONS
+-----------------------
+*	Plot of each simulation. (Illustrative purposes)
+	Density diagram with haloes sample (BDM or FOF)						| |
+*	Histogram of the three eigenvalues (Vweb, Tweb?) for each simulation.			| |
+*	Histogram of each simulation respec to the Lambda_th value (volume)			| |
+*	Plot of each CLUES LG pairs showed on density map					| |
+*	Environment of each CLUES LG pairs respect to the Lambda_th				| |
+*	Correlation bewteen the density field and Lambda_eigenvalues, all this			| |
+	with the aim of determining an optim value of lambda_th
+
+*	Halos mass and Isolated pairs histogram. (Indicating the three 
+	CLUES LG)										| |
+*	Energy, angular momentum, separation and velocities distributions of
+	each sample										| |
+*	Distribution of embedded environments of each Isolated pairs, respec to
+	lambda_th value.									| |
+*	Density diagrams (Number of pairs respec to the volume of each			
+	environment type) to determinate the most favorable environment to 
+	imbibbe Isolated Pairs systems								| |
+
+*	Lambda cuts respect to CLUES LG systems.						| |
+*	Distribution of eigenvalues associated to LG system (Bolshoi)				| |
+
+*	Orientation of angular momentum of pairs respect to the main directions
+	of eigenvectors.									| |
