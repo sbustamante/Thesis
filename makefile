@@ -22,4 +22,6 @@ git_update:
 
 	git commit -m 'Last changes'
 
+	git push -u origin master
+
 	
