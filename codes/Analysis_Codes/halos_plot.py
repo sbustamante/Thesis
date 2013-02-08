@@ -7,6 +7,8 @@ execfile('_head.py')
 folds = [ "CLUES/16953/", "CLUES/2710/", "CLUES/10909/", "BOLSHOI/" ]
 #Labels of graphs
 labels = ["CLUES_16953","CLUES_2710", "CLUES_10909", "BOLSHOI"]
+#Catalog type
+catalog = 'FOF'
 #Box lenght
 Box_L = [64., 64., 64., 256.]
 #Number of sections
@@ -14,7 +16,7 @@ N_sec = [64, 64, 64, 256]
 
 
 #==================================================================================================
-#			CALCULATING ENVIROMENT DENSITY DIAGRAM
+#			CALCULATING PLOT OF HALOS
 #==================================================================================================
 i_fold = 0
 for fold in folds:
@@ -23,7 +25,7 @@ for fold in folds:
     Colors = np.linspace( 1, 0, N_sec[i_fold] )
     
     #Loading Halos Data
-    halos = np.transpose( np.loadtxt( '%s%sHalos_catalog.dat'%(foldglobal,fold) ) )
+    halos = np.transpose( np.loadtxt( '%s%sCatalog_Halos_%s.dat'%(foldglobal,fold,catalog) ) )
     Nhalos = len(halos[0])		#Number of halos
 
     #Plotting cuts
@@ -32,8 +34,8 @@ for fold in folds:
 	dx = Box_L[i_fold]/(1.0*N_sec[i_fold])
 	
 	Y, Z = HC.CutX( x, dx, halos, plot = False )
-	#plt.plot( Y, Z, '.', color = ( Colors[i]**(1/1.7), Colors[i]**(1/1.7), Colors[i]**(1/1.7) ), markersize = 6 )
 	plt.plot( Y, Z, '.', color = ( np.sqrt(Colors[i]), np.sqrt(Colors[i]), np.sqrt(Colors[i]) ), markersize = 6 )
+	
 	plt.xlim( (0,Box_L[i_fold] ) )
 	plt.ylim( (0,Box_L[i_fold] ) )
 

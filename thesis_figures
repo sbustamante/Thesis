@@ -10,15 +10,15 @@ ADVISOR: Jaime E. Forero-Romero		(Universidad de los Andes)
 
 INTRODUCTION
 ------------
-*	Herschel's model of our galaxy.
-*	Different geometries with variation of fifth Euclides postulate.
+*	Herschel's model of our galaxy.								|X|
+*	Different geometries with variation of fifth Euclides postulate.			|X|
 *	
 
 
 THEORETICAL FRAMEWORK
 ---------------------
-*	Metric of a 2D sphere
-
+*	Metric of a 2D sphere									|X|
+*	Curved Spaces										|X|
 
 N-BODY SIMULATIONS AND ENVIRONMENT CHARACTERIZATION
 ---------------------------------------------------
@@ -27,9 +27,10 @@ N-BODY SIMULATIONS AND ENVIRONMENT CHARACTERIZATION
 
 RESULTS AND CONCLUSIONS
 -----------------------
-*	Plot of each simulation. (Illustrative purposes)
-	Density diagram with haloes sample (BDM or FOF)						| |
-*	Histogram of the three eigenvalues (Vweb, Tweb?) for each simulation.			| |
+*(4.1)	Plot of each simulation. (Illustrative purposes)					|X|
+*(4.2)	Density diagram with haloes sample (BDM or FOF)						| |
+*(4.3)	Histogram of the three eigenvalues (Vweb, Tweb?) for each simulation.			|X|
+*(4.4)	Histogram of the three eigenvalues with cosmic variance(Vweb, Tweb?) for Bolshoi.	| |
 *	Histogram of each simulation respec to the Lambda_th value (volume)			| |
 *	Plot of each CLUES LG pairs showed on density map					| |
 *	Environment of each CLUES LG pairs respect to the Lambda_th				| |

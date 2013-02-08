@@ -1,5 +1,5 @@
 ===============================================================================
-    THESIS STRUCTURE
+			   THESIS STRUCTURE
 ===============================================================================
 
 TITLE: The place of the Milky Way and Andromeda in the cosmic web
@@ -13,21 +13,9 @@ A brief historical introduction to cosmology and large-scale astrophysics,
 Passing from ancient astronomy, scientific revolution (Copernicus, Galileo, 
 Newton) until Einsten's general relavitivy and the current state of cosmology.
 
-    1.1. The current cosmology picture
-	1.1.1. First stage of our universe
-	1.1.2. Nonlinear epoch
-	1.1.3. Our local neighborhood, the Local Group
+    1.1. Prehistory
 
-    1.2. Numerical simulations
-	1.2.1. N-body simulations
-	1.2.2. The cosmological environment
-	1.2.3. Concordance with real world
-
-    1.3. Cosmological observations (?)
-	1.3.1. COBE
-	1.3.2. WMAP
-	1.3.3. Planck
-
+    1.2. The current cosmology picture
 
 
 2. THEORETICAL FRAMEWORK					( 15 PAGES )
@@ -37,18 +25,18 @@ brief review of all theoretical topics, but as far as possible completely
 self-contained.
     
     2.1. Isotropic and homogeneous universe
-	2.1.1. General relativity and Friedmann equations
-	2.1.2. The perfect Fluid equations
+	2.1.1. Metric of curved spaces
+	2.1.2. General relativity and Friedmann equations
 	2.1.3. Simple solutions of the universe
-	2.1.4. Cosmological parameters
 
-    2.2. Nonlinear evolution and structure formation
+    2.2. Structure formation
+	2.2.1. Linear evolution
+	2.2.2. Nonlinear evolution
 
     2.3. Quantification of cosmological environment
-	2.3.2. The T-web method
-	2.3.3. The V-web method
+	(The V-web method)
 
-    2.4 The local group
+    2.4 Cosmological Observations
 
     
 
@@ -78,7 +66,7 @@ analysis
 
 
     
-4. RESULTS (?)							( 10 PAGES )
+4. RESULTS AND CONCLUSIONS (?)					( 15 PAGES )
 -----------
 Here is shown all the results about the environment influence on LG systems 
 in the cosmological simulations used (Bolshoi and CLUES), besides a 
@@ -97,9 +85,3 @@ distributions and a comparison among them.
     4.3. Correlations between the environment and pairs properties
 
     4.4. Orientation of pairs angular momentum (?)
-
-
-
-5. CONCLUSIONS AND DISCUSSIONS					( 5 PAGES )
-------------------------------
-Conclusions about the results section.

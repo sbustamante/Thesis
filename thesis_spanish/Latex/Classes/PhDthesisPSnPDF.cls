@@ -86,7 +86,7 @@
 % To use more than a language and fixing inputtenc
 \usepackage[utf8x]{inputenc}
 \usepackage{ucs}
-\usepackage{amsmath}
+%\usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 
@@ -114,7 +114,7 @@
 
 \renewcommand{\nomlabel}[1]{\textbf{#1}} % make abbreviations bold
 \makenomenclature % used to be \makeglossary
-\newcommand{\g}{\footnote{For all abbreviations see the glossary on page \pageref{nom}.}} % type "\g" to refer to glossary
+\newcommand{\g}{\footnote{Para todas las abreviaciones vea el glosario en la página \pageref{nom}.}} % type "\g" to refer to glossary
 
 % used to be for sorting into categories:
 %\renewcommand\nomgroup[1]{%
@@ -630,7 +630,7 @@
 
 % \section format
 \titleformat{\section}[block]{\normalfont\Large}{\thesection}{.5em}{\bfseries}
-%\titlespacing*{\section}{0pt}{*4}{*1}					%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+\titlespacing*{\section}{0pt}{*4}{*1}					%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 % \subsection format
 \titleformat{\subsection}[block]{\normalfont\large}{\thesubsection}{.5em}{\bfseries}
@@ -672,7 +672,7 @@
 
 % \section format
 \titleformat{\section}[block]{\normalfont\Large}{\thesection}{.5em}{\bfseries}
-%\titlespacing*{\section}{0pt}{*4}{*1}					%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+\titlespacing*{\section}{0pt}{*4}{*1}					%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 % \subsection format
 \titleformat{\subsection}[block]{\normalfont\large}{\thesubsection}{.5em}{\bfseries}
@@ -705,7 +705,7 @@
        
 % \section format
 \titleformat{\section}[block]{\normalfont\Large}{\thesection}{.5em}{\bfseries}
-%\titlespacing*{\section}{0pt}{*4}{*1}					%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+\titlespacing*{\section}{0pt}{*4}{*1}					%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 % \subsection format
 \titleformat{\subsection}[block]{\normalfont\large}{\thesubsection}{.5em}{\bfseries}
