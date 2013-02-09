@@ -224,7 +224,7 @@ donde se ha introducido el cuadrivector $x^\mu = (ct, r, \theta, \phi)$.
 
 
 Debido a la asunción de isotropía y homogeneidad el tensor métrico debe ser
-diagonal, y además comparando con la expresión \ref{eq:IntervalCurvedSpaces}
+diagonal, además comparando con la expresión \ref{eq:IntervalCurvedSpaces}
 se llega a la siguiente forma explícita
 
 
@@ -240,7 +240,78 @@ se llega a la siguiente forma explícita
 
 
 A partir de esta métrica y las ecuaciones de campo de Einstein es posible 
-construir sencillos modelos de universo, tal como se muestra a continuación.
+construir sencillos modelos de universo, tal como se muestra a en la 
+subsección \ref{subsec:GeneralRelativityAndFriedmannEquations}.
+
+
+			%-------------------------------------------------------------
+			%Medidas de distancias
+			\subsubsection*{Medición de distancias}
+			%-------------------------------------------------------------
+			
+Una vez definida la métrica de espacios curvos es útil introducir algunos
+conceptos de distancia que son usados de forma recurrente \cite{longair2008}. 
+Por simplicidad se asumirá una métrica plana ($k = 0$).
+
+
+%Comovil Radial Distance..................................................
+\textit{\textbf{Distancia radial comóvil:}} por definición, una señal 
+lumínica tiene asociado un valor nulo del intervalo $ds^2 = 0$, usando la 
+métrica \ref{eq:IntervalCurvedSpaces} se llega a
+
+
+%.........................................................................
+%Comovil Distance
+\eq{eq:ComovilDistance}
+{ r = \int_t^{t_0} \frac{ cdt'}{a(t')} = \int_a ^1 \frac{ c da}{a \dot a} }
+%.........................................................................
+
+
+donde la forma de $a(t)$ depende de la cosmología específica que se use
+(ver subsección \ref{subsec:SimpleSolutionsOfTheUniverse}) y $t_0$ es el 
+tiempo de referencia, el cual se toma como la edad actual del universo. 
+
+
+Debido a la asunción de expansión de la métrica, la distancia entre dos 
+objetos depende del tiempo en que es medida, y más aún, esta distancia no 
+puede ser determinada a partir de un haz de luz debido a la finitud de su
+velocidad \footnote{$c=299\ 792\ 458$ m/s}. Por esta razón se debe 
+realizar una proyección del cono de luz trazado por el haz en la época 
+actual, tal como se hace en la expresión \ref{eq:ComovilDistance}. Esto 
+último permite interpretar $r$ como la distancia a un objeto en el tiempo
+actual, y es diferente a la distancia aparente que corresponde al 
+tiempo en que el objeto emitió la luz que se observa.
+
+
+%Proper Radial Distance..................................................
+\textit{\textbf{Distancia radial propia:}} en virtud de la definición de
+factor de escala, para obtener la distancia a un objeto en cualquier 
+tiempo basta multiplicar su distancia comóvil por el factor de escala en 
+ese mismo tiempo, esto es
+
+
+%.........................................................................
+%Proper Distance
+\eq{eq:ComovilDistance}
+{ r_{\submath{prop}} = a(t)\int_t^{t_0} \frac{ cdt'}{a(t')} = 
+a\int_a ^1 \frac{ c da}{a \dot a} }
+%.........................................................................	
+
+
+%Particle Horizon........................................................
+\textit{\textbf{Horizonte de partículas:}} considerando un haz de luz que
+viaja en el vacío desde el inicio del universo en $t=0$, la máxima 
+distancia propia que puede haber recorrido en un tiempo $t$ se denomina 
+horizonte de partículas y determina la región que puede estar conectada 
+causalmente en el universo en esa época.
+
+
+%.........................................................................
+%Particle Horizon distance
+\eq{eq:HorizonDistance}
+{ r_{\submath{H}} = a(t)\int_0^{t} \frac{ cdt'}{a(t')} = 
+a\int_0 ^a \frac{ c da}{a \dot a} }
+%.........................................................................
 
 
 	%---------------------------------------------------------------------
@@ -251,8 +322,8 @@ construir sencillos modelos de universo, tal como se muestra a continuación.
 	
 
 Las ecuaciones de campo métrico de Einstein desempeñan un papel fundamental
-en la relatividad general ya que expresan de forma explícita la relación entre
-la materia y la geometría local del espacio-tiempo.
+en la relatividad general ya que expresan de forma explícita la relación 
+entre la materia y la geometría local del espacio-tiempo.
 
 
 %.........................................................................
@@ -403,7 +474,7 @@ $\rho_\Lambda = c^2\Lambda/8\pi G$ se obtiene
 %.........................................................................
 %Pre Hubble Equation
 \[ \pr{ \frac{\dot a}{a} }^2 = H^2(t) = \frac{ 8\pi G}{3}
-\cor{ \rho_{m0}\frac{1}{a^{3}} + \rho_{r0}\frac{1}{a^{4}} + \rho_{\Lambda} }
+\cor{ \rho_{m}\frac{1}{a^{3}} + \rho_{r}\frac{1}{a^{4}} + \rho_{\Lambda} }
 - \frac{ c^2 k }{a^2} \]
 %.........................................................................
 
@@ -625,7 +696,7 @@ parámetro de densidad que satisfacen $0<\Omega_\Lambda <1$. Esto muestra
 que no es posible tener universos con geometría plana o hiperbólica cuando 
 solo se tiene constante cosmológica. Otro aspecto igual de notable es la 
 concavidad de la función $a(t)$ obtenida de \ref{eq:VacuumUniverseSolution}
-(ver figura \ref{fig:ScaleFactors}), lo que muestra una expansión acelerada
+(ver figura \ref{fig:Cosmologies}), lo que muestra una expansión acelerada
 del universo. Esta característica solo es posible cuando hay un término no 
 nulo de energía de vacío.
 
@@ -675,18 +746,40 @@ para llegar a
 \Omega_\Lambda a'^2 }^{-1/2}da' }
 %.........................................................................
 
+\
+%.........................................................................
+%Curved Spaces
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.9\textwidth]
+	{./figures/2_theoretical_framework/Friedmann_Solution.pdf}
+
+	\caption{\small{Diferentes soluciones de universo para las ecuaciones
+	de Friedmann.}}
+	
+	\label{fig:Cosmologies}
+\end{figure}
+%.........................................................................
+\
 
 Es posible obtener una solución analítica de esta integral en términos de 
 funciones elípticas, pero por simplicidad se opta por realizar una 
 integración numérica. En la figura \ref{fig:Cosmologies} se muestra la 
 solución para el universo WMAP7 y se compara con las demás cosmologías 
-derivadas previamente
+derivadas previamente.
 
 
-
-
-
-
+Una característica interesante de la solución para un universo WMAP7 es
+el cambio de concavidad (ver curva negra en la figura \ref{fig:Cosmologies})
+que indica que se pasa de un régimen dominado por materia/radiación a uno 
+dominado por la expansión acelerada asociada a la energía del vacío. 
+Otro aspecto importante es la predicción de la edad el universo. Teniendo 
+en cuenta la normalización definida anteriormente para el factor de escala 
+$a(t_0) = a_0$, es directo ver que $t_0 = H_0^{-1} \approx 13.75 \times 10^9$ 
+años. Otras cosmologías bajo la misma normalización predicen edades
+diferentes, desde mayores como el caso del universo de vacío, hasta mucho 
+menores e inclusive un tiempo final (big crunch) como el universo con 
+geometría cerrada con radiación.
 
 
 %*************************************************************************
@@ -695,9 +788,138 @@ derivadas previamente
 
 
 %*************************************************************************
-%Nonlinear evolution and structure formation
-\section{Nonlinear Evolution and Structure Formation}
-\label{sec:NonlinearEvolutionAndStructureFormation}
+%Structure Formation
+\section{Formación de Estructuras}
+\label{sec:StructureFormation}
+
+
+La sección pasada aborda el universo de manera completamente global, 
+asumiendo válidas las condiciones de isotropía y homogeneidad. El 
+universo real a pesar de tener ese comportamiento de manera asintótica en
+escalas muy grandes, en escalas menores es muy diferente, siendo 
+completamente anisotrópico y altamente no homogéneo. Un ejemplo claro de 
+esto último es la vida, una de las más altas no linealidades del universo,
+pasando luego por planetas, estrellas, galaxias, cúmulos galácticos, en 
+orden de inhomogeneidad e anisotropía respectivamente.
+
+
+La forma estándar de introducir estos efectos de estructura en el universo
+es asumir válidas las soluciones de Friedmann a grandes escalas y considerar
+las inhomogeneidades como perturbaciones del modelo. Pasando primero por el
+régimen lineal para el cual las perturbaciones en el campo de densidad son 
+mucho menores que el valor medio de fondo ($\delta \rho \ll \rho_b$)
+subsección \ref{subsec:LinearEvolution}), hasta el régimen no lineal en que 
+son comparables o mayores ($\delta \rho \sim \rho_b$) subsección 
+\ref{subsec:NonLinearEvolution}).
+
+
+	%---------------------------------------------------------------------
+	%Linear Evolution
+	\subsection{Evolución Lineal}
+	\label{subsec:LinearEvolution}
+	%---------------------------------------------------------------------
+
+
+El marco de la evolución lineal puede ser abordado de dos formas. La primera
+es considerar un término perturbativo en el tensor momentum-energía 
+$ \delta T_{\mu \nu}$ y linealizar las ecuaciones de campo métrico 
+\ref{eq:EinsteinEquations} y resolver finalmente para $\delta R_{\mu \nu}$
+
+
+%.........................................................................
+%Perturbative Einstein Equations
+\eq{eq:PerturbativeEinsteinEquations}
+{ \mathcal{L}( R_{\mu \nu}, \delta R_{\mu \nu} ) = 
+\frac{8\pi G}{c^2}\pr{ T_{\mu \nu} + \delta T_{\mu \nu} } }
+%.........................................................................
+
+
+A pesar de que este método es rigurosamente más adecuado, tiene un 
+incoveniente que lo hace considerablemente complicado de aplicar, los 
+términos perturbativos no lo son necesariamente en todos los sistemas 
+coordenados e incluso pueden llegar a ser del mismo orden o mayores que el 
+término de fondo \cite{padmanabhan1995}.
+
+
+El segundo método consiste en asumir perturbaciones con una dimensión 
+comóvil menor al radio de Hubble ($r_\delta \ll r_H \sim cH_0^{-1}$) 
+\footnote{Un radio de Hubble $r_H$ es una unidad de longitud que define 
+el orden de magnitud del tamaño del universo observable.}, y así 
+despreciar los efectos relativistas debido a la curvatura de la 
+espacio-tiempo. Una vez hecho esto es posible usar un esquema Newtoniana 
+para el desarrollo de las perturbaciones en el universo de fondo, este 
+esquema asume el contenido de materia como un fluido y está soportado por 
+tres ecuaciones básicas de la mecánica de fluidos. La primera es la 
+ecuación de continuidad que representa la conservación de la masa del 
+fluido
+
+
+%.........................................................................
+%Continuity equation
+\eq{eq:ContinuityEquation}
+{ \dtot{\rho}{t} = - \rho \nabla \cdot \bds u }
+%.........................................................................
+
+
+La segunda es la ecuación de Euler que caracteriza el campo de velocidades
+del fluido y físicamente representa la conservación del momentum
+
+
+%.........................................................................
+%Euler Equation
+\eq{eq:EulerEquation}
+{ \dtot{\bds u}{t} = -\frac{ \nabla P}{\rho} - \nabla \phi }
+%.........................................................................
+
+
+Y finalmente la ecuación de Poisson que es la forma no relativista de las 
+ecuaciones de campo de Einstein y especifica el contenido de materia como
+fuentes de campo gravitacional.
+	
+	
+%.........................................................................	
+%Poisson Equation
+\eq{eq:PoissonEquation}
+{ \nabla^2 \varphi = 4\pi G \rho }
+%.........................................................................	
+
+
+Para completar el marco Newtoniano de perturbaciones es necesario incluir 
+en el anterior sistema de ecuaciones (\ref{eq:ContinuityEquation}, 
+\ref{eq:EulerEquation} y \ref{eq:PoissonEquation}) el efecto de la 
+expansión del universo, para esto se realiza un cambio de coordenadas de
+distancia propia $\bds x$ a distancia comóvil $\bds r$
+
+
+%.........................................................................	
+%Changing Coordinate
+\[\bds x = a \bds r\]
+%.........................................................................	
+
+
+esto implica directamente que
+
+
+%.........................................................................	
+%Changing Coordinate
+\[\bds u = \dtot{\bds x}{t} = 
+\frac{\dot a}{a}\bds x + \bds v = \dot a \bds r + \bds v\]
+%.........................................................................	
+
+
+Esta forma de reescribir $\bds u$ permite separar la componente debida a la
+expansión del universo ($\dot a/a \bds x$), o también denominada Ley de 
+Hubble, de la componente debida al movimiento del fluido, denominado campo 
+de velocidad peculiar y es definido como $\bds v = a \dot{ \bds r}$.
+
+	
+	%---------------------------------------------------------------------
+	%Nonlinear Evolution
+	\subsection{Evolución no Lineal}
+	\label{subsec:NonLinearEvolution}
+	%---------------------------------------------------------------------
+
+
 %*************************************************************************
 
 
@@ -729,7 +951,53 @@ derivadas previamente
 
 
 %*************************************************************************
-%The local group
-\section{The Local Group}
-\label{sec:TheLocalGroup}
+%Cosmological observations
+\section{Observaciones Cosmológicas}
+\label{sec:CosmologicalObservations}
+	
+
+%.........................................................................
+%Cosmological Parameter of WMAP7
+\begin{table}[htbp]
+\begin{small}
+\centering
+\begin{tabular}{|c|c|c|c|} \hline
+\cellc{\textbf{Parámetro}}		&
+\cellc{\textbf{Notación}}		&  
+\cellc{\textbf{Valor}}			& 
+\cellc{\textbf{Unidades}}					\\ \hline
+
+
+Edad del Universo  			&	$t_0$			&	$13.75 \pm 0.13$	&	Ga 				\\ \hline
+
+Constante de Hubble			&	$H_0$			&	$71.0 \pm 2.5$		&   km/(Mpc s)		\\ \hline
+
+Densidad de Bariones		&	$\Omega_b$		&	$0.0449\pm 0.0027$	&	--				\\ \hline
+
+Densidad de & & & \\
+Materia Oscura				&	$\Omega_c$		&	$0.222 \pm 0.026$	&	--				\\ \hline
+
+Densidad de & & & \\
+Energía Oscura				&	$\Omega_\Lambda$&	$0.734 \pm 0.029$	&	--				\\ \hline
+
+Densidad de & & & \\
+Radiación					&	$\Omega_r$		&$8.24 \times 10^{-5}$	&	--				\\ \hline
+
+Amplitud de & & & \\
+Fluctuaciones en $8h^{-1}$ Mpc&	$\sigma^2$		&	$0.801 \pm 0.030$	&	--				\\ \hline
+
+Índice Espectral			&	$n_s$			&	$0.963 \pm 0.014$	&	--				\\ \hline
+Profundidad Óptica & & & \\
+de Reionización 			&	$\tau$			&	$0.088 \pm 0.015$	&	--				\\ \hline
+				
+Densidad Total & & & \\
+del Universo	&	$\Omega_0$		&	$1.080\ \mbox{\scriptsize{$+0.093$}}/ 
+										\mbox{\scriptsize{$-0.071$}} $&	--			\\ \hline
+\end{tabular}
+\caption{Parámetros cosmológicos WMAP7 \cite{WMAP7}.}
+\label{tab:CosmologicalParameters}
+\end{small}
+\end{table}
+%.........................................................................
+
 %*************************************************************************

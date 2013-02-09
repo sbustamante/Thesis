@@ -9,12 +9,10 @@ import matplotlib
 import os
 import matplotlib.pyplot as plt
 from pylab import *
-
-import halo_cuts as HC
+import scipy.integrate as integ
+import scipy.interpolate as interp
 
 
 #==================================================================================================
 #			VARIABLES
 #==================================================================================================
-#Global Fold
-foldglobal = '../../data/'
