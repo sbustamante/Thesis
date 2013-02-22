@@ -4,15 +4,17 @@ execfile('_Head.py')
 #			PARAMETERS
 #==================================================================================================
 #Simulation
-folds = [ "CLUES/16953/", "CLUES/2710/", "CLUES/10909/", "BOLSHOI/" ]
+folds = [ "BOLSHOI/" ]
 #Labels of graphs
-labels = ["CLUES_16953","CLUES_2710", "CLUES_10909", "BOLSHOI"]
-#Catalog type
-catalog = 'FOF'
+labels = [ "BOLSHOI" ]
+#Web type
+webtype = 'Vweb/'
 #Box lenght
-Box_L = [64., 64., 64., 256.]
+Box_L = [ 256. ]
 #Number of sections
-N_sec = [64, 64, 64, 256]
+N_sec = [ 256 ]
+#Smooth parameter
+smooth = '_s1'
 
 
 #==================================================================================================
@@ -21,23 +23,14 @@ N_sec = [64, 64, 64, 256]
 i_fold = 0
 for fold in folds:
     print '\nCurrently in ', fold
-    #Color Diagram
-    Colors = np.linspace( 1, 0, N_sec[i_fold] )
     
-    #Loading Halos Data
-    halos = np.transpose( np.loadtxt( '%s%sCatalog_Halos_%s.dat'%(foldglobal,fold,catalog) ) )
-    Nhalos = len(halos[0])		#Number of halos
+    n = N_sec[i_fold]
+    
+    #Loading Density Data
+    delta = np.transpose( np.loadtxt( '%s%s%s%d/density_sign%s.dat'%(foldglobal,fold,webtype,n,smooth), 
+    dtype = int ) )
+    delta = np.reshape( (n,n,n) )
 
-    #Plotting cuts
-    for i in xrange( N_sec[i_fold] ):
-	x = i*Box_L[i_fold]/(1.0*N_sec[i_fold])
-	dx = Box_L[i_fold]/(1.0*N_sec[i_fold])
-	
-	Y, Z = HC.CutX( x, dx, halos, plot = False )
-	plt.plot( Y, Z, '.', color = ( np.sqrt(Colors[i]), np.sqrt(Colors[i]), np.sqrt(Colors[i]) ), markersize = 6 )
-	
-	plt.xlim( (0,Box_L[i_fold] ) )
-	plt.ylim( (0,Box_L[i_fold] ) )
 
     plt.xlabel('y [$h^{-1}$Mpc]')
     plt.ylabel('z [$h^{-1}$Mpc]')

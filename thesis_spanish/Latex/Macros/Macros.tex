@@ -13,6 +13,9 @@
 % MY COMMANDS
 %---------------------------------------------------------------
 \usepackage{bm} 
+\usepackage{natbib}
+%Times font and maths
+%\usepackage{mathptmx}
 
 %MY COMMANDS
 \newcommand{\sub}[1]{\mbox{\scriptsize{#1}}}
@@ -32,12 +35,21 @@
 \newcommand{\ket}{\rangle}
 \newcommand{\bra}{\langle}
 
-\renewcommand{\listtablename}{Índice de tablas}
-\renewcommand{\tablename}{Tabla}
+\AtBeginDocument{\renewcommand{\listtablename}{Índice de tablas}}
+\AtBeginDocument{\renewcommand{\tablename}{Tabla}}
+
+%\AtBeginDocument{\renewcommand{\ref}[1]{(\ref{#1})}}
+%\renewcommand{\ref}[1]{(\ref{#1})}
 
 \usepackage{color, colortbl}
 %Celda de colores en tablas
 \newcommand{\cellc}[1]{\multicolumn{1}{|>{\columncolor[rgb]{0.8, 0.8, 0.8}}c|}{#1}}
+
+%New cite
+%\AtBeginDocument{\renewcommand{\cite}[1]{(\citet{#1})}}
+
+\newcommand{\LCDM}{$\Lambda$CDM}
+
 
 %---------------------------------------------------------------
 % Figures
