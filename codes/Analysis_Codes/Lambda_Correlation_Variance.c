@@ -4,7 +4,7 @@
 #define FLOAT2 double
 #define NMAX 1000
 
-//USAGE  Lambda_Correlation.out <EIG_Filename> <DELTA_Filename> <Min_Lambda> <Max_Lambda> <N_Lambda> <Out_Filename>
+//USAGE  Lambda_Correlation.out <EIG_Filename> <DELTA_Filename> <Min_Lambda> <Max_Lambda> <N_Lambda> <Out_Filename> <N_div>
 
 int main(int argc, char **argv)
 {    
@@ -16,7 +16,7 @@ int main(int argc, char **argv)
     float Ndiv[NMAX], Ncon[NMAX], Nsub[NMAX], Nover[NMAX];
     
     FLOAT1 Lambda_min, Lambda_max, Lambda;
-    int j, k, N_thr, eig;
+    int octx, octy, octz, oct_id, j, N_thr, eig, ii, jj, kk, Noct = atoi(argv[7]);
     float corr[NMAX][4];
     
     //Grid variables===============================================================================
@@ -128,64 +128,71 @@ int main(int argc, char **argv)
     fclose(in);
 
     //CORRELATIONS=================================================================================
-    //Correlation File
-    sprintf(filename, "%s.dat", argv[6]);
-    out_corr=fopen(filename, "w");
-
-    //Initializing histograms
-    for( j=0; j<N_thr; j++ )
-	for( i=0; i<4; i++ )
-	    corr[j][i] = 0;
     
-    for( j=0; j<N_thr; j++ ){
-
-	Ncon[j] = 0;	Ndiv[j] = 0;
-	Nsub[j] = 0;	Nover[j] = 0;
-
-	for( i=0; i<n_total; i++ ){
-	//Current Lambda
-	Lambda = Lambda_min + (Lambda_max - Lambda_min)*j/N_thr;
-	
-	//Convergent and Divergent regions
-	if( eigen1[i] + eigen2[i] + eigen3[i] - 3*Lambda < 0 )
-	    Ndiv[j] ++;
-	else
-	    Ncon[j] ++;
-	
-	//Sub and Over density 
-	if( delta[i]<=0 )
-	    Nsub[j] ++;
-	else
-	    Nover[j] ++;		
-
-	
-	//Histogram
-	if( delta[i]<=0 && eigen1[i] + eigen2[i] + eigen3[i] - 3*Lambda < 0 )
-	    corr[j][0] ++;
-	if( delta[i]<=0 && eigen1[i] + eigen2[i] + eigen3[i] - 3*Lambda > 0 )
-	    corr[j][1] ++;
-	if( delta[i]>0 && eigen1[i] + eigen2[i] + eigen3[i] - 3*Lambda > 0 )
-	    corr[j][2] ++;
-	if( delta[i]>0 && eigen1[i] + eigen2[i] + eigen3[i] - 3*Lambda < 0 )
-	    corr[j][3] ++;
-    }}
-
-    //File Head
-    fprintf( out_corr, "#Lamb  rg1  rg2  rg3  rg4  Ntot  Nsub  Nover  Ndiv  Ncon\n");
-    for( j=0; j<N_thr; j++ ){
-      	//Current Lambda
-	Lambda = Lambda_min + (Lambda_max - Lambda_min)*j/N_thr;
-	
-	fprintf( out_corr, "%1.2f  %1.3f %1.3f %1.3f %1.3f %8f  %8f %8f %8f %8f\n", Lambda, \
-        corr[j][0], corr[j][1], corr[j][2], corr[j][3],
-	corr[j][0] + corr[j][1] + corr[j][2] + corr[j][3],
-        Nsub[j], Nover[j], Ndiv[j], Ncon[j]);
-
+    //Divisions
+    oct_id = 0;
+    for( octx=0; octx<Noct; octx++ )
+	for( octy=0; octy<Noct; octy++ )
+	    for( octz=0; octz<Noct; octz++ ){
     
-    	printf("%1.2f\t%8.0f\t%8.0f\t%8.0f\t%8.0f\n", Lambda, \
-	corr[j][0], corr[j][1], corr[j][2], corr[j][3]  );}
-	
-    fclose(out_corr);	
+		//Correlation File
+		sprintf(filename, "%s_%02d.dat", argv[6],oct_id);
+		out_corr=fopen(filename, "w");
+
+		//Initializing histograms
+		for( j=0; j<N_thr; j++ )
+		    for( i=0; i<4; i++ )
+			corr[j][i] = 0;
+		
+		for( j=0; j<N_thr; j++ ){
+		    Ncon[j] = 0;	Ndiv[j] = 0;
+		    Nsub[j] = 0;	Nover[j] = 0;
+
+		    for( ii=(int)(n_x*octx/Noct); ii<(int)(n_x*(octx+1)/Noct); ii++ )
+		    for( jj=(int)(n_y*octy/Noct); jj<(int)(n_y*(octy+1)/Noct); jj++ )
+		    for( kk=(int)(n_z*octz/Noct); kk<(int)(n_z*(octz+1)/Noct); kk++ ){
+			i = ii + n_x * (jj + n_y * kk );
+
+			//Current Lambda
+			Lambda = Lambda_min + (Lambda_max - Lambda_min)*j/N_thr;
+			
+			//Convergent and Divergent regions
+			if( eigen1[i] + eigen2[i] + eigen3[i] - 3*Lambda < 0 )
+			    Ndiv[j] ++;
+			else
+			    Ncon[j] ++;
+			
+			//Sub and Over density 
+			if( delta[i]<=0 )
+			    Nsub[j] ++;
+			else
+			    Nover[j] ++;		
+
+			
+			//Histogram
+			if( delta[i]<=0 && eigen1[i] + eigen2[i] + eigen3[i] - 3*Lambda < 0 )
+			    corr[j][0] ++;
+			if( delta[i]<=0 && eigen1[i] + eigen2[i] + eigen3[i] - 3*Lambda > 0 )
+			    corr[j][1] ++;
+			if( delta[i]>0 && eigen1[i] + eigen2[i] + eigen3[i] - 3*Lambda > 0 )
+			    corr[j][2] ++;
+			if( delta[i]>0 && eigen1[i] + eigen2[i] + eigen3[i] - 3*Lambda < 0 )
+			    corr[j][3] ++;
+		    }}
+		    
+		//File Head
+		fprintf( out_corr, "#Lamb  rg1  rg2  rg3  rg4  Ntot  Nsub  Nover  Ndiv  Ncon\n");
+		for( j=0; j<N_thr; j++ ){
+		    //Current Lambda
+		    Lambda = Lambda_min + (Lambda_max - Lambda_min)*j/N_thr;
+		    
+		    fprintf( out_corr, "%1.2f  %1.3f %1.3f %1.3f %1.3f %8f  %8f %8f %8f %8f\n", Lambda, \
+		    corr[j][0], corr[j][1], corr[j][2], corr[j][3],
+		    corr[j][0] + corr[j][1] + corr[j][2] + corr[j][3],
+		    Nsub[j], Nover[j], Ndiv[j], Ncon[j]);}
+		    
+		fclose(out_corr);
+		oct_id ++;}
     
     //=============================================================================================
     return 0;

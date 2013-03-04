@@ -501,7 +501,7 @@
  \cleardoublepage
  \begin{center}
 \vspace*{1.5cm}
-{\Large \bfseries Acknowledgements}
+{\Large \bfseries Agradecimientos}
 \end{center}
 \vspace{0.5cm}
 \begin{quote}}
@@ -517,7 +517,7 @@
  \cleardoublepage
  \begin{center}
 \vspace*{1.5cm}
-{\Large \bfseries Acknowledgements}
+{\Large \bfseries Agradecimientos}
 \end{center}
 \vspace{0.5cm}\begin{quote}}
 {\end{quote}\end{alwayssingle}}
@@ -554,7 +554,7 @@
    \cleardoublepage
  \begin{center}
   \vspace*{1.5cm}
-  {\Large \bfseries  Abstract}
+  {\Large \bfseries  Resumen}
   \end{center}
   \vspace{0.5cm}
    \begin{quote}}
@@ -568,7 +568,7 @@
   \begin{center}
    \cleardoublepage
  \vspace*{1.5cm}
-  {\Large \bfseries  Abstract}
+  {\Large \bfseries  Resumen}
   \end{center}
   \vspace{0.5cm} \begin{quote}}
 {\end{quote}\end{alwayssingle}}
