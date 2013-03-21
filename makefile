@@ -16,6 +16,7 @@ git_update:
 	thesis_spanish/chapters/*.tex 		\
 	thesis_spanish/chapters/*.bib		\
 	thesis_spanish/dissertation_sp.tex	\
+	thesis_spanish/dissertation_sp.pdf	\
 	codes/Halo_Finder/*			\
 	codes/Analysis_Codes/*			\
 	codes/Theoretical_Codes/*

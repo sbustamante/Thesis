@@ -365,7 +365,7 @@
 \def\advisor#1{\gdef\@advisor{#1}}
 
 % Advisor two
-%\def\advisortwo#1{\gdef\@advisortwo{#1}}
+\def\advisortwo#1{\gdef\@advisortwo{#1}}
 
 % Text signature candidate
 \def\textsignaturecandidate#1{\gdef\@textsignaturecandidate{#1}}

@@ -4,7 +4,8 @@
 #define FLOAT2 double
 #define NMAX 1000
 
-//USAGE  Lambda_Correlation.out <EIG_Filename> <DELTA_Filename> <Min_Lambda> <Max_Lambda> <N_Lambda> <Out_Filename> <N_div>
+//USAGE  Lambda_Correlation_Variance.out 
+//	<EIG_Filename> <DELTA_Filename> <Min_Lambda> <Max_Lambda> <N_Lambda> <Out_Filename> <N_div>
 
 int main(int argc, char **argv)
 {    

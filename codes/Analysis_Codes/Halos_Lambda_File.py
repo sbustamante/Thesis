@@ -1,125 +1,82 @@
-#==================================================================================================
-#			HEADERS
-#==================================================================================================
-from struct import *
-import numpy as np
-import sys
-import os
-
-#==================================================================================================
-#			FUNCTIONS
-#==================================================================================================
-def read_CIC_scalar(filename, double=False):
-    f = open(filename, "rb")
-    dumb = f.read(38)
-
-    dumb = f.read(4)
-    n_x = f.read(4)
-    n_y = f.read(4)
-    n_z = f.read(4)
-    nodes = f.read(4)
-    x0 = f.read(4)
-    y0 = f.read(4)
-    z0 = f.read(4)
-    dx = f.read(4)
-    dy = f.read(4)
-    dz = f.read(4)
-    dumb = f.read(4)
-
-    n_x = (unpack('i', n_x))[0]
-    n_y = (unpack('i', n_y))[0]
-    n_z = (unpack('i', n_z))[0]
-    nodes = (unpack('i', nodes))[0]
-    dx = (unpack('f', dx))[0]
-    dy = (unpack('f', dy))[0]
-    dz = (unpack('f', dz))[0]
-    x0 = (unpack('f', x0))[0]
-    y0 = (unpack('f', y0))[0]
-    z0 = (unpack('f', z0))[0]
-    print n_x, n_y, n_z, nodes, dx, dy, dz
-
-    total_nodes = n_x * n_y * n_z
-    dumb = f.read(4)
-    if(double==False):
-        array_data = f.read(total_nodes*4)
-        format_s = str(total_nodes)+'f'
-    else:
-        array_data = f.read(total_nodes*8)
-        format_s = str(total_nodes)+'d'
-    dumb = f.read(4)
-
-    array_data = unpack(format_s, array_data)
-    f.close()
-    array_data  = np.array(array_data)
-    new_array_data = np.reshape(array_data, (n_x,n_y,n_z), order='F')
-    return new_array_data, n_x, dx
-
-
-def enviroment_lambda( r ):
-    '''
-    FUNCTION: Return the local enviroment in a given r coordinate
-    ARGUMENTS: r - Local coordinate
-	       n - Number of lambda
-    RETURN:   Enviroment
-	      0 - Void
-	      1 - Filament
-	      2 - Knot
-    '''
-    i = np.int(r[0]/Box_lenght*n_x)
-    j = np.int(r[1]/Box_lenght*n_x)
-    k = np.int(r[2]/Box_lenght*n_x)
-    
-    return [lambda_val[0][i,j,k], lambda_val[1][i,j,k], lambda_val[2][i,j,k]]
-
+execfile('_Head.py')
 
 #==================================================================================================
 #			PARAMETERS
 #==================================================================================================
-#Global Fold
-#foldglobal = '../Data/'
-foldglobal = './'
 #Simulation
-folds = [ "CLUES/16953/", "CLUES/2710/", "CLUES/10909/", "Bolshoi/" ]
-names = [ "CLUES_16953", "CLUES_2710", "CLUES_10909", "BOLSHOI" ]
-#Classification scheme
-scheme = 'Vweb/'
-schemename = 'Vweb'
-#Lambda_Filename
-eigen_file = [ "snap_190.s1.00.eigen_", "snap_191.s1.00.eigen_", "snap_190.s1.00.eigen_", "PMcrsFULL.0416.DAT.s1.00.eigen_" ]
-#eigen_file = [ "snap_190.eigen_", "snap_191.eigen_", "snap_190.eigen_", "PMcrsFULL.0416.DAT.eigen_" ]
-#Resolutions of each simulation
-res = [ 64, 64, 64, 256 ]
-#Box lenghts of each simulation
-Box_L = [ 64, 64, 64, 256 ]
-
+folds = ["CLUES/10909/","CLUES/16953/","CLUES/2710/","BOLSHOI/"]
+#Box lenght
+Box_L = [64,64,64,250]
+#Number of sections
+N_sec = [64,64,64,256]
+#Smooth parameter
+smooth = '_s1'
+#Catalog Scheme
+catalog = 'FOF'
+#Web Scheme
+web = 'Vweb'
 
 #==================================================================================================
-#			CALCULATING ENVIROMENT
+#			CONSTRUCTING FILES WITH HALOS ENVIRONMENT
 #==================================================================================================
+N_sim = len( folds )
+ax = np.zeros( (3, N_sim) )
+
 i_fold = 0
-for fold in folds:
-    print '\nCurrently in ', fold
+for fold in folds:    
+    #if fold != "BOLSHOI/":
+	#i_fold += 1
+	#continue
     
-    #Loading Lambda Files for each simulation
-    lambda_val = []
-    for i in xrange(0,3):
-	lv,n_x,dx =read_CIC_scalar("%s%s%s%d/%s%d"%(foldglobal, fold, scheme, res[i_fold], eigen_file[i_fold], i+1) )
-	lambda_val.append( lv )
+    print "\n"+fold
+    
+    #Box Lenght
+    L = Box_L[i_fold]
 
-    #Current Box lenght
-    Box_lenght = Box_L[i_fold]
-
-    #Loading Halos Data
-    halos = np.transpose( np.loadtxt( '%s%sHalos_catalog.dat'%(foldglobal,fold) ) )
-    Nhalos = len(halos[0])		#Number of halos
-
-    #Environment of each halo
-    halos_envinroment = np.zeros( (Nhalos, 3) )
-
+    #Loading Eigenvalues Vweb filename
+    eigV_filename = '%s%s%s/%d/Eigen%s'%(foldglobal,fold,web,N_sec[i_fold],smooth)
+    #Loading All properties of Halos
+    halos = np.transpose(np.loadtxt('%s%s/C_GH_%s.dat'%(foldglobal,fold, catalog)))
+    datos = np.transpose(np.loadtxt('%s%s/C_GH_%s.dat'%(foldglobal,fold, catalog)))
+    Nhalos = len(halos[0])
+    
+    #Saving environment of each halo
+    eig = np.zeros( (3,Nhalos) )
+    for i in xrange( N_sec[i_fold] ):
+	#Showing the advance
+	progress(50, int(100*i/(1.0*N_sec[i_fold])) )
+	
+	#loading index of halos in a same X cut
+	temp, index = CutHaloX( 
+	i*L*1.0/N_sec[i_fold], L*1.0/N_sec[i_fold], 
+	datos, plot=False )
+	#Loading environment in this Z section
+	eigX1 = CutFieldZ( eigV_filename+"_1", i, res=16, Coor = 1 )
+	eigX2 = CutFieldZ( eigV_filename+"_2", i, res=16, Coor = 1 )
+	eigX3 = CutFieldZ( eigV_filename+"_3", i, res=16, Coor = 1 )
+	
+	#All halos in this Z section
+	for l in xrange( len(index) ):
+	    ind = index[l] - 1
+	    #y and z index
+	    j = abs(int(N_sec[i_fold]*(halos[2,ind]-0.0001)/L))
+	    k = abs(int(N_sec[i_fold]*(halos[3,ind]-0.0001)/L))
+	    
+	    #Storing eigenvalues
+	    eig[0,ind] = eigX1[j,k]
+	    eig[1,ind] = eigX2[j,k]
+	    eig[2,ind] = eigX3[j,k]
+    
+    I = np.zeros(Nhalos)
+    J = np.zeros(Nhalos)
+    K = np.zeros(Nhalos)
     for i in xrange(Nhalos):
-	halos_envinroment[i] = enviroment_lambda( halos[1:4,i] )
-
-    #Saving File
-    np.savetxt("%s/Halos_Environment_%s%s%d_s1.dat"%(foldglobal, names[i_fold], schemename, res[i_fold]), halos_envinroment )
+	I[i] = abs(int(N_sec[i_fold]*(halos[1,i]-0.0001)/L))
+	J[i] = abs(int(N_sec[i_fold]*(halos[2,i]-0.0001)/L))
+	K[i] = abs(int(N_sec[i_fold]*(halos[3,i]-0.0001)/L))
+	
+    np.savetxt( '%s%s%s/%d/E_GH%s_%s.dat'%(foldglobal,fold,web,N_sec[i_fold],smooth,catalog), 
+    np.transpose([halos[0],eig[0],eig[1],eig[2],I,J,K]), 
+    fmt=('%d\t%1.5e\t%1.5e\t%1.5e\t%d\t%d\t%d') )
     
     i_fold += 1

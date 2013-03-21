@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #define FLOAT float
 
-//Usage  Field_Cut.out <filename> <cut in z>
+//Usage  Field_Cut.out <filename> <cut in x/y/z> <output filename> <coordinate section>
 
 int main(int argc, char **argv)
 {    
@@ -44,9 +44,9 @@ int main(int argc, char **argv)
     fread(&dz,sizeof(float),1,in);    
     fread(&dumb,sizeof(int),1,in);
     n_total = n_x * n_y * n_z;
-    fprintf(stderr, "Nx Ny Nz : %d %d %d %lld\n", n_x, n_y, n_z, n_total);
-    fprintf(stderr, "x_0 y_0 z_0 : %g %g %g\n", x_0, y_0, z_0);
-    fprintf(stderr, "dx dy dz : %g %g %g\n", dx, dy, dz);    
+    //fprintf(stderr, "Nx Ny Nz : %d %d %d %lld\n", n_x, n_y, n_z, n_total);
+    //fprintf(stderr, "x_0 y_0 z_0 : %g %g %g\n", x_0, y_0, z_0);
+    //fprintf(stderr, "dx dy dz : %g %g %g\n", dx, dy, dz);    
     
     if(!(delta=malloc(n_nodes * sizeof(FLOAT)))){
 	fprintf(stderr, "problem with array allocation\n");
@@ -63,10 +63,24 @@ int main(int argc, char **argv)
     //New file for density field values
     sprintf(filename, "%s", argv[3]);
     field=fopen(filename, "w");
+
+    // X Direction
+    if ( atoi(argv[4]) == 1 ){    
+	for( ii=0; ii<n_x; ii++ )
+	    for( jj=0; jj<n_y; jj++ )
+	      fprintf( field, "%1.6f\n", delta[ atoi(argv[2]) + n_x * (ii + n_y * jj ) ] );}
     
-    for( ii=0; ii<n_x; ii++ )
-        for( jj=0; jj<n_y; jj++ )
-	  fprintf( field, "%1.3lf\n", delta[ ii + n_x * (jj + n_y * atoi(argv[2]) ) ] );
+    // Y Direction
+    if ( atoi(argv[4]) == 2 ){    
+	for( ii=0; ii<n_x; ii++ )
+	    for( jj=0; jj<n_y; jj++ )
+	      fprintf( field, "%1.6f\n", delta[ ii + n_x * (atoi(argv[2]) + n_y * jj ) ] );}
+    
+    // Z Direction
+    if ( atoi(argv[4]) == 3 ){    
+	for( ii=0; ii<n_x; ii++ )
+	    for( jj=0; jj<n_y; jj++ )
+	      fprintf( field, "%1.6f\n", delta[ ii + n_x * (jj + n_y * atoi(argv[2]) ) ] );}
 
     fclose(field);
 

@@ -1628,8 +1628,8 @@ las perturbaciones crecen tal que $\delta \gtrsim 1$ la autogravedad de
 los modos acopla fuertemente el campo de forma local y e invalida la 
 aproximación lineal. Los procesos físicos asociados al régimen no lineal
 son altamente complejos e inclusive algunos no son bien entendidos en la 
-actualidad, esto hace que solo sea posible abordar el problema a través de
-simulaciones numéricas (ver capítulo 
+actualidad, esto hace que solo sea posible abordar satisfactoriamente el 
+problema a través de simulaciones numéricas (ver capítulo 
 \ref{cha:N-BodySimulations}).
 
 
@@ -1668,8 +1668,112 @@ de un patrón de red a grandes escalas (red cósmica).
 
 A pesar de la complejidad del régimen no lineal, cuando las perturbaciones 
 en el campo de densidad aún no son mucho mayores que el valor de fondo 
-puede realizarse una aproximación analítica de la evolución.
+puede realizarse una desarrollo analítico de la evolución, esto es conocido
+como aproxi\-mación de Zeldovich y fue desarrollada en 1970 por Yakov 
+Zeldovich en \cite{zeldovich1970}. Para formular esta aproximación es 
+conveniente expresar de nuevo el campo de contraste de densidad 
+$\delta(\bds r)$ en términos de coordenadas comóviles y no respecto a los 
+modos normales de Fourier, esto debido a que en este régimen los modos no 
+son independientes y usarlos no simplifica el tratamiento, a diferencia 
+del régimen lineal. 
 
+
+Usando el marco de referencia Lagrangiano de una cierta porción de fluido
+o distribución de materia, su trayectoria $\bds r_f$ puede ser descrita 
+mediante la siguiente expresión
+
+
+%.........................................................................
+\eq{eq:ZeldovichTrayectory}
+{ \bds r_f( t,\bds q ) = a(t)\bds r = a(t)\cor{ \bds q + \bds \Psi(\bds q,t) } }
+%.........................................................................
+donde $\bds r$ es la posición comóvil de la porción de fluido, $\bds q$ 
+su coordenada Lagrangiana inicial cuando el fluido no está perturbado y 
+$\bds \Psi(\bds q,t)$ se denomina función de desplazamiento y da cuenta de 
+las perturbaciones en el medio. 
+
+
+A partir de la ecuación de evolución del campo de contraste de densidad 
+\ref{eq:DeltaEvolution} es posible demostrar que el campo de desplazamiento 
+$\bds \Psi(\bds q,t)$ satisface \cite{Yoshisato2006}
+
+
+%.........................................................................
+%Displacement Differential Equation
+\eq{eq:Displacement}
+{ \der{^2  \bds \Psi}{t^2} + 2H\der{\bds \Psi}{t} =
+ \frac{ 3}{2}H^2 \bds \Psi  }
+%.........................................................................
+de esto se obtiene finalmente
+
+
+%.........................................................................
+%Displacement Explicit Form
+\eq{eq:DisplacementForm}
+{ \bds \Psi = \frac{3}{2}H_0^{-2}a(t)\nabla \Phi  }
+%.........................................................................
+donde $\Phi$ es el potencial gravitacional efectivo asociado al campo de 
+densidad por medio de la ecuación de Poisson \ref{eq:PoissonEquationC}.
+
+
+Expresando la conservación de la masa en términos de las coordenadas 
+comóviles y las coordenadas Lagrangianas iniciales, se debe satisfacer
+
+
+%.........................................................................
+%Mass Conservation
+\eq{eq:MassConservation}
+{ \rho(\bds r, t)d^3 \bds r = \bar{\rho}(t)d^3 \bds q  }
+%.........................................................................
+calculando ahora el Jacobiano $\partial q_i / \partial r_j$ de la 
+transformación $\bds r \rightarrow \bds q$, el campo de densidad perturbado 
+pude se escrito como \cite{padmanabhan1995}
+
+
+%.........................................................................
+%Perturbed Field Density
+\eq{eq:PerturbedFieldDensity}
+{ \rho(\bds r, t) = \frac{\bar \rho (t)}{\pr{ 1 - a(t) \lambda_1(\bds q)}
+\pr{ 1 - a(t) \lambda_2(\bds q)}\pr{ 1 - a(t) \lambda_3(\bds q)} } }
+%.........................................................................
+donde $-\lambda_i(\bds q)$ son los autovalores del Jacobiano y están 
+ordenados de tal forma que $\lambda_1\geq\lambda_2\geq\lambda_3$. Cada uno
+de estos autovalores pueden ser interpretados de forma geométrica como un 
+indicador del colapso o expansión de una porción de fluido en la dirección
+correspondiente al autovector respectivo, así por ejemplo si $\lambda_i > 0$,
+implica que el campo de densidad está colapsando localmente en la dirección 
+del autovector $\bds u_i$, mientras que $\lambda_i < 0$ implica una 
+expansión en la misma dirección.
+
+\
+%.........................................................................
+%Zeldovich Approximation Comparison
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.9\textwidth]
+	{./figures/2_theoretical_framework/Zeldovich_Approximation.png}
+
+	\caption{\small{Comparación de la evolución en régimen no lineal entre
+	una simulación de N-cuerpos (a), y la aproximación de Zeldovich (b).
+	En ambos casos se usan las mismas condiciones iniciales. Tomado de 
+	\cite{longair2008}. }}
+	
+	\label{fig:ZeldovichComparison}
+\end{figure}
+%.........................................................................
+
+
+Finalmente en la figura \ref{fig:ZeldovichComparison} se muestra una 
+comparación entre una simulación numérica de N-cuerpos y la aproximación 
+de Zeldovich, puede notarse una alta semejanza visual en las estructuras 
+obtenidas en los dos casos al final de la evolución, demostrando la alta 
+precisión del método. En la sección \ref{sec:EnvironmentCharacterization}
+se hace uso de la idea general planteada en la aproximación de Zeldovich 
+respecto a los autovalores del Jacobiano de la transformación, para la 
+construcción de esquemas de clasificación del entorno cosmológico a partir 
+de los autovalores de otras cantidades físicas más adecuadas para la 
+descripción de la dinámica local del campo de densidad, tales como el 
+tensor de marea o el tensor de velocidad peculiar.
 
 
 %*************************************************************************

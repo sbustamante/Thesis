@@ -6,25 +6,10 @@
 
 %: ----------------------------------------------------------------------
 %:                  TITLE PAGE: name, degree,..
-% ----------------------------------------------------------------------
-
-\ifpdf  
-    \pdfinfo { /Title  (PhD)
-               /Creator (TeX)
-               /Producer (pdfTeX)
-               /Author (Name surname)
-               /CreationDate (D:YYYYMMDDhhmmss)  %format D:YYYYMMDDhhmmss
-               /ModDate (D:YYYYMMDDhhmm)
-               /Subject (xyz)
-               /Keywords (keyword1, keyword2, keyword3) }
-    \pdfcatalog { /PageMode (/UseOutlines)
-                  /OpenAction (fitbh)  }
-\fi
-
+% -----------------------------------------------------------------------
 
 % Title of the dissertation
 \title{El lugar de la Vía Láctea y Andrómeda en la red cósmica}
-
 
 
 % ----------------------------------------------------------------------
@@ -33,14 +18,19 @@
 \crest{\includegraphics[width=3cm]{figures/0_frontmatter/UdeA_Shield}}
 % Full logo
 %\crest{\includegraphics[width=6cm]{UDeusto}}
-\university{Universidad de Antioquia \\ Facultad de Ciencias Exactas y Naturales \\ Instituto de Física                                  }
+\university{Universidad de Antioquia \\ 
+Facultad de Ciencias Exactas y Naturales \\ 
+Instituto de Física}
 \degree{}
 \author{\textbf{Sebastian Bustamante Jaramillo}} 
-\collegeordept{Facultad de Ciencias Exactas y Naturales \\ Instituto de Física}
-\textadvisor{Tutor: \\}
-\advisor{\textbf{Prof. Jaime E. Forero-Romero}}
+\collegeordept{Facultad de Ciencias Exactas y Naturales \\ 
+Instituto de Física}
+\textadvisor{}
+\advisor{\textbf{Asesor:} Jaime E. Forero-Romero \\
+\textbf{Co-asesor:} Jorge I. Zuluaga\ \ \ }
 \textsignaturecandidate{Estudiante}
-\textsignatureadvisor{Tutor}
+\textsignatureadvisor{Asesor\hspace{2.5 cm} Co-asesor}
+
 \cityofbirth{Medellín}
 %\degreedate{\monthname \ \the\year}
 \degreedate{Enero \the\year}
@@ -58,15 +48,15 @@
 % --------------------------------------------------------------
 
 \begin{document}
-
 \selectlanguage{spanish}
-
 % sets line spacing
 \renewcommand\baselinestretch{1.2}
 \baselineskip=18pt plus1pt
 
+\maketitle 
 
-\maketitle  % command to print the title page with above variables
+% Dedication
+\include{chapters/0_dedication}
 
 % Title back
 \include{chapters/0_title_back}
@@ -103,16 +93,16 @@
 
 \pagestyle{fancy}
 
-%------------------------- introduction ------------------------
+%------------------------- Introduction ------------------------
 \include{chapters/1_introduction}
 
-%---------------------- theoretical frame -----------------------
+%---------------------- Theoretical Frame -----------------------
 \include{chapters/2_theoretical_framework}	
 
-%--------------------- Nbody simulations ------------------------
+%--------------------- Nbody Simulations ------------------------
 \include{chapters/3_nbody_simulations}
 			
-%--------------------------- results ----------------------------
+%--------------------------- Results ----------------------------
 \include{chapters/4_results}
 
 % --------------------------------------------------------------
@@ -122,14 +112,13 @@
 \backmatter
 
 
-%: ----------------------- appendix ----------------------------
-
 %: ----------------------- bibliography ------------------------
 
 
 
-\bibliographystyle{abbrv}
-%\bibliographystyle{plainnat}
+%\bibliographystyle{abbrv}
+
+\bibliographystyle{plainnat}
 %\bibliographystyle{abbrvnat}
 \bibliography{chapters/references}
 
