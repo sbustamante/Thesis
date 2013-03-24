@@ -8,7 +8,6 @@ git_update:
 	git add \
 	thesis_content				\
 	thesis_figures				\
-	thesis_schedule				\
 	Readme					\
 	makefile				\
 	thesis_spanish/figures/* 		\

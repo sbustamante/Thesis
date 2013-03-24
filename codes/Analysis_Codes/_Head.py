@@ -241,7 +241,7 @@ def Energy_AngularM( M1, x1, y1, z1, vx1, vy1, vz1, M2, x2, y2, z2, vx2, vy2, vz
 	v2p = v2 - Vcm + 100*r2p
     
 	L[i] = (m1*np.cross( r1p, v1p ) + m2*np.cross( r2p, v2p ))/(m1+m2)
-	E[i] = (0.5*( m1*norm(v1p)**2 + m2*norm(v1p)**2 )*KM2MPC**2 - G*m1*m2/( norm(r1p - r2p) ) )/(m1+m2)
+	E[i] = (0.5*( m1*norm(v1p)**2 + m2*norm(v2p)**2 )*KM2MPC**2 - G*m1*m2/( norm(r1p - r2p) ) )/(m1+m2)
     
     return E, L
     
