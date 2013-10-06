@@ -1,11 +1,11 @@
 %qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
 %Quote
 \begin{savequote}[50mm]
-‘‘El cosmos es todo lo que es, todo lo que fue y todo lo que será. Nuestras 
-más ligeras contemplaciones del cosmos nos hacen estremecer: Sentimos como 
-un cosquilleo nos llena los nervios, una voz muda, una ligera sensación como
-de un recuerdo lejano o como si cayéramos desde gran altura. Sabemos que nos
-aproximamos al más grande de los misterios.’’
+‘‘The Cosmos is all that is or was or ever will be. Our feeblest contemplations 
+of the Cosmos stir us: there is a tingling in the spine, a catch in the voice, 
+a faint sensation, as if a distant memory, of falling from a height. We know 
+we are approaching the greatest of mysteries.’’
+
 \qauthor{Carl Sagan}
 \end{savequote}
 %qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
@@ -14,16 +14,20 @@ aproximamos al más grande de los misterios.’’
 
 
 %#########################################################################
-\chapter{Fundamentos en Cosmología}
+\chapter{Theoretical Framework in Cosmology}
 \label{cha:Theoretical Framework}
 
 
-Este capítulo se concentra en abarcar de forma autocontenida y resumida 
-todo el marco teórico necesario para el estudio del universo a gran escala,
-pasando por los modelos simples de universo dados por las soluciones de 
-Friedmann, la teoría de perturbaciones para la generación de estructuras
-complejas como galaxias y cúmulos galácticos, hasta la cuantificación del 
-red cósmica.
+%Reviewed
+The aim of this chapter is to cover, in a self-contained and summarized 
+way, all the theoretical framework needed for the study of the large-scale
+universe. From the simplest models of the universe given by Friedman's 
+solutions, the theory of perturbations for the formation of complex 
+structures like galaxies and galaxy clusters, until the schemes to 
+quantify the cosmic web.
+
+
+
 %#########################################################################
 
 
@@ -31,37 +35,41 @@ red cósmica.
 
 %*************************************************************************
 %Isotropic and homogeneous universe
-\section{Universo Isotrópico y Homogéneo}
+\section{Isotropic and Homogeneous Universe}
 \label{sec:IsotropicAndHomogeneousUniverse}
 
 
-Los dos grandes pilares de la comoslogía moderna son el principio 
-cosmológico y la teoría de la relatividad general. El primero es un 
-principio que asume que el universo es homogéneo e isotrópico a grandes 
-escalas, mientras que la segunda da el soporte teórico necesario para un 
-entendimiento adecuado de la relación entre materia y la estructura del 
-espacio-tiempo.
+%Reviewed
+The two big pillars of the modern cosmology are the cosmological principle
+and the theory of the general relativity. The first one is a principle 
+where it is assumed that the universe is isotropic and homogeneous at very
+large scales, while the second one gives the theoretical support needed in 
+order to understand properly the relation between the matter content of 
+the universe and the structure of the space-time.
 
 
-Como han indicado observaciones de estructura a gran escala y de radiación
-cósmica de fondo nuestro universo parece ser isotrópico y homogéneo a muy
-grandes escalas, lo que está acorde con el principio cosmológico. Más aún, 
-esta hecho simplifica bastante la compleja formulación tensorial de la 
-relatividad general para llegar finalmente a las ecuaciones de Friedmann.
+%Reviewed
+As it has been evidenced by observations of large-scale structures and the 
+CMB, the universe appears to be isotropic and homogeneous at large scales,
+which is in agreement with the cosmological principle. Moreover, this fact
+simplifies quite enough the complex tensorial formulation of the general
+relativity, thereby allowing finally to lead to the Friedmann's equations.
+
 
 
 	%---------------------------------------------------------------------
 	%Curved space metric
-	\subsection{Métrica de Espacios Curvados}
+	\subsection{Metric of Curved Spaces}
 	\label{subsec:MetricOFCurvedSpaces}
 	%---------------------------------------------------------------------
-	
 
-En la construcción de un modelo isotrópico y homogéneo del universo es
-necesario establecer una métrica adecuada que lo describa, como un ejemplo
-ilustrativo que puede ser generalizado se considera una superficie 
-esférica, que claramente satisface los criterios de homogeneidad e 
-isotropía.
+	
+%Reviewed
+In the construction of an isotropic and homogeneous model of universe, it 
+is necessary to establish an adequate metric which describes it properly. 
+An illustrative example that could be generalized is a 2D spherical 
+surface, which clearly satisfies the criteria of homogeneity and isotropy.
+
 
 
 %.........................................................................
@@ -71,38 +79,40 @@ isotropía.
 	\includegraphics[width=0.5\textwidth]
 	{./figures/2_theoretical_framework/2D_Sphere.png}
 	
-	\caption{\small{Métrica de una superficie esférica.}}
+	\caption{\small{Metric of a spherical surface.}}
 	
 	\label{fig:2sphere}
 \end{figure}
 %.........................................................................
 
 
+%Reviewed
+A line element over the surface shown in the figure \ref{fig:2sphere} can
+be described as
 
-Un elemento de línea sobre la superficie de la figura \ref{fig:2sphere} 
-puede ser descrito como
 
-
+%Reviewed
 %.........................................................................
 %Line element on the sphere
 \[ dl^2 = d\rho^2 + R_c^2 \sin^2 \pr{ \frac{\rho}{R_c}}d\phi^2 \]
 %.........................................................................
-donde se ha introducido una nueva coordenada de longitud sobre la superficie
-definida como $\rho = \theta R_c$ y $R_c$ radio de curvatura de la esfera. 
-Otra forma muy conveniente de reescribir esta expresión y que permite una
-generalización muy útil se logra introduciendo el parámetro de curvatura $k$ 
-y la coordenada $r = \sin (\rho/a)$, obteniendo
+where it have been introduced a new length coordinate over the surface, 
+defined as $\rho = \theta R_c$ and $R_c$ is the curvature radius of the 
+sphere. Another very convenient way to rewrite this expression, and that 
+allowing a very useful generalization, it is reached defining the curvature
+parameter $k$ and the coordinate $r = \sin (\rho/a)$, obtaining:
 
 
+%Reviewed
 %.........................................................................
 %Line element on the sphere with time-dependent curvature
 \[ dl^2 = a^2(t) \cor { \frac{dr^2}{1-kr^2} + r^2 d\phi^2 } \]
 %.........................................................................
-con $k = -1$ y se asume un radio de curvatura dependiente del tiempo 
-$R_c = a(t)$.
-La métrica para el caso de 3 dimensiones se obtiene reemplazando el 
-diferencial del ángulo $d\phi^2$ por uno de ángulo sólido $d\Omega^2 = 
-d\theta^2 + \sin^2\theta d\phi^2$
+with $k = -1$ and it is assumed a time-dependent curvature radius $R_c = 
+a(t)$. The metric in this case is 3D and is obtained by replacing the 
+differential element of angle $d\phi^2$ by the solid angle differential 
+$d\Omega^2 = d\theta^2 + \sin^2\theta d\phi^2$.
+
 
  
 %.........................................................................
@@ -113,8 +123,10 @@ d\theta^2 + \sin^2\theta d\phi^2$
 %.........................................................................
 
 
-Finalmente incluyendo el tiempo, el intervalo espacio-temporal para la 
-métrica de espacios curvos isotrópicos y homogéneos queda
+%Reviewed
+Finally, time is included, so the space-time interval for the metric of
+isotropic and homogeneous curved spaces is:
+
 
 
 %.........................................................................
@@ -125,10 +137,12 @@ métrica de espacios curvos isotrópicos y homogéneos queda
 %.........................................................................
 
 
-La generalización directa de esta expresión consiste en variar los valores
-del parámetro de curvatura $k$ para llegar a la métrica de espacios planos 
-($k = 0$), esféricos cerrados ($k = -1$) o abiertos ($k = 1$), tal como
-es mostrado en \cite{longair2008} o \cite{padmanabhan1995}.
+%Reviewed
+The direct generalization of this expression consists in varying the 
+different values of the curvature parameter $k$ in order to obtain the 
+metric of flat ($k = 0$), spherical closed ($k = -1$) or opened spaces
+($k = 1$), as it is shown in \cite{longair2008} or \cite{padmanabhan1995}.
+
 
 \
 %.........................................................................
@@ -138,15 +152,17 @@ es mostrado en \cite{longair2008} o \cite{padmanabhan1995}.
 	\includegraphics[width=0.9\textwidth]
 	{./figures/2_theoretical_framework/Curved_Spaces.png}
 
-	\caption{\small{Diferentes espacios curvos según el parámetro de curvatura.}}
+	\caption{\small{Curved spaces according to the curvature parameter.}}
 	
 	\label{fig:CurvedSpaces}
 \end{figure}
 %.........................................................................
 \
 
-Una manera alternativa de reescribir la métrica es introduciendo dos cambios 
-de coordenadas definidos por 
+%Reviewed
+An alternative way to rewrite the metric is introducing two changes of 
+coordinates defined as
+
 
 
 %.........................................................................
@@ -155,14 +171,16 @@ de coordenadas definidos por
 %.........................................................................
 
 
+%Reviewed
 %.........................................................................
 %Proper time
 \[ \tau = \int \frac{ c dt'}{a(t')}\]
 %.........................................................................
-los cuales se interpretan respectivamente como una coordenada de longitud 
-sobre la hipersuperficie que define el espacio ($\chi$) y como el tiempo 
-propio medido localmente ($\tau$). Se obtiene la siguiente expresiones para 
-la métrica
+where each one is respectively interpreted as a length coordinate over the 
+hypersurface that defines the space ($\chi$) and as the proper time 
+measured locally ($\tau$). It is obtained the next expressions for the 
+metric
+
 
 
 %.........................................................................
@@ -173,14 +191,16 @@ la métrica
 %.........................................................................
 
 
+%Reviewed
 %.........................................................................
 %Interval element generalized
 \eq{eq:IntervalCurvedSpacesAltern2}
 { ds^2 = \bar a^2 (\tau)\cor{ d\tau^2 - d\xi^2 -  f^2_k(\xi)(d\theta^2 + 
 \sin^2\theta d\phi^2)} }
 %.........................................................................
-donde la función $f_k(\chi)$ es definida de acuerdo al valor del parámetro 
-de curvatura
+where the function $f_k(\chi)$ is defined according to the value of the 
+curvature parameter.
+
 
 
 %.........................................................................
@@ -193,31 +213,37 @@ de curvatura
 %.........................................................................
 
 
-A pesar de que las expresiones derivadas para la métrica 
-\ref{eq:IntervalCurvedSpaces} \ref{eq:IntervalCurvedSpacesAltern1} y
-\ref{eq:IntervalCurvedSpacesAltern2} son equivalentes, el uso de una u otra
-depende de la conveniencia del problema. En especial la forma 
-\ref{eq:IntervalCurvedSpacesAltern1} suele ser más usada y se define como 
-métrica de Friedmann.
+%Reviewed
+In spite of the derived expressions for the metric 
+\ref{eq:IntervalCurvedSpaces} \ref{eq:IntervalCurvedSpacesAltern1} and
+\ref{eq:IntervalCurvedSpacesAltern2} are completely equivalent, the usage
+of one or another depends on the specific problem. Especially the 
+expression \ref{eq:IntervalCurvedSpacesAltern1} is usually more used and
+is defined as the Friedmann's metric.
 
 
-Puede ser mostrado que en variedades Riemannianas 
-\footnote{Una variedad Riemanniana es un espacio donde puede ser definido el 
-concepto de métrica.} 
-el intervalo espacio-temporal se expresa en términos de la tensor métrico
-como \cite{weinberg1972}
+%Reviewed
+It could be shown that in Riemannian manifolds \footnote{A Riemannian 
+manifold is a space where it can be defined (well-defined) a metric.},
+the space-time interval is expressed in terms of the metric tensor as
+\cite{weinberg1972}
 
 
+%Reviewed
 %.........................................................................
 %Metric-Interval relation
 \[ ds^2 = g_{\mu \nu}dx^\mu dx_\nu \]
 %.........................................................................
-donde se ha introducido el cuadrivector $x^\mu = (ct, r, \theta, \phi)$.
+where it has been introduced the cuadrivector $x^\mu = 
+(ct, r, \theta, \phi)$.
 
 
-Debido a la asunción de isotropía y homogeneidad el tensor métrico debe ser
-diagonal, además comparando con la expresión \ref{eq:IntervalCurvedSpaces}
-se llega a la siguiente forma explícita
+%Reviewed
+Due to the assumption of isotropy and homogeneity, the metric tensor must
+be diagonal, furthermore, comparing with the expression 
+\ref{eq:IntervalCurvedSpaces}, it is possible to obtain the next explicit 
+form
+
 
 
 %.........................................................................
@@ -231,53 +257,65 @@ se llega a la siguiente forma explícita
 %.........................................................................
 
 
-A partir de esta métrica y las ecuaciones de campo de Einstein es posible 
-construir sencillos modelos de universo, tal como se muestra a en la 
-subsección \ref{subsec:GeneralRelativityAndFriedmannEquations}.
+%Reviewed
+From this metric and the Einstein's field equations, it is possible to 
+build simple models of the universe, such as it shall be shown in the 
+subsection \ref{subsec:GeneralRelativityAndFriedmannEquations}.
+
 
 
 			%-------------------------------------------------------------
-			%Medidas de distancias
-			\subsubsection*{Medición de distancias}
+			%Measuring distances
+			\subsubsection*{Measuring distances}
 			%-------------------------------------------------------------
-			
-Una vez definida la métrica de espacios curvos es útil introducir algunos
-conceptos de distancia que son usados de forma recurrente \cite{longair2008}. 
-Por simplicidad se asumirá una métrica plana ($k = 0$).
 
+
+%Reviewed
+Once defined the metric of curved spaces, it is very useful to introduce
+some concepts related with distances, which are used recurrently 
+\cite{longair2008}. For the sake of simplicity it will be assumed a flat 
+metric ($k = 0$).
+
+
+%Reviewed
 \begin{itemize}
 %Comovil Radial Distance..................................................
-\item \textit{\textbf{Distancia radial comóvil:}} por definición, una señal 
-lumínica tiene asociado un valor nulo del intervalo $ds^2 = 0$, usando la 
-métrica \ref{eq:IntervalCurvedSpaces} se llega a
+\item \textit{\textbf{Comovil radial distance:}} by definition, a light
+signal has an associated null interval, i.e. $ds^2 = 0$. Using the 
+expression \ref{eq:IntervalCurvedSpaces} for the metric, it is obtained
 
 
+%Reviewed
 %.........................................................................
 %Comovil Distance
 \eq{eq:ComovilDistance}
 { r = \int_t^{t_0} \frac{ cdt'}{a(t')} = \int_a ^1 \frac{ c da}{a \dot a} }
 %.........................................................................
-donde la forma de $a(t)$ depende de la cosmología específica que se use
-(ver subsección \ref{subsec:SimpleSolutionsOfTheUniverse}) y $t_0$ es el 
-tiempo de referencia, el cual se toma como la edad actual del universo. 
+where the specific form of $a(t)$ depends on the specific chosen cosmology
+(see subsection \ref{subsec:SimpleSolutionsOfTheUniverse}) and $t_0$ is the
+reference time, which is taken as the current age of the universe.
 
 
-Debido a la asunción de expansión de la métrica, la distancia entre dos 
-objetos depende del tiempo en que es medida, y más aún, esta distancia no 
-puede ser determinada a partir de un haz de luz debido a la finitud de su
-velocidad \footnote{$c=299\ 792\ 458$ m/s}. Por esta razón se debe 
-realizar una proyección del cono de luz trazado por el haz en la época 
-actual, tal como se hace en la expresión \ref{eq:ComovilDistance}. Esto 
-último permite interpretar $r$ como la distancia a un objeto en el tiempo
-actual, y es diferente a la distancia aparente que corresponde al 
-tiempo en que el objeto emitió la luz que se observa.
+%Reviewed
+Due to the assumption of an expanding metric, the distance between two 
+objects depends on the time in which the measurement is performed. 
+Moreover, the distance cannot be determined from a beam of light since
+light has a finite velocity \footnote{$c=299\ 792\ 458$ m/s}. Because of 
+that, it must be performed a projection on the light-cone traced by the 
+beam in the current time, such as it is made in the expression 
+\ref{eq:ComovilDistance}. The latter allows interpreting $r$ as the 
+distance to an object in the current time, and it is quite different to
+the apparent distance which corresponds to the time when the object in 
+question emitted the observed light.
 
 
+%Reviewed
 %Proper Radial Distance..................................................
-\item \textit{\textbf{Distancia radial propia:}} en virtud de la definición
-de factor de escala, para obtener la distancia a un objeto en cualquier 
-tiempo basta multiplicar su distancia comóvil por el factor de escala en 
-ese mismo tiempo, esto es
+\item \textit{\textbf{Proper radial distance:}} by virtue of the 
+definition of scale factor, to obtain the distance to an object in any 
+time, it is enough to multiply the comovil distance by the scale factor 
+evaluated in the same time, that is
+
 
 
 %.........................................................................
@@ -288,12 +326,14 @@ a\int_a ^1 \frac{ c da}{a \dot a} }
 %.........................................................................	
 
 
+%Reviewed
 %Particle Horizon........................................................
-\item \textit{\textbf{Horizonte de partículas:}} considerando un haz de 
-luz que viaja en el vacío desde el inicio del universo en $t=0$, la máxima 
-distancia propia que puede haber recorrido en un tiempo $t$ se denomina 
-horizonte de partículas y determina la región que puede estar conectada 
-causalmente en el universo en esa época.
+\item \textit{\textbf{Particle horizon:}} considering a beam travelling 
+through vacuum since the beginning of all time, at $t=0$; the maxim proper
+distance that could be travelled by the light in a time $t$ is denominated 
+particle horizon and determines all regions in the universe that could 
+have been causally connected in that time. 
+
 
 
 %.........................................................................
@@ -306,48 +346,53 @@ a\int_0 ^a \frac{ c da}{a \dot a} }
 \end{itemize}
 	%---------------------------------------------------------------------
 	%General relativity and Friedmann equations
-	\subsection{Relatividad General y Ecuaciones de Friedmann}
+	\subsection{General Relativity and Friedmann's Equations}
 	\label{subsec:GeneralRelativityAndFriedmannEquations}
 	%---------------------------------------------------------------------
 	
 
-Las ecuaciones de campo métrico de Einstein desempeñan un papel fundamental
-en la relatividad general ya que expresan de forma explícita la relación 
-entre la materia y la geometría local del espacio-tiempo.
+%Reviewed
+The Einstein's field equations of the general relativity play a fundamental
+role since they express explicitly the relation between the matter 
+content of the universe and the local geometry of the space-time.
 
 
+%Reviewed
 %.........................................................................
 %EinsteinEquations
 \eq{eq:EinsteinEquations}
 { R_{\mu \nu} - \frac{1}{2}R - g_{\mu \nu}\Lambda = 
 \frac{8\pi G}{c^4}T_{\mu \nu} }
 %.........................................................................
-o de forma equivalente 
+or equivalently
 
 
+%Reviewed
 %.........................................................................
 %Einstein Equations Alternative
 \eq{eq:EinsteinEquationsAltern}
 { R_{\mu \nu} + g_{\mu \nu}\Lambda = 
 \frac{8\pi G}{c^4}\pr{T_{\mu \nu} - \frac{1}{2}T g_{\mu \nu}} }
 %.........................................................................
-donde $T$ es la traza del tensor momentum energía 
-(ver \ref{eq:MomentumEnergyTensor}), $R_{\mu \nu}$ el tensor de Ricci y $R
-$ el escalar de curvatura. Estos dos últimos calculados a partir de 
-trazas del tensor de curvatura de Riemann como 
-$R_{\mu \nu} = R^\eta_{\ \mu \eta \nu}$ y $R = R^{\mu}_{\ \mu}$. Por 
-conveniencia se ha introducido el término asociado a la constante 
-cosmológica y será usado posteriormente para calcular modelos de universo
-con energía oscura.
+where $T$ is the trace of the energy-momentum tensor (see 
+\ref{eq:MomentumEnergyTensor}), $R_{\mu \nu}$ the Ricci curvature tensor
+and $R$ the scalar curvature. The last two terms are calculated from 
+different traces of the Riemann curvature tensor, as $R_{\mu \nu} = 
+R^\eta_{\ \mu \eta \nu}$ and $R = R^{\mu}_{\ \mu}$. For convenience, it
+has been introduced the term associated with the cosmological constant, 
+which will be used below to calculate different models of the universe 
+with dark energy contribution.
 
 
-El tensor de Riemann cuantifica la diferencia entre la métrica del espacio-
-tiempo curvo y la métrica Euclideana y permite determinar completamente 
-las propiedades geométricas como la curvatura local, la medida de
-distancias y ángulos, etc \cite{weinberg1972}. Es construido a partir de 
-la conexión afín como
+%Reviewed
+The Riemann curvature tensor quantifies deviations of the metric of curved 
+space-times with respect to the Euclidean metric and allows to determinate
+completely the geometrical properties like the local curvature, different 
+measures of distances and angles, etc. \cite{weinberg1972}. This tensor is
+built from the Levi-Civita connection as
 
 
+%Reviewed
 %.........................................................................
 %Riemann Tensor
 \eq{eq:RiemannTensor}
@@ -357,7 +402,8 @@ la conexión afín como
 \Gamma^\mu_{\ \sigma \alpha}\Gamma^\sigma_{\ \nu \beta}-
 \Gamma^\mu_{\ \sigma \beta}\Gamma^\alpha_{\ \nu \alpha}}
 %.........................................................................
-a su vez la conexión afín se define en términos de la métrica
+with the Levi-Civita connection defined from the metric as
+
 
 
 %.........................................................................
@@ -369,11 +415,13 @@ g_{\alpha \beta, \sigma} } }
 %.........................................................................
 
 
-El lado derecho de la ecuación \ref{eq:EinsteinEquations} contiene el 
-tensor de momentum energía $T_{\mu \nu}$, que caracteriza la densidad y el 
-flujo materia-energía en el universo. En virtud del principio cosmológico
-este tensor también debe ser diagonal y si además se asume un modelo de 
-fluido ideal se obtiene la siguiente forma
+%Reviewed
+The right-hand side of the equation \ref{eq:EinsteinEquations} contains
+the energy-momentum tensor $T_{\mu \nu}$, which characterizes the density
+and the matter-energy flux of the universe. By virtue of the cosmological 
+principle, this tensor must also be diagonal and if, furthermore, it is 
+assumed an ideal fluid model, the next form is obtained
+
 
 
 %.........................................................................
@@ -387,13 +435,15 @@ c\rho^2	&	0	&	0	&	0				\cr
 %.........................................................................
 
 
-Finalmente usando las ecuaciones \ref{eq:MetricTensor}, 
-\ref{eq:EinsteinEquationsAltern} y \ref{eq:MomentumEnergyTensor} es posible 
-reducir el complejo sistema ecuaciones tensoriales a dos ecuaciones 
-escalares acopladas denominadas ecuaciones de Friedmann \cite{longair2008}. 
-Estas describen completamente la evolución de un universo isotrópico y 
-homogéneo en términos del factor de escala $a(t)$ (ver ecuación
-\ref{eq:LineElement3D})
+%Reviewed
+Finally, using the equations \ref{eq:MetricTensor}, 
+\ref{eq:EinsteinEquationsAltern} and \ref{eq:MomentumEnergyTensor}, it is 
+possible to reduce the complex system of tensorial equations to two scalar
+coupled equations which are usually called Friedmann's equations 
+\cite{longair2008}. These equations describe completely the evolution of
+an isotropic and homogeneous universe in terms of the scale factor $a(t)$ 
+(see equation \ref{eq:LineElement3D})
+
 
 
 %.........................................................................
@@ -412,47 +462,51 @@ homogéneo en términos del factor de escala $a(t)$ (ver ecuación
 %.........................................................................
 
 
-Para resolver este sistema en términos de $a(t)$ y obtener así la evolución 
-de la escala del universo es necesario conocer la forma en la que cambia la 
-densidad $\rho$ y la presión $P$ en el tiempo o el factor de escala, y para 
-todos los diferentes tipos de materia-energía del universo. Una derivación 
-detallada de estas dependencias puede ser encontrada en \cite{longair2008} y
-es resumido en la tabla \ref{tab:PropertiesDependence}
+%Reviewed
+In order to solve this equation system in terms of $a(t)$ and thereby 
+obtaining the evolution of the scale factor, it is necessary to know the 
+explicit time-dependent expression of the density $\rho$ and the pressure
+$P$, or equivalently, the dependence on the scale factor. This must be done
+for each type of energy-matter of the universe. A detailed derivation of
+these explicit expressions could be found in \cite{longair2008} and they
+are summarized in the table \ref{tab:PropertiesDependence}.
 
-\
+
+
 %.........................................................................
 %Table of dependences of Matter-Energy content of the universe with a
 \begin{table}[htbp]
 \centering
 \begin{tabular}{|c|c|c|c|} \hline
-\cellc{\textbf{Propiedad}} 	& 
-\cellc{\textbf{Densidad}} 	&
-\cellc{ \textbf{Presión}}	& 
-\cellc{\textbf{Temperatura}}		\\ \hline
+\cellc{\textbf{Property}} 	& 
+\cellc{\textbf{Density}} 	&
+\cellc{ \textbf{Pressure}}	& 
+\cellc{\textbf{Temperature}}		\\ \hline
 
 & & &  \\
-\textbf{Materia }& $\rho = \rho_0 a^{-3}(t)$ & $p = p_0 a^{-5}(t)$ & $T = T_0 a^{-2}(t)$ \\ 
-\small{(bariónica + oscura)} & & &  \\ \hline
+\textbf{Matter}& $\rho = \rho_0 a^{-3}(t)$ & $p = p_0 a^{-5}(t)$ & $T = T_0 a^{-2}(t)$ \\ 
+\small{(baryonic + dark)} & & &  \\ \hline
 & & &  \\
-\textbf{Radiación }& $\rho = \rho_0 a^{-4}(t)$ & $p = p_0 a^{-4}(t)$ & $T = T_0 a^{-1}(t)$ \\ 
-\small{(+ materia relativista)} & & &  \\ \hline
+\textbf{Radiation }& $\rho = \rho_0 a^{-4}(t)$ & $p = p_0 a^{-4}(t)$ & $T = T_0 a^{-1}(t)$ \\ 
+\small{(+ relativistic matter)} & & &  \\ \hline
 & & &  \\
-\textbf{Vacío }& $\rho = \rho_0 $ & $p = p_0 $ & $-$ \\ 
+\textbf{Vacuum }& $\rho = \rho_0 $ & $p = p_0 $ & $-$ \\ 
 & & &  \\ \hline
 \end{tabular}
-\caption{Dependencia de algunas propiedades físicas respecto al factor de escala
+\caption{Dependence of some quantities on the scale factor $a(t)$
 \cite{longair2008}.}
 \label{tab:PropertiesDependence}
 \end{table}
 %.........................................................................
 
 
-Por convención se ha tomado el factor de escala en el presente como
-$a_0 = a(t_0) = 1$ y los valores de referencia se definen como
-$\rho_0 = \rho(a_0)$, $P_0 = P(a_0)$ y $T_0 = T(a_0)$. Usando las 
-ecuaciones de Friedmann, definiendo el parámetro de Hubble 
-$H(t) = \dot a/ a$ y la densidad de vacío 
-$\rho_\Lambda = c^2\Lambda/8\pi G$ se obtiene
+%Reviewed
+By convention, it has been taken the current scale factor as $a_0 = a(t_0) 
+= 1$ and the reference values are defined as $\rho_0 = \rho(a_0)$, $P_0 = 
+P(a_0)$ and $T_0 = T(a_0)$. Using the Friedmann's equations, defining the
+Hubble parameter as $H(t) = \dot a/ a$ and the vacuum density as 
+$\rho_\Lambda = c^2\Lambda/8\pi G$, it is obtained
+
 
 
 %.........................................................................
@@ -463,19 +517,22 @@ $\rho_\Lambda = c^2\Lambda/8\pi G$ se obtiene
 %.........................................................................
 
 
-Evaluando esta expresión en el tiempo actual $H(t_0) = H_0$, con $H_0$ la 
-constante de Hubble y definiendo la densidad crítica $\rho_c$ como la 
-densidad actual necesaria para un universo plano
+%Reviewed
+Evaluating this expression in the current epoch $H(t_0) = H_0$, with $H_0$
+the Hubble constant and defining the critical density $\rho_c$ as the 
+density that the universe must have in order to be flat.
 
 
+%Reviewed
 %.........................................................................
 %Critical Density
 \eq{eq:CriticalDensity}
 { \rho_c = \frac{3H_0^2}{8\pi G} }
 %.........................................................................
-se llega a la ecuación de evolución para el parámetro de Hubble
+it leads to the equation of evolution for the Hubble parameter
 
 
+%Reviewed
 %.........................................................................
 %Hubble Equation
 \eq{eq:HubbleEquation}
@@ -485,15 +542,15 @@ se llega a la ecuación de evolución para el parámetro de Hubble
 \Omega_r \frac{1}{a^4} +
 \Omega_\Lambda} }
 %.........................................................................
-donde se han introducido los parámetros de densidad $\Omega_i$, definidos 
-como la densidad actual de la i-ésima especie en el tiempo actual 
-normalizada con la densidad crítica \ref{eq:CriticalDensity}, y 
-$\Omega_0 = \sum_i \Omega_i$. Estos parámetros de densidad junto con la 
-constante de Hubble hacen parte de los parámetros libres de la teoría y 
-deben ser establecidos observacionalmente, lo cual permite caracterizar 
-cosmologías particulares. \footnote{\textit{Cosmología} debe ser 
-entendida en este contexto como una solución específica de las ecuaciones 
-de Friedmann.}
+where it has been introduced the density parameters $\Omega_i$, defined
+as the current density of the i-th specie in the current epoch, normalized 
+with the critical density \ref{eq:CriticalDensity}, and $\Omega_0 = 
+\sum_i \Omega_i$. These density parameters along with the Hubble constant
+are part of the free parameters of the theory and must be determined by 
+observations. This allows to characterize different particular cosmologies
+\footnote{\textit{Cosmology} must be understood in this context as a 
+specific solution of the Friedmann's equations.}
+
 
 
 	%---------------------------------------------------------------------
