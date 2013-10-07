@@ -555,35 +555,40 @@ specific solution of the Friedmann's equations.}
 
 	%---------------------------------------------------------------------
 	%Simple solutions of the universe
-	\subsection{Soluciones Simples de Universo}
+	\subsection{Simple Solutions of the Universe}
 	\label{subsec:SimpleSolutionsOfTheUniverse}
 	%---------------------------------------------------------------------
 
 
-A pesar de que en este punto no ha sido introducido el formalismo de 
-pequeñas perturbaciones y la formación de estructuras, el conjunto de 
-ecuaciones \ref{eq:FriedmannEquation1}, \ref{eq:FriedmannEquation2} y 
-\ref{eq:HubbleEquation} permiten una primera comprensión rudimentaria de 
-la evolución del universo.
+%Reviewed
+Although in this stage it has not been introduced the complete formalism 
+of small perturbations and structure formation, the set of equations
+\ref{eq:FriedmannEquation1}, \ref{eq:FriedmannEquation2} and 
+\ref{eq:HubbleEquation} leads to a first and rough understanding of the
+evolution of the Universe.
 
 
-En esta subsección serán presentadas algunas soluciones analíticas de las 
-ecuaciones de Friedmann. A pesar de su carácter ideal, en algunos casos
-pueden ser usadas como aproximaciones a algunas etapas de evolución del 
-universo, permitiendo así un entendimiento físico más adecuado que 
-soluciones numéricas exactas.
+%Reviewed
+In this subsection will be presented some analytic solutions to the 
+Friedmann's equations. In spite of the ideal assumptions on which are
+based, in some cases, they can be used as approximations in some stages
+of evolution of the universe, thus allowing a physical understanding more 
+adequate than exact numerical solutions.
+
 
 
 			%-------------------------------------------------------------
 			%Einstein-de Sitter Universe
-			\subsubsection*{Universo Einstein - de Sitter}
+			\subsubsection*{Einstein - de Sitter Universe}
 			%-------------------------------------------------------------
 
 
-El universo Einstein-de Sitter es un modelo cosmológico con una métrica 
-plana y compuesto enteramente de materia, esto implica que 
-$\Omega_0 = \Omega_m = 1$ y $k=0$. Aplicando esto en la ecuación 
-\ref{eq:HubbleEquation} se obtiene
+%Reviewed
+The Einstein-de Sitter Universe is a cosmological model with a flat metric
+and composed entirely of matter, this implies that $\Omega_0 = \Omega_m = 1$ 
+and $k=0$. Applying this in equation \ref{eq:HubbleEquation}, it is obtained
+the next expression
+
 
 
 %.........................................................................
@@ -593,8 +598,10 @@ $\Omega_0 = \Omega_m = 1$ y $k=0$. Aplicando esto en la ecuación
 %.........................................................................
 
 
-Integrando se llega a la solución para el factor de escala en función del 
-tiempo
+%Reviewed
+Integrating, it leads to the explicit time-dependent solution for the 
+scale factor
+
 
 
 %.........................................................................
@@ -604,19 +611,21 @@ tiempo
 %.........................................................................
 
 
-A pesar de que en este caso es posible obtener la forma explícita de $a(t)$,
-la mayoría de veces solo se tiene una solución implícita de la forma $t(a)$.
-Otra forma muy útil de escribir esta solución es en términos del corrimiento
-al rojo $z$, el cual se relaciona con el factor de escala como 
-\cite{longair2008}
+%Reviewed
+Although in this case it is possible to obtain the explicit form of $a(t)$,
+most of the time it is only possible to have the implicit solution $t(a)$.
+Another very useful way to describe this solution is by using the redshift
+$z$, which is related with the scale factor as \cite{longair2008}
 
 
+%Reviewed
 %.........................................................................
 %Redshift
 \eq{eq:Redshift}
 { z + 1 = \frac{ a_0}{a} }
 %.........................................................................
-para obtener finalmente
+to finally obtain
+
 
 
 %.........................................................................
@@ -626,19 +635,24 @@ para obtener finalmente
 %.........................................................................
 
 
-Esta solución se aproxima al comportamiento del universo real en la época
-de dominio de la materia, entre $70000$ y $5$ millones de años después del 
-Big Bang \cite{padmanabhan1995}.
+%Reviewed
+This solution is quite close to the real behaviour of the universe in the 
+matter-dominated epoch, between $70000$ and $5$ millions of years after 
+the Big Bang \cite{padmanabhan1995}.
+
 
 
 			%-------------------------------------------------------------
 			%Radiation Dominated Universe
-			\subsubsection*{Universo dominado por radiación}
+			\subsubsection*{Radiation-Dominated Universe}
 			%-------------------------------------------------------------
 
-En este caso se asume un universo dominado completamente por radiación tal
-que $\Omega_0 = \Omega_r$, pero no necesariamente plano. La ecuaciones de 
-Friedmann conducen entonces a la siguiente expresión
+
+%Reviewed
+In this case, it will be assumed that the universe is radiation-dominated, 
+that is $\Omega_0 = \Omega_r$, but not necessarily flat. The Friedmann's 
+equations lead to the next expression
+
 
 
 %.........................................................................
@@ -649,10 +663,12 @@ Friedmann conducen entonces a la siguiente expresión
 %.........................................................................
 
 
-Integrando se obtiene la siguiente solución implícita para el factor de 
-escala
+%Reviewed
+Integrating this expression, it is obtained the next implicit solution for
+the scale factor
 
 
+%Reviewed
 %.........................................................................
 %Radiation Universe Solution
 \eq{eq:RadiationUniverseSolution}
@@ -661,7 +677,8 @@ H_0^{-1}(\Omega_r - 1)^{-1}\pr{ \Omega_r^{1/2} -
 \cor{a^2(1-\Omega_r) + \Omega_r}^{1/2} } & \Omega_r \neq 1 \cr
 H_0^{-1} a^2/2 & \Omega_r = 1} \right. }
 %.........................................................................
-o en términos del corrimiento al rojo
+or in terms of redshift
+
 
 
 %.........................................................................
@@ -674,22 +691,25 @@ H_0^{-1} (1+z)^{-2}/2 & \Omega_r = 1} \right. }
 %.........................................................................
 
 
-Esta solución es útil como una aproximación a la época dominada por 
-radiación, la cual sucedió desde la creación del universo hasta la 
-recombinación, aproximadamente $380 000$ años después del big bang, o 
-equivalentemente en un corrimiento al rojo de $z = 1100$ 
-\cite{padmanabhan1995}.
+%Reviewed
+This solution is useful as an approximation for the radiation-dominated 
+epoch, which happened from the big bang until the recombination epoch, 
+approximately $380 000$ years after the big bang, or equivalently in a
+redshift of $z = 1100$ \cite{padmanabhan1995}.
+
 
 
 			%-------------------------------------------------------------
 			%Vacuum Dominated Universe
-			\subsubsection*{Universo dominado por vacío}
+			\subsubsection*{Vacuum-dominated Universe}
 			%-------------------------------------------------------------
+		
+
+%Reviewed	
+This type of hypothetical universe is completely vacuum-dominated, or
+equivalently dominated by the cosmological constant. Making $\Omega_0 = 
+\Omega_\Lambda$ in the Friedmann's equations, it is obtained
 			
-Este tipo de universo hipotético corresponde a uno donde solo existe 
-energía asociada por vacío, o equivalentemente dominado por la constante 
-cosmológica. Haciendo $\Omega_0 = \Omega_\Lambda$ en las ecuaciones de 
-Friedmann se llega a 
 
 
 %.........................................................................
@@ -700,9 +720,11 @@ Friedmann se llega a
 %.........................................................................
 
 
-Solucionando para $t(a)$
+%Reviewed	
+Solving for $t(a)$
 
 
+%Reviewed
 %.........................................................................
 %Vacuum Universe Solution
 \eq{eq:VacuumUniverseSolution}
@@ -710,7 +732,8 @@ Solucionando para $t(a)$
 \ln\cor{ a \pr{ \frac{\Omega_\Lambda}{1 - \Omega_\Lambda} }^{1/2} +
 \pr{ 1 + \frac{\Omega_\Lambda}{1 - \Omega_\Lambda}a^2 }^{1/2} } }
 %.........................................................................
-y respecto al corrimiento al rojo
+and using the redshift
+
 
 
 %.........................................................................
@@ -722,39 +745,46 @@ y respecto al corrimiento al rojo
 %.........................................................................
 
 
-Lo interesante de esta solución es que solo es válida para valores del
-parámetro de densidad que satisfacen $0<\Omega_\Lambda <1$. Esto muestra 
-que no es posible tener universos con geometría plana o hiperbólica cuando 
-solo se tiene constante cosmológica. Otro aspecto igual de notable es la 
-concavidad de la función $a(t)$ obtenida de \ref{eq:VacuumUniverseSolution}
-(ver figura \ref{fig:Cosmologies}), lo que muestra una expansión acelerada
-del universo. Esta característica solo es posible cuando hay un término no 
-nulo de energía de vacío.
+%Reviewed
+This solution is very interesting because, unlike the previous solutions, 
+is only valid for values of the density parameter within the range 
+$0<\Omega_\Lambda <1$. This implies that it is not possible to have a  
+universe with flat or hyperbolic geometry when it is vacuum-dominated.
+Another aspect equally remarkable is the concavity of the scale factor 
+$a(t)$ obtained from \ref{eq:VacuumUniverseSolution} (see figure 
+\ref{fig:Cosmologies}), which shows an accelerated expansion of the 
+universe. This characteristic is only possible when there is a non-null 
+term associated to the vacuum energy.
 
 
-Finalmente y al igual que las anteriores soluciones, la expresión 
-\ref{eq:VacuumUniverseSolution} puede ser usada como aproximación a la era
-de dominio de vacío del universo, la cual va desde el fin de la era de 
-dominio de materia, $5$ millones de años después del 
-Big Bang, hasta la actualidad \cite{longair2008}.
+%Reviewed
+Finally and like the previous solutions, the expression 
+\ref{eq:VacuumUniverseSolution} can be used as an approximation for the
+vacuum-dominated epoch of the universe, which lasts from the end of the
+matter-dominated epoch, $5$ millions of years after the big bang, until 
+nowadays \cite{longair2008}.
+
 
 
 			%-------------------------------------------------------------
 			%WMAP7 Universe
-			\subsubsection*{Universo WMAP7}
+			\subsubsection*{WMAP7 Universe}
 			%-------------------------------------------------------------
 			
-El conjunto de parámetros derivados del modelo cosmológico estándar han 
-sido medidos en varias ocasiones por diferentes sondas espaciales (ver 
-sección \ref{sec:CosmologicalObservations}), entre estas destaca el WMAP. 
-Los datos derivados después de siete años de esta sonda (WMAP7) son los 
-adoptados en este trabajo \cite{WMAP7}. Entre los parámetros cosmológicos 
-medidos se encuentra la constante de Hubble y los parámetros de densidad 
-$\Omega_i$. Tomando los valores de la tabla \ref{tab:CosmologicalParameters} 
-y por simplicidad asumiendo $\Omega_0 = 1$ es posible integrar las 
-ecuaciones de Friedmann
+			
+%Reviewed
+The set of parameters associated to the standard cosmological model has 
+been measured on several occasions by different spacecraft missions (see
+section \ref{sec:CosmologicalObservations}). Among those measurements it 
+is notable the one conducted by WMAP. The data obtained after seven years
+of observation (WMAP7) are adopted in this work \cite{WMAP7}. Among the 
+cosmological parameters measured are the Hubble constant and the density
+parameters $\Omega_i$. Taking the values given in the table 
+\ref{tab:CosmologicalParameters} and for simplicity assuming $\Omega_0 = 1$
+it is possible to integrate the Friedmann's equations
 
-
+			
+%Reviewed	
 %.........................................................................
 %WMAP Universe
 \eq{eq:WMAPUniverse}
@@ -763,7 +793,7 @@ ecuaciones de Friedmann
 \Omega_r \frac{1}{a^4} +
 \Omega_\Lambda} }
 %.........................................................................
-para llegar a
+to obtain
 
 
 %.........................................................................
@@ -783,32 +813,35 @@ para llegar a
 	\includegraphics[width=0.9\textwidth]
 	{./figures/2_theoretical_framework/Friedmann_Solution.pdf}
 
-	\caption{\small{Diferentes soluciones de universo para las ecuaciones
-	de Friedmann.}}
+	\caption{\small{Different solutions of the universe according to the
+	Friedmann's equations.}}
 	
 	\label{fig:Cosmologies}
 \end{figure}
 %.........................................................................
 \
 
-Es posible obtener una solución analítica de esta integral en términos de 
-funciones elípticas, pero por simplicidad se opta por realizar una 
-integración numérica. En la figura \ref{fig:Cosmologies} se muestra la 
-solución para el universo WMAP7 y se compara con las demás cosmologías 
-derivadas previamente.
+%Reviewed
+It is possible to obtain an analytic solution of this integral in terms of
+elliptic functions, but for simplicity it is chosen the numerical solution.
+In the figure \ref{fig:Cosmologies} is shown the solution for a WMAP7 
+universe and it is compared with other cosmologies, derived previously.
 
 
-Una característica interesante de la solución para un universo WMAP7 es
-el cambio de concavidad (ver curva negra en la figura \ref{fig:Cosmologies})
-que indica que se pasa de un régimen dominado por materia/radiación a uno 
-dominado por la expansión acelerada asociada a la energía del vacío. 
-Otro aspecto importante es la predicción de la edad el universo. Teniendo 
-en cuenta la normalización definida anteriormente para el factor de escala 
-$a(t_0) = a_0$, es directo ver que $t_0 = H_0^{-1} \approx 13.75 \times 10^9$ 
-años. Otras cosmologías bajo la misma normalización predicen edades
-diferentes, desde mayores como el caso del universo de vacío, hasta mucho 
-menores e inclusive un tiempo final (big crunch) como el universo con 
-geometría cerrada con radiación.
+%Reviewed
+An interesting characteristic of the solution for the WMAP7 universe is 
+the change of concavity (black curve in the figure \ref{fig:Cosmologies}), 
+which indicates a transition from the matter/radiation-dominated epoch
+to an accelerated expanding regime associated to the vacuum energy.
+Another important aspect is the prediction of the age of the universe.
+Taking into account the previously defined normalization for the scale
+factor $a(t_0) = a_0$, it is straightforward to see that $t_0 = H_0^{-1} 
+\approx 13.75 \times 10^9$ years. Other cosmologies under the same 
+normalization predict different ages, since larger values such as a 
+vacuum-dominated universe, until smaller and even a collapse time (usually
+known as big crunch time) such as a radiation-dominated and closed 
+universe.
+
 
 
 %*************************************************************************
@@ -818,7 +851,7 @@ geometría cerrada con radiación.
 
 %*************************************************************************
 %Linear Structure Formation
-\section{Régimen Lineal de Formación de Estructuras}
+\section{Linear Regime of Structure Formation}
 \label{sec:LinearStructureFormation}
 
 
