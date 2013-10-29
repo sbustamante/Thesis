@@ -53,7 +53,7 @@ As it has been evidenced by observations of large-scale structures and the
 CMB, the universe appears to be isotropic and homogeneous at large scales,
 which is in agreement with the cosmological principle. Moreover, this fact
 simplifies quite enough the complex tensorial formulation of the general
-relativity, thereby allowing finally to lead to the Friedmann's equations.
+relativity, thereby allowing finally leading to the Friedmann's equations.
 
 
 
@@ -862,7 +862,7 @@ has this asymptotic behaviour at very large scales, at smaller local scales
 the behaviour is quite different, being even completely anisotropic and 
 highly non-homogeneous. Life is certainly the most illustrative example of 
 that, one of the highest non-linearities of the universe, and thus, 
-planets, stars, galaxies, galaxy clusters, in the same order of 
+planets, stars, galaxies, galaxy clusters, in the same decreasing order of 
 inhomogeneity and anisotropy.
 
 
@@ -885,8 +885,8 @@ comparable or even larger ($\delta \rho \sim \rho_b$) (see section
 	%---------------------------------------------------------------------
 
 
-
-The frame of the linear evolution can be presented in two ways. The first 
+%Reviewed
+The frame of linear evolution can be presented in two ways. The first 
 one is by considering a perturbative term in the energy-momentum tensor
 $ \delta T_{\mu \nu}$ and linearizing the Einstein's field equations 
 \ref{eq:EinsteinEquations} and finally solving for $\delta R_{\mu \nu}$
@@ -901,24 +901,26 @@ $ \delta T_{\mu \nu}$ and linearizing the Einstein's field equations
 %.........................................................................
 
 
-A pesar de que este método es rigurosamente más adecuado, tiene un 
-incoveniente que lo hace considerablemente complicado de aplicar, los 
-términos perturbativos no lo son necesariamente en todos los sistemas 
-coordenados e incluso pueden llegar a ser del mismo orden o mayores que el 
-término de fondo \cite{padmanabhan1995}.
+%Reviewed
+Although this method is, rigorously, more adequate, it has an inconvenience
+which makes it very complicated of applying. Non-perturbative terms are 
+not necessarily small in all the coordinate systems, inclusively, they can 
+reach values with the same order or even bigger than the background mean 
+density \cite{padmanabhan1995}.
 
 
-El segundo método consiste en asumir perturbaciones con una dimensión 
-comóvil menor al radio de Hubble ($r_\delta \ll r_H \sim cH_0^{-1}$) 
-\footnote{Un radio de Hubble $r_H$ es una unidad de longitud que define 
-el orden de magnitud del tamaño del universo observable.}, y así 
-despreciar los efectos relativistas debido a la curvatura de la 
-espacio-tiempo. Una vez hecho esto es posible usar un esquema Newtoniano 
-para el desarrollo de las perturbaciones en el universo de fondo, este 
-esquema asume el contenido de materia como un fluido y está soportado por 
-tres ecuaciones básicas de la mecánica de fluidos. La primera es la 
-ecuación de continuidad que representa la conservación de la masa del 
-fluido
+%Reviewed
+The second method consists in assuming perturbations with a comovil size
+smaller than the Hubble radius ($r_\delta \ll r_H \sim cH_0^{-1}$)
+\footnote{The Hubble radius $r_H$ is a length unit that defines the 
+order of magnitude of the size of the observable universe.}, thereby
+being possible to neglect relativistic effects due to the curvature
+of the space-time. Once this is done, it is possible to use a Newtonian
+scheme to evolve perturbations of the background universe. This scheme
+assumes that the matter content of the universe is a fluid described by
+three basic equations of fluid mechanics. The first one is the continuity
+equation, which expresses mass conservation in a fluid
+
 
 
 %.........................................................................
@@ -928,8 +930,9 @@ fluido
 %.........................................................................
 
 
-La segunda es la ecuación de Euler que caracteriza el campo de velocidades
-del fluido y físicamente representa la conservación del momentum
+%Reviewed
+The second one, Euler's equation, characterizes the velocity field of the 
+fluid, and physically it expresses the momentum conservation law
 
 
 %.........................................................................
@@ -939,9 +942,11 @@ del fluido y físicamente representa la conservación del momentum
 %.........................................................................
 
 
-Y finalmente la ecuación de Poisson que es la forma no relativista de las 
-ecuaciones de campo de Einstein y especifica el contenido de materia como
-fuentes de campo gravitacional.
+%Reviewed
+And finally the Poisson's equation, which is the non-relativistic version
+of the Einstein's field equations and expresses the relation between the
+matter content of the universe and sources of gravitational field.
+
 	
 	
 %.........................................................................	
@@ -951,18 +956,21 @@ fuentes de campo gravitacional.
 %.........................................................................	
 
 
-Para completar el marco Newtoniano de perturbaciones es necesario incluir 
-en el anterior sistema de ecuaciones (\ref{eq:ContinuityEquation}, 
-\ref{eq:EulerEquation} y \ref{eq:PoissonEquation}) el efecto de la 
-expansión del universo, para esto se realiza un cambio de coordenadas de
-distancia propia $\bds x$ a distancia comóvil $\bds r$
+
+In order to complete the Newtonian frame of perturbations is necessary to 
+include in the previous system of equations (\ref{eq:ContinuityEquation}, 
+\ref{eq:EulerEquation} and \ref{eq:PoissonEquation}) the effect of the 
+expansion of the universe by making a change of coordinates of the proper
+distance $\bds x$ to comovil distance $\bds r$
+
 
 
 %.........................................................................	
 %Changing Coordinate
 \[\bds x = a \bds r\]
 %.........................................................................	
-esto implica directamente que
+this implies that
+
 
 
 %.........................................................................	
@@ -972,20 +980,23 @@ esto implica directamente que
 %.........................................................................	
 
 
-Esta forma de reescribir $\bds u$ permite separar la componente debida a la
-expansión del universo ($\dot a/a \bds x$), o también denominada Ley de 
-Hubble, de la componente debida al movimiento del fluido, denominado campo 
-de velocidad peculiar y es definido como $\bds v = a \dot{ \bds r}$.
+
+This way to rewrite $\bds u$ allows separating the contribution of the 
+expansion of the universe ($\dot a/a \bds x$), also called Hubble's law,
+from the component due to the movement of the fluid, called peculiar 
+velocity field and it is defined as $\bds v = a \dot{ \bds r}$.
+
 
 	
-Por conveniencia se descompone el campo de densidad del fluido en una parte 
-media o de fondo y en una parte perturbativa, esto es 
-$\rho = \bar \rho + \delta\rho = \bar \rho( 1+ \delta )$, donde $\delta$ se 
-denomina parámetro de densidad y es adimensional. En el caso del potencial 
-gravitacional $\varphi$ se define un nuevo campo dado por 
-$ \Phi = \phi + \ddot a a r^2/2$ \cite{longair2008}. Con estas 
-consideraciones se obtiene finalmente el conjunto final de ecuaciones
-de fluido para el marco Newtoninano
+For the sake of simplicity it is decomposed the density field of the fluid 
+into two parts, the background contribution and a perturbative term, that 
+is $\rho = \bar \rho + \delta\rho = \bar \rho( 1+ \delta )$, where $\delta$
+is called the density parameter and is dimensionless. In the case of the 
+gravitational potential $\varphi$, it is defined a new field given by 
+$ \Phi = \phi + \ddot a a r^2/2$ \cite{longair2008}. With these 
+considerations it is finally obtained the final set of equations for 
+describing a fluid in the Newtonian frame.
+
 
 
 %.........................................................................	
@@ -993,13 +1004,13 @@ de fluido para el marco Newtoninano
 \begin{eqnarray}
 %.........................................................................	
 \label{eq:ContinuityEquationC}
-\matrix{\mbox{\footnotesize{Ecuación de}} \cr \mbox{\footnotesize{continuidad}}} & &
+\matrix{\mbox{\footnotesize{Continuity}} \cr \mbox{\footnotesize{equation}}} & &
 \der{\delta}{t} = - \frac{1}{a}\nabla_r \cdot \cor{ (1+\delta)\bds v }\\
 \nonumber{}
 \\
 %.........................................................................	
 \label{eq:EulerEquationC}
-\matrix{\mbox{\footnotesize{Ecuación de}} \cr \mbox{\footnotesize{Euler}}} & &
+\matrix{\mbox{\footnotesize{Euler's}} \cr \mbox{\footnotesize{equation}}} & &
 \der{\bds v}{t} + \frac{\dot a}{a}\bds v + 
 \frac{1}{a}\pr{ \bds v\cdot \nabla_r }\bds v = 
 -\frac{\nabla_r P}{a \bar \rho(1+\delta)} - 
@@ -1008,24 +1019,26 @@ de fluido para el marco Newtoninano
 \\
 %.........................................................................	
 \label{eq:PoissonEquationC}
-\matrix{\mbox{\footnotesize{Ecuación de}} \cr \mbox{\footnotesize{Poisson}}} & &
+\matrix{\mbox{\footnotesize{Poisson's}} \cr \mbox{\footnotesize{equation}}} & &
 \nabla^2_r \Phi = 4\pi G\bar \rho a^2 \delta
 \end{eqnarray}
 %.........................................................................	
 
 
-Hasta este punto no se ha hecho explícito el tipo de contenido 
-materia-energía que es perturbado con las ecuaciones de fluido (e.g. 
-radiación, materia o energía oscura). Siguiendo el procedimiento para 
-derivar el anterior sistema puede notarse que no se ha hecho ninguna 
-suposición a priori sobre comportamiento de las variables de estado respecto
-al factor de escala (ver tabla \ref{tab:PropertiesDependence}), por tanto 
-son válidas para cualquiera de las especies
-\footnote{De acá en adelante cada uno de los tipos de materia-energía que 
-contribuyen al tensor momentum-energía serán denominados \textit{especies}.} 
-presentes en el universo. Teniendo en cuenta que las estructuras del universo 
-actual son completamente de materia, solo se usará el marco Newtoniano para 
-perturbaciones de esta especie.
+
+Until this stage it has not made explicit what type of matter-energy 
+content is described by the above perturbative fluid equations (e.g. 
+radiation, dark matter, dark energy). Taking into account the followed 
+procedure to derive the previous system of equations, it can be noticed
+that no \textit{a priori} assumption has been made about the explicit 
+dependence of the state variables on the scale factor (see table 
+\ref{tab:PropertiesDependence}), therefore they are valid for any of the
+different species \footnote{Henceforth, each one of the different 
+matter-energy contents that contributes to the momentum-energy tensor, 
+will be called \textit{specie}.} present in the universe. Bearing in mind 
+that the structures of the current universe are completely composed of 
+matter, it will be only used the Newtonian frame for this specie.
+
 
 
 Las cantidades físicas que deben ser determinadas a partir de las ecuaciones
