@@ -280,7 +280,7 @@ metric ($k = 0$).
 %Reviewed
 \begin{itemize}
 %Comovil Radial Distance..................................................
-\item \textit{\textbf{Comovil radial distance:}} by definition, a light
+\item \textit{\textbf{Comoving radial distance:}} by definition, a light
 signal has an associated null interval, i.e. $ds^2 = 0$. Using the 
 expression \ref{eq:IntervalCurvedSpaces} for the metric, it is obtained
 
@@ -313,7 +313,7 @@ question emitted the observed light.
 %Proper Radial Distance..................................................
 \item \textit{\textbf{Proper radial distance:}} by virtue of the 
 definition of scale factor, to obtain the distance to an object in any 
-time, it is enough to multiply the comovil distance by the scale factor 
+time, it is enough to multiply the comoving distance by the scale factor 
 evaluated in the same time, that is
 
 
@@ -910,7 +910,7 @@ density \cite{padmanabhan1995}.
 
 
 %Reviewed
-The second method consists in assuming perturbations with a comovil size
+The second method consists in assuming perturbations with a comoving size
 smaller than the Hubble radius ($r_\delta \ll r_H \sim cH_0^{-1}$)
 \footnote{The Hubble radius $r_H$ is a length unit that defines the 
 order of magnitude of the size of the observable universe.}, thereby
@@ -961,7 +961,7 @@ In order to complete the Newtonian frame of perturbations is necessary to
 include in the previous system of equations (\ref{eq:ContinuityEquation}, 
 \ref{eq:EulerEquation} and \ref{eq:PoissonEquation}) the effect of the 
 expansion of the universe by making a change of coordinates of the proper
-distance $\bds x$ to comovil distance $\bds r$
+distance $\bds x$ to comoving distance $\bds r$
 
 
 %Reviewed
@@ -1086,7 +1086,7 @@ space the modes of the field are decoupled naturally.
 Since it has been assumed perturbations with characteristic lengths 
 smaller than the Hubble's radius, the volume of the observable universe 
 can be considered infinite, and therefore decomposition of the fields 
-in comovile coordinates becomes discrete, obtaining
+in comoving coordinates becomes discrete, obtaining
 
  
 
@@ -1136,28 +1136,31 @@ fields associated to the perturbations.
 
 	%---------------------------------------------------------------------
 	%Jeans Instability
-	\subsection{Inestabilidad de Jeans}
+	\subsection{Jeans Instability}
 	\label{subsec:JeansInstability}
 	%---------------------------------------------------------------------
 	
 	
-Las soluciones de la ecuación \ref{eq:ContinuityEquationCMode} para los 
-modos del campo de densidad pueden ser clasificadas en dos familias, la 
-primera son soluciones donde la amplitud de los modos oscilan en el tiempo
-y no colapsan. La segunda familia son aquellas donde los modos crecen en el 
-tiempo, colapsando y volviéndose altamente no lineales ($\delta_k \gg 1$). 
-Un ejemplo sencillo que ilustra lo anterior y puede ser generalizado 
-consiste en considerar perturbaciones en un universo estático, es decir 
-$\dot a = 0$. Teniendo en cuenta esto la ecuación 
-\ref{eq:ContinuityEquationCMode} toma la forma
+%Reviewed
+Solutions to the equation \ref{eq:ContinuityEquationCMode} for the modes
+of the density field can be classified into two different families. The 
+first one is a set of solutions where the amplitude of each mode oscillates
+over time and does not collapse. The second family is a set of solutions 
+where each mode grows up over time, collapsing and becoming highly 
+non-linear ($\delta_k \gg 1$). A quite simple example that illustrates the
+above discussed and can be generalized, involves taking perturbations in 
+a static universe, that is $\dot a = 0$. Taking this into account, the 
+equation \ref{eq:ContinuityEquationCMode} is rewritten as
 
 
+%Reviewed
 %.........................................................................	
 %JeansEquation
 \eq{eq:JeansEquation}
 {\dtot{^2 \delta_{\bds k}}{t^2} -\omega_k^2 \delta_{\bds k} = 0,\ \ \ a=\mbox{cte}}
 %.........................................................................	
-donde se ha definido la frecuencia característica $\omega_k$ como
+where it has been defined the characteristic frequency $\omega_k$ as
+
 
 
 %.........................................................................	
@@ -1167,29 +1170,35 @@ donde se ha definido la frecuencia característica $\omega_k$ como
 %.........................................................................	
 	
 
-La expresión \ref{eq:JeansEquation} es denominada ecuación de Jeans y 
-tiene la forma de una ecuación de ondas, con base en esto las soluciones 
-pueden ser clasificadas según el valor de $\omega_k$, tal como se había
-mencionado inicialmente.
+%Reviewed
+Expression \ref{eq:JeansEquation} is called Jeans equation and it has the
+form of a wave equation. Based upon this, solutions can be classified 
+according to the value of $\omega_k$, such as it has been said initially.
 
 
+%Reviewed
 %.........................................................................	
 %Jeans Criteria
 \begin{itemize}
-\item Si $\omega_k^2>0$ el modo $\delta_{\bds k}$ se comporta de forma 
-oscilatoria, manteniendo su amplitud constante en el tiempo. Esta solución
-no es de interés para el contexto de formación de estructuras debido a que
-no es posible llegar tener colapso gravitacional.
+\item If $\omega_k^2>0$, the mode $\delta_{\bds k}$ behaves like an 
+oscillator, while it maintains its oscillation amplitude constant over 
+time. This solution is not of interest in the context of structure 
+formation because it is not possible to lead gravitational collapse.
 
-\item Si $\omega_k^2<0$ la amplitud del modo $\delta_{\bds k}$ crece en el 
-tiempo, permitiendo el colapso y la formación de estructuras no lineales.
+
+%Reviewed
+\item If $\omega_k^2<0$, the amplitude of the mode $\delta_{\bds k}$ grows
+up over time, thereby allowing gravitational collapse and formation of 
+non-linear structures.
 \end{itemize}
 %.........................................................................	
 
 
-La expresión \ref{eq:JeansFrequency} para $\omega_k$ junto con el anterior 
-criterio para determinar el tipo de solución permite definir la longitud 
-de Jeans $\lambda_J$
+%Reviewed
+Expression \ref{eq:JeansFrequency} for $\omega_k$, along with the 
+previously defined criteria to determine the type of solution, allow to 
+define the Jeans length $\lambda_J$
+
 
 
 %.........................................................................	
@@ -1200,11 +1209,13 @@ c_s \pr{ \frac{\pi}{G \bar \rho} }^{1/2} }
 %.........................................................................	
 
 
-Esta longitud se interpreta como el mínimo tamaño en coordenadas comóviles 
-que debe tener una perturbación embebida en un medio homogéneo y estático
-de densidad $\bar \rho$ para colapsar gravitacionalmente. En este mismo 
-contexto es posible definir la masa de Jeans como la mínima masa necesaria
-para el colapso.
+%Reviewed
+This length can be interpreted as the minimal size in comoving coordinates
+that must have a perturbation in a homogeneous and static medium with a 
+density value $\bar \rho$, in order to collapse gravitationally. In this
+same context it is possible to define the Jeans mass as the minimal mass
+value needed for the collapse.
+
 
 
 %.........................................................................	
@@ -1214,22 +1225,26 @@ para el colapso.
 %.........................................................................
 
 
-A pesar de que lo derivado anteriormente solo es estrictamente válido para 
-medios estáticos, la importancia de su consideración es debida a dos 
-razones: la primera es el interés histórico, ya que el problema de 
-perturbaciones que crecen en medios homogéneos surge inicialmente en 
-astronomía estelar, donde es necesario calcular la masa mínima de una 
-perturbación para su colapso y posterior formación de estrellas y sistemas 
-planetarios. La segunda razón de debe a que la solución para medios 
-estáticos sirve para evaluar el comportamiento asintótico y la validación 
-de las soluciones generales para medios en expansión.
+%Reviewed
+In spite of the results previously derived are only strictly valid for 
+static mediums, the importance of considering it lies in two reasons: the
+first one is the historic interest, just because the problem of 
+perturbations that grow up in homogeneous mediums emerged initially in the 
+context of stellar astronomy, where it is necessary to calculate the 
+minimal mass of a perturbation in a gas cloud needed for its collapse and 
+subsequent formation of stars and planetary systems. The second reason is 
+that the solution for static mediums allows evaluating the asymptotic 
+behaviour and the validation of general solutions for expanding mediums.
 
 
-Antes de proseguir con las soluciones para medios en expansión es 
-conveniente usar las definiciones de longitud y masa de Jeans como 
-aproximaciones al caso general, para esto se usa la tabla de propiedades en
-función del factor de escala \ref{tab:PropertiesDependence} y la definición 
-de la velocidad del sonido en un medio \cite{pathria1996}
+%Reviewed
+Before to continue with the solutions for expanding mediums, it is 
+convenient to use the definitions of the Jean mass and length as an 
+approach for the general case. In order to obtain this, table 
+\ref{tab:PropertiesDependence} is used to evaluate the dependence on the
+scale factor of each physical property, furthermore the definition of the 
+velocity of sound in a medium \cite{pathria1996}
+
 	
 
 %.........................................................................	
@@ -1243,9 +1258,11 @@ de la velocidad del sonido en un medio \cite{pathria1996}
 %Jeans length and mass
 \begin{itemize}
 %Matter perturbations
-\item En el caso de perturbaciones de materia bariónica se usa la ecuación 
-de estado de gas ideal asumiendo hidrógeno atómico y se obtiene la
-siguiente expresión para la masa de Jeans
+%Reviewed
+\item In the case of baryonic matter perturbations, it is used the 
+equation of state for an ideal gas assumed of monoatomic hydrogen, and
+this leads the below expression for the Jeans mass
+
 
 
 %.........................................................................	
@@ -1256,17 +1273,20 @@ siguiente expresión para la masa de Jeans
 %.........................................................................
 
 
-Por conveniencia se ha introducido el factor de escala correspondiente a la 
-época de recombinación \footnote{Época en la que se desacopla la
-materia y la radiación, sucede en un corrimiento al rojo aproximadamente de
-$z_{\submath{rc}}\approx 1000$.}$a_{\submath{rc}}$.
+%Reviewed
+For convenience it has been introduced the scale factor that corresponds
+to the recombination epoch \footnote{Epoch in which matter and radiation 
+got decoupled, it happened in a redshift of $z_{\submath{rc}}\approx 1000$,
+approximately}$a_{\submath{rc}}$.
 
 
+%Reviewed
 %Radiation perturbations
-\item Para perturbaciones de radiación y materia relativista se usa la 
-ecuación de estado de la presión de radiación del campo electromagnético 
-\cite{jackson1999} $P = c^2\rho/3$ y la ley de Stefan-Boltzmann
-$\rho \propto T^4$, se obtiene la siguiente masa de Jeans
+\item For radiation and relativistic matter perturbations, it is used the 
+equation of state for the radiation pressure of the electromagnetic field
+\cite{jackson1999} $P = c^2\rho/3$ and the Stefan-Boltzmann law $\rho 
+\propto T^4$. It is obtained the next expression for the Jeans mass
+
 
 
 %.........................................................................	
@@ -1278,25 +1298,27 @@ $\rho \propto T^4$, se obtiene la siguiente masa de Jeans
 %.........................................................................
 
 	
-Ambos casos pueden ser usados como aproximaciones a diferentes estadios del 
-universo. Antes de la época de recombinación, cuando la materia y la 
-radiación estaban acopladas vía efecto Compton, las perturbaciones solo 
-colapsan si tienen una masa aproximada a la masa de Jeans 
-\ref{eq:RadiationJeansMass}. Después de esta época, cuando la materia 
-evoluciona de forma independiente es válida la expresión 
-\ref{eq:MatterJeansMass}.
+%Reviewed
+Both cases can be used as approximations for different stages of the 
+universe. Before to the epoch of recombination, when matter and radiation
+were coupled via Compton scattering, perturbations collapse only if they 
+have a mass value close to the Jean mass \ref{eq:RadiationJeansMass}. After
+of this epoch, when matter evolves independently, expression 
+\ref{eq:MatterJeansMass} becomes valid.
 
 
-En la figura \ref{fig:JeansMass} se ilustra el cambio de la masa de Jeans
-respecto al factor de escala del universo. Es interesante notar que antes 
-de la época de recombinación la formación de estructuras poco masivas era
-impedida, lo que se debe al proceso de homogeneización producido por la 
-difusión de fotones en el medio. Luego de esta época, cuando surgen las 
-perturbaciones de materia bariónica, es posible la formación de estructuras 
-menos masivas (del orden de cúmulos globulares), lo que está acorde con la
-teoría de formación jerárquica de estructuras a gran escala.
+%Reviewed
+In the figure \ref{fig:JeansMass} is illustrated how the Jeans mass changes
+with the scale factor. It is interesting to notice that before to the 
+epoch of recombination, formation of low-mass structures was impeded due to
+the homogenization process produced by diffusion of photons in the medium.
+After of this epoch, when baryonic matter perturbations arises, it is 
+possible to form low-mass structures (like globular clusters), what is
+in agreement with the theory of hierarchical large-scale structure 
+formation.
 
-	
+
+%Reviewed
 %.........................................................................
 %Jeans Mass Evolution
 \begin{figure}[htbp]
@@ -1304,22 +1326,24 @@ teoría de formación jerárquica de estructuras a gran escala.
 	\includegraphics[width=0.9\textwidth]
 	{./figures/2_theoretical_framework/Jeans_Mass_Evolution.pdf}
 
-	\caption{\small{Evolución de la masa de Jeans para diferentes estadios
-	del universo. En las regiones coloreadas se ilustra el rango típico de 
-	masa para varios tipos de estructuras, desde cúmulos estelares abiertos
-	hasta cúmulos y supercúmulos de galaxias.}}
+	\caption{\small{Evolution of the Jean mass for different stages of the
+	universe. Coloured regions illustrate the typical mass range of some 
+	types of structures, since open stellar clusters to superclusters of 
+	galaxies.}}
 	
 	\label{fig:JeansMass}
 \end{figure}
 %.........................................................................	
 	
 
-Con el anterior análisis se ha establecido la masa mínima necesaria para 
-el colapso de una perturbación, a continuación se estudia la evolución de
-tales perturbaciones en medios en expansión. Para esto se hace uso de los
-modelos de universo derivados en la subsección 
-\ref{subsec:SimpleSolutionsOfTheUniverse} y la ecuación general de evolución
-de perturbaciones \ref{eq:ContinuityEquationCMode}.
+%Reviewed
+The previous analysis has allowed to establish the minimal mass of a 
+perturbation in order to collapse. Next it is studied the evolution of 
+such perturbations in expanding mediums. For this it is used the models of 
+the universe derived in the subsection 
+\ref{subsec:SimpleSolutionsOfTheUniverse} and the general equation 
+\ref{eq:ContinuityEquationCMode} for evolving perturbations.
+
 
 
 %.........................................................................
