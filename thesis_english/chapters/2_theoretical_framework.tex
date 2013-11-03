@@ -1085,7 +1085,7 @@ space the modes of the field are decoupled naturally.
 %Reviewed
 Since it has been assumed perturbations with characteristic lengths 
 smaller than the Hubble's radius, the volume of the observable universe 
-can be considered infinite, and therefore decomposition of the fields 
+can be considered finite, and therefore decomposition of the fields 
 in comoving coordinates becomes discrete, obtaining
 
  
@@ -1349,54 +1349,63 @@ the universe derived in the subsection
 %.........................................................................
 %Solutions to Perturbations Evolution
 \begin{itemize}
-\item \textbf{Universo Einstein - de Sitter}
+\item \textbf{Einstein - de Sitter universe}
 
 
-Recordando que para este tipo de universo $\Omega_m = \Omega_0 = 1$, usando
-la función de Hubble \ref{eq:EinsteindeSitter}, la solución para el factor 
-de escala \ref{eq:EinsteindeSitterSolution} y la velocidad del sonido 
-derivada de \ref{eq:SoundVelocity} y la ecuación de estado de gas ideal se 
-llega a la siguiente expresión para la evolución de las perturbaciones
+%Reviewed
+Bearing in mind that for this type of universe $\Omega_m = \Omega_0 = 1$, 
+using the Hubble's function \ref{eq:EinsteindeSitter}, the solution for 
+the scale factor \ref{eq:EinsteindeSitterSolution}, the velocity of sound 
+derived from \ref{eq:SoundVelocity} and the equation of state for an ideal 
+gas, it leads to the below expression for the evolution of the 
+perturbations
 
 
+%Reviewed
 %.........................................................................	
 %Einsten-de Sitter Perturbations
 \eq{eq:EinstendeSitterPerturbations}
 { \delta_{\bds k}(a) = \delta_{\bds k, 0} \pr{\frac{a}{a_{\submath{ref}}}}^{1} }
 %.........................................................................
-donde $\delta_{\bds k, 0}$ son las condiciones del campo en el tiempo de 
-referencia $t_{\submath{ref}}$. Otra solución posible es de la forma
-$\delta_{\bds k}\propto a^{-3/2}$, pero debido a que es una solución que
-decae en el tiempo, no es de interés.
+where $\delta_{\bds k, 0}$ are the conditions of the field over the 
+reference time $t_{\submath{ref}}$. Another possible solution is 
+$\delta_{\bds k}\propto a^{-3/2}$, but because this solution does not 
+decrease over time, it is not interesting.
+
 
 
 %Radiation Dominated Universe
-\item \textbf{Universo dominado por radiación}
+\item \textbf{Radiation-dominated universe}
 
 
-Para el caso de perturbaciones en un universo dominado por radiación con
-$\Omega_r = \Omega_0 = 1$, usando \ref{eq:RadiationUniverseSolution} se 
-llega a
+%Reviewed
+For perturbations in a radiation-dominated universe with $\Omega_r = 
+\Omega_0 = 1$, using the equation \ref{eq:RadiationUniverseSolution}, it
+is obtained
 
 
+%Reviewed
 %.........................................................................	
 %Radiation Perturbations
 \eq{eq:RadiationPerturbations}
 { \delta_{\bds k}(a) = \delta_{\bds k, 0} \pr{\frac{a}{a_{\submath{ref}}}}^{1.22} }
 %.........................................................................
-donde de nuevo $\delta_{\bds k, 0}$ representa los modos iniciales del 
-campo y se ignoran soluciones divergentes.
+where $\delta_{\bds k, 0}$ again represents  the initial modes of the 
+field, divergent solutions are ignored.
+
 
 
 %Vacuum Dominated Universe
-\item \textbf{Universo dominado por vacío}
+\item \textbf{Vacuum-dominated universe}
 			
 
-Para un universo de constante cosmológica $\Omega_\Lambda$
-\footnote{$\Omega_\Lambda < 1 $ para garantizar convergencia de las soluciones
-de la ecuación de Friedmann (ver subsección 
-\ref{subsec:SimpleSolutionsOfTheUniverse}).}
-se tiene el siguiente comportamiento para la evolución de los modos
+%Reviewed
+For a universe with cosmological constant $\Omega_\Lambda$
+\footnote{$\Omega_\Lambda < 1 $ in order to guarantee the convergence of 
+solutions to the Friedmann's equation (see subsection 
+\ref{subsec:SimpleSolutionsOfTheUniverse}).} it is obtained the next 
+behaviour for the evolution of each mode
+
 
 
 %.........................................................................	
@@ -1408,19 +1417,25 @@ se tiene el siguiente comportamiento para la evolución de los modos
 %.........................................................................
 
 
-Graficando cada una de estas soluciones se obtiene la figura 
-\ref{fig:DeltaEvolution}. Por simplicidad y para ilustrar mejor el 
-comportamiento con el factor de escala se normaliza cada solución respecto 
-a su valor en el tiempo de referencia $\delta_{\bds k, 0}$. 
+%Reviewed
+Plotting each one of these solutions, Figure \ref{fig:DeltaEvolution} is 
+obtained. For simplicity and in order to illustrate in a better way the 
+behaviour of the scale factor, it is normalized each solution with respect
+to their respective value in the reference time $\delta_{\bds k, 0}$.
 
 
-Las condiciones iniciales dependen del número de onda comóvil $\bds k$ y
-deben ser determinadas a partir de las propiedades estadísticas del campo 
-de densidad (ver subsección \ref{subsec:StatisticalProperties}) y de 
-medidas observacionales (por ejemplo la radiación cósmica de fondo).
+%Reviewed
+Initial conditions depend on the comoving wavenumber $\bds k$ and must be
+determined from the statistical properties of the density field (see 
+subsection \ref{subsec:StatisticalProperties}) and observational 
+measurements, for instance the cosmic background radiation.
+
+
 
 \newpage
 
+
+%Reviewed
 %.........................................................................
 %Perturbations Evolution
 \begin{figure}[htbp]
@@ -1428,13 +1443,14 @@ medidas observacionales (por ejemplo la radiación cósmica de fondo).
 	\includegraphics[width=0.9\textwidth]
 	{./figures/2_theoretical_framework/Perturbations_Evolution.pdf}
 
-	\caption{\small{Evolución de los modos normales del campo de densidad.
-	Por motivos ilustrativos se ha normalizado respecto a las condiciones 
-	iniciales.}}
+	\caption{\small{Evolution of the normal modes of the density field.
+	For the sake of the illustration, each solution has been normalized
+	with respect to the initial conditions.}}
 	
 	\label{fig:DeltaEvolution}
 \end{figure}
 %.........................................................................	
+
 
 
 	%---------------------------------------------------------------------
@@ -1442,6 +1458,7 @@ medidas observacionales (por ejemplo la radiación cósmica de fondo).
 	\subsection{Propiedades Estadísticas y Función de Transferencia}
 	\label{subsec:StatisticalProperties}
 	%---------------------------------------------------------------------
+
 
 
 Una vez determinada la evolución de los modos de densidad es necesario 
