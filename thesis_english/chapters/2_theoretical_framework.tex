@@ -266,7 +266,7 @@ subsection \ref{subsec:GeneralRelativityAndFriedmannEquations}.
 
 			%-------------------------------------------------------------
 			%Measuring distances
-			\subsubsection*{Measuring distances}
+			\subsubsection*{Measuring Distances}
 			%-------------------------------------------------------------
 
 
@@ -569,7 +569,7 @@ evolution of the Universe.
 
 
 %Reviewed
-In this subsection will be presented some analytic solutions to the 
+In this subsection, it will be presented some analytic solutions to the 
 Friedmann's equations. In spite of the ideal assumptions on which are
 based, in some cases, they can be used as approximations in some stages
 of evolution of the universe, thus allowing a physical understanding more 
@@ -1345,7 +1345,7 @@ the universe derived in the subsection
 \ref{eq:ContinuityEquationCMode} for evolving perturbations.
 
 
-
+\newpage
 %.........................................................................
 %Solutions to Perturbations Evolution
 \begin{itemize}
@@ -1432,9 +1432,6 @@ measurements, for instance the cosmic background radiation.
 
 
 
-\newpage
-
-
 %Reviewed
 %.........................................................................
 %Perturbations Evolution
@@ -1455,36 +1452,38 @@ measurements, for instance the cosmic background radiation.
 
 	%---------------------------------------------------------------------
 	%Statistical Properties and Transfer function
-	\subsection{Propiedades Estadísticas y Función de Transferencia}
+	\subsection{Statistical Properties and Transfer Function}
 	\label{subsec:StatisticalProperties}
 	%---------------------------------------------------------------------
 
 
-
-Una vez determinada la evolución de los modos de densidad es necesario 
-compararlos con el universo real. Debido a la naturaleza continua de 
-los campos es inviable tratar de determinar de forma ob\-servacional la 
-distribución de densidad, más aún, teniendo en cuenta que la mayor parte de 
-la materia es oscura, la cual solo puede ser inferida de forma indirecta,
-resulta también técnicamente imposible con los instrumentos actuales llevar 
-a cabo esta empresa.
-
-
-A pesar de lo anterior es posible aún medir las propiedades estadísticas
-de la distribución de densidad del universo y comparar con lo obtenido de
-forma teórica. Para esto se introduce el concepto de funcional de 
-probabilidad para un campo continuo $P\cor{ \delta(\bds r,t) }$, definido 
-como la probabilidad de que un cierto campo físico tenga la forma funcional 
-específica $\delta(\bds r,t)$.
+%Reviewed
+Once determined how each mode of the density field evolves, it is necessary
+to compare this with observations of the real universe. Due to the 
+continuous nature of fields, it is infeasible to try to determine 
+observationally the density distribution. Moreover, taking into account 
+that most of matter is dark, which just can be measured by indirect methods, 
+it is technically impossible, with the current instruments, carrying out 
+this enterprise.
 
 
-Una manera más conveniente, en términos computacionales, de aplicar el 
-formalismo de funcional de probabilidad se logra discretizando el espacio 
-en celdas de volumen $\Delta^3 \bds r_i$, de tal forma que una cierta 
-forma funcional del campo de densidad $\delta(\bds r,t)$ sea equivalente a 
-tener simultáneamente en cada celda $\bds r_i$ del grid el valor 
-$\delta_i = \delta(\bds r_i)$, así el funcional de probabilidad se 
-transforma en una función de probabilidad conjunta
+%Reviewed
+In spite of the above, it is still possible to measure the statistical 
+properties of the density distribution of the universe and to compare them
+with theoretical predictions. In order to do this, it is introduced the 
+concept of probability functional of a continuous field 
+$P\cor{ \delta(\bds r,t) }$, defined as the probability that a certain 
+function has an explicit functional form $\delta(\bds r,t)$.
+
+
+%Reviewed
+A computationally more convenient way to apply the formalism of probability
+functional is by discretizing the volume in a set of cells $\Delta^3 \bds 
+r_i$, such that a certain explicit functional form of the density field
+$\delta(\bds r,t)$ is equivalent to have simultaneously in each cell 
+$\bds r_i$ of the grid the value $\delta_i = \delta(\bds r_i)$, so the 
+probability functional becomes equal to a joint probability function.
+
 
 
 %.........................................................................
@@ -1495,52 +1494,59 @@ transforma en una función de probabilidad conjunta
 %.........................................................................
 
 
-Teniendo en cuenta la descomposición de Fourier del campo de densidad 
-$\delta(\bds r,t)$ en las ecuaciones \ref{eq:FourierFields}, es posible 
-definir una función de probabilidad conjunta en el espacio recíproco 
+%Reviewed
+Taking into account the Fourier decomposition of the density field 
+$\delta(\bds r,t)$ introduced in the equations \ref{eq:FourierFields}, it
+is possible to define a joint probability function in the reciprocal space
 $\mathcal{P}_{\bds k}(\delta_{\bds k_1},\delta_{\bds k_2}, \cdots,
-\delta_{\bds k_N};t)$ que caracteriza completamente la probabilidad de 
-una distribución específica $\delta_{\bds k}(t)$.
+\delta_{\bds k_N};t)$ that completely characterizes the probability of a 
+given distribution $\delta_{\bds k}(t)$.
 
 
-La principal motivación de trabajar en el espacio recíproco de debe a que
-es posible usar la aproximación de modos incorrelacionados en la cual se
-asume que cada modo evoluciona de forma independiente. En el espacio real 
-no es posible realizar esto debido a que el largo alcance de la interacción
-gravitacional acopla fuertemente el campo densidad entre diferentes 
-lugares. Una consecuencia directa de la anterior aproximación es expresar 
-la función de probabilidad conjunta como el producto de $N$ distribuciones
-individuales \cite{padmanabhan1995}
+%Reviewed
+The main motivation to work over the reciprocal space is because it is 
+possible to use the approach of uncorrelated modes, where it is assumed 
+that each mode evolves independently of the others. In the real space it
+is not possible to assume this since the long-range nature of the 
+gravitational interaction couples strongly the density field between 
+different locations. A direct consequence of the previous approach is to 
+express the joint probability function as the product of $N$ single 
+distributions \cite{padmanabhan1995}
 
 
+%Reviewed
 %.........................................................................
 %Probability Functional Recipro
 \eq{eq:ProbabilityJointFour}
 { \mathcal{P}_{\bds k}(\delta_{\bds k_1},\delta_{\bds k_2},
 \cdots,\delta_{\bds k_N};t) = \prod_{\bds k_i}g_{\bds k_i}( \delta_{\bds k_i};t )  }
 %.........................................................................
-donde 
+where
 
 
+%Reviewed
 %.........................................................................
 %Inverse Fourier Delta
 \eq{eq:InverseFourierDelta}
 { \delta_{\bds k} = 
 \int_V \delta(\bds r) e^{-i \bds k \cdot \bds r} d^3 \bds r  }
 %.........................................................................
-$g_{\bds k_i}$ la distribución individual de cada modo, $V=L^3$ el volumen 
-de normalización y $\bds k = (2\pi/L)\bds n$, con $\bds n$ un vector de 
-componentes enteras que caracterizan el modo específico.
+$g_{\bds k_i}$ is the single distribution of each mode, $V=L^3$ the 
+normalization volume and $\bds k = (2\pi/L)\bds n$, with $\bds n$ a vector
+of integer components that characterizes the specific mode.
 
 
-Asumiendo que las perturbaciones primordiales del campo de densidad se 
-ori\-ginaron por el proceso de inflación cósmica, es posible demostrar que 
-la distribución de los modos normales $g_{\bds k_i}$ es una función 
-Gaussiana \cite{padmanabhan1995}. Por conveniencia se descompone en 
-coordenadas polares complejas el modo de densidad $\delta_{\bds k} = 
-r_{\bds k}\exp\pr{ i \phi_{\bds k} }$, obteniendo la siguiente distribución
+%Reviewed
+Assuming that primordial perturbations of the density field were originated
+by the process of cosmic inflation, it is possible to demonstrate that the
+distribution of normal modes $g_{\bds k_i}$ is a Gaussian function
+\cite{padmanabhan1995}. For convenience, it is decomposed into complex 
+polar coordinates the $\delta_{\bds k}$ mode of the density field, 
+$\delta_{\bds k} = r_{\bds k}\exp\pr{ i \phi_{\bds k} }$, which leads to 
+the next distribution
 
 
+%Reviewed
 %.........................................................................
 %Gaussian Distribution
 \eq{eq:GaussianDistribution}
@@ -1548,11 +1554,12 @@ r_{\bds k}\exp\pr{ i \phi_{\bds k} }$, obteniendo la siguiente distribución
 \frac{2(r_{\bds k} dr_{\bds k})}{\sigma_k^2}\pr{ \frac{d\phi_{\bds k}}{2\pi} }
 \exp\pr{ -\frac{r_{\bds k}^2}{\sigma_k^2} };\ \ \ \ \ \sigma_k^2 = 2\mu_k^2  }
 %.........................................................................
-donde $\mu_k^2$ es la varianza de la distribución y $\sigma_k^2$ se 
-denomina espectro de potencia. Debido a la asunción de isotropía y 
-homogeneidad para el universo de fondo, ambas cantidades solo dependen de 
-la magnitud del vector de onda $|\bds k| = k$. También es directo mostrar 
-las siguientes propiedades de la distribución del campo
+where $\mu_k^2$ is the variance of the distribution and $\sigma_k^2$ is 
+the power spectrum. Due to the assumption of isotropy and homogeneity for
+the background universe, both quantities only depends on the norm of the 
+wave vector $|\bds k| = k$. Furthermore it is direct to demonstrate the 
+below properties of the distribution of the field
+
 
 
 %.........................................................................
@@ -1565,6 +1572,7 @@ las siguientes propiedades de la distribución del campo
 %.........................................................................
 
 
+%Reviewed
 %.........................................................................
 %Initial density
 \begin{figure}[htbp]
@@ -1572,23 +1580,24 @@ las siguientes propiedades de la distribución del campo
 	\includegraphics[width=0.9\textwidth]
 	{./figures/2_theoretical_framework/Initial_Density.pdf}
 
-	\caption{\small{Distribución inicial de perturbaciones para el campo
-	de contraste de densidad a partir de la distribución Gaussiana 
-	\ref{eq:GaussianDistribution} y el espectro de potencia de Harrison-
-	Zeldovich $\sigma_k \propto k$.}}
-	
+	\caption{\small{Initial distribution of perturbations for the density 
+	contrast field from the Gaussian distribution 
+	\ref{eq:GaussianDistribution} and the Harrison-Zeldovich power spectrum
+	$\sigma_k \propto k$.}}	
 	\label{fig:InitialDensity}
 \end{figure}
 %.........................................................................	
 
 
-Una cantidad que puede ser evaluada directamente es la función de 
-correlación de dos puntos $\xi(\bds r) \equiv \bra \delta(\bds r' + \bds r)
-\delta(\bds r') \ket$, definida como la probabilidad de tener una 
-perturbación a una distancia $\bds r$ de otra. Es una medida directa del 
-grado de anisotropía y las propiedades de clustering de una distribución.
+%Reviewed
+A quantity that can be directly evaluated is the two-point correlation 
+function $\xi(\bds r) \equiv \bra \delta(\bds r' + \bds r) \delta(\bds r') 
+\ket$, defined as the probability of a perturbation at a distance $\bds r$ 
+from another. It is a direct measurement of the anisotropy degree and the 
+clustering properties of a certain distribution.
 
 
+%Reviewed
 %.........................................................................
 %Two Points Correlation Function
 \begin{eqnarray}
@@ -1600,9 +1609,10 @@ grado de anisotropía y las propiedades de clustering de una distribución.
 &=& \int \frac{V^{-1}}{(2\pi)^3}\sigma_k^2 e^{i \bds k \cdot \bds r} d^3 \bds k
 \end{eqnarray}
 %.........................................................................
-donde en la última línea se ha realizado el límite al continuo. La 
-expresión \ref{eq:2PCorrelation} muestra que $\sigma_k^2$ es la 
-transformada de Fourier de la función de correlación, es decir
+where in the last line has been performed the continuous approximation. 
+The expression \ref{eq:2PCorrelation} shows that $\sigma_k^2$ is the
+Fourier transform of the correlation function, that is
+
 
 
 %.........................................................................
@@ -1612,137 +1622,153 @@ transformada de Fourier de la función de correlación, es decir
 %.........................................................................
 
 
-La anterior relación junto con la distribución Gaussiana del campo muestra 
-que tanto el espectro de potencia como la función de correlación contienen
-toda la información estadística del campo de densidad en el régimen lineal.
-En caso de asumir una distribución no-Gaussiana es necesario tener más
-momentos de la distribución, tal como la función de correlación de tres 
-puntos, etc.
+%Reviewed
+The previous relation along with the Gaussian distribution of the field 
+show that both, the power spectrum and the correlation function, contain
+all the statistical information of the density field in the linear regime.
+If it is assumed a non-Gaussian distribution, it would be necessary to 
+have more moments of the distribution, such as the three-point correlation
+function, etc.
+
 
 
 			%-------------------------------------------------------------
 			%Harrison-Zeldovich Power Spectrum
-			\subsubsection*{Espectro de potencia de Harrison-Zeldovich}
+			\subsubsection*{Harrison-Zeldovich Power Spectrum}
 			%-------------------------------------------------------------
 			
 
-Una primera aproximación al espectro de potencia, y que puede ser 
-demostrada con el modelo de inflación cósmica para las perturbaciones 
-primigenias \cite{padmanabhan1995}, es una ley de potencia de la forma
+%Reviewed
+A first approximation to the power spectrum of primordial perturbations 
+and that can be demonstrated from the model of cosmic inflation
+\cite{padmanabhan1995} is the next power law expression
 
 
+%Reviewed
 %.........................................................................
 %Power Spectrum power
 \eq{eq:PowerSpectrumPower}
 { \sigma_k^2 = A k^{n_s} }
 %.........................................................................
-donde $A$ es un factor de normalización y $n$ es el índice espectral. En 
-el caso específico en que $n_s=1$ se denomina espectro de potencia de 
-Harrison-Zeldovich y es invariante de escala \footnote{El valor determinado 
-observacionalmente es muy cercano $n_s = 0.963$ (ver tabla
+where $A$ is a normalization factor and $n$ is the spectral index. In the 
+specific case where this index is taken to be $n_s=1$, it is called 
+Harrison-Zeldovich power spectrum and is scale invariant \footnote{The 
+observed value is very close to 1, $n_s = 0.963$ (see Table
 \ref{tab:CosmologicalParameters}).}.
 
 
-Para determinar el factor de normalización es común aplicar un filtro a 
-los modos normales que contribuyen al campo de densidad, con esto la 
-función de correlación queda
+%Reviewed
+In order to determine the normalization factor, it is common to apply a
+filter to the normal modes that contributes to the density field, which
+leads to the next form of the correlation function
 
 
+%Reviewed
 %.........................................................................
 %Two Points Correlation Function Fourier with Filter
 \eq{eq:Filter2PCorrelation}
 { \xi(\bds r;R) = \int \frac{V^{-1}}{(2\pi)^3}\sigma_k^2 
 e^{i \bds k \cdot \bds r} \tilde{W}(k;R) d^3\bds k }
 %.........................................................................
-donde $R$ determina la escala máxima a partir de la cual se aplica el 
-filtro en los modos del campo y $\tilde{W}(k;R)$ es la transformada de
-Fourier de la función de filtro. En especial se define la dispersión en el
-espacio real asociada a una escala $R$ como $\sigma^2_R = \bra \delta^2 \ket=
-\xi(0; R)$, este parámetro puede ser determinado observacionalmente a partir
-de surveys de galaxias y de la radiación cósmica de fondo, en especial el 
-valor estándar definido por el WMAP7 es $\sigma^2_8 = \xi(0; R = 
-8 \mbox{ Mpc}/h) = 0.801$ (ver tabla \ref{tab:CosmologicalParameters}), con
-esto se llega a
+where $R$ determines the maximum scale from which is applied the filter
+to the modes of the density field and $\tilde{W}(k;R)$ is the Fourier 
+transform of the filter function. Specially, it is defined the dispersion
+in the real space associated to a scale $R$ as $\sigma^2_R = \bra \delta^2
+\ket = \xi(0; R)$, this parameter can be determined observationally from
+galaxy surveys and the cosmic background radiation. The value measured by
+the WMAP7 release is $\sigma^2_8 = \xi(0; R = 8 \mbox{ Mpc}/h) = 0.801$ 
+(see Table \ref{tab:CosmologicalParameters}), this leads to 
 
 
+%Reviewed
 %.........................................................................
 %Normalization Expression
 \eq{eq:Normalization}
 { \sigma_8^2 = A\int \frac{V^{-1}}{(2\pi)^3} k^{n_s}
  \tilde{W}(k;R=8 \mbox{ Mpc}/h) d^3\bds k }
 %.........................................................................
-de esta forma, a partir de los valores medidos de $n_s$ y $\sigma_8^2$, es
-posible encontrar la normalización del espectro de potencia.
+thus, from the measured values of $n_s$ and $\sigma_8^2$, it is possible
+to find the correct normalization of the power spectrum.
+
 
 
 			%-------------------------------------------------------------
 			%Transfer Function
-			\subsubsection*{Función de Transferencia}
+			\subsubsection*{Transfer Function}
 			%-------------------------------------------------------------
 			
 
-Finalmente para el régimen lineal se introduce el concepto de función de 
-trans\-ferencia $T_{\bds k}(t)$, definida a partir de la siguiente 
-expresión
+%Reviewed
+Finally for the linear regime, it is introduced the concept of transfer 
+function $T_{\bds k}(t)$, defined from the below expression
 
 
+%Reviewed
 %.........................................................................
 %Transfer function Definition
 \eq{eq:TransferFunction}
 { \delta_{\bds k}(t) = T_{\bds k}(t) \delta_{\bds k}(t_i) }
 %.........................................................................
-donde $t_i$ es un tiempo de referencia, normalmente la época de 
-recombinación en el caso de perturbaciones de materia.
+where $t_i$ is a reference time, normally taken to be the recombination 
+epoch for matter perturbations.
 
 
-De la expresión \ref{eq:TransferFunction} se infiere que la función de 
-transferencia contiene toda la información dinámica de las perturbaciones,
-más aún, de la definición \ref{eq:Distribution Properties} para el espectro
-de potencia se tiene
+%Reviewed
+From the expression \ref{eq:TransferFunction} can be inferred that the 
+transfer function contains all the information about the dynamics of the
+perturbations, moreover, from the definition \ref{eq:Distribution 
+Properties} for the power spectrum it is obtained
 
 
+%Reviewed
 %.........................................................................
 %Power Spectrum and Transfer Function
 \eq{eq:PkTransferFunction}
 { \sigma_k(t) = \sigma_k(t_i)|T_k(t)|^2 = Ak^{n_s} |T_k(t)|^2 }
 %.........................................................................
-donde se ha asumido un espectro de potencia de Harrison-Zeldovich para el 
-tiempo de referencia. Con esto finalmente se concluye que la función de 
-transferencia también permite obtener todas las propiedades estadísticas 
-del campo durante el tiempo en que el régimen lineal es válido.
+where it has been assumed a Harrison-Zeldovich power spectrum for the 
+reference time. With this, finally it is concluded that the transfer 
+function also allows to obtain all the statistical properties of the 
+density field during the time when the lineal regime is valid.
 
 
-El cálculo de la función de transferencia es generalmente complejo y 
-requiere realizarse numéricamente \footnote{\texttt{CMBFAST} es un 
-software bastante conocido para este propósito 
-\url{http://lambda.gsfc.nasa.gov/toolbox/tb_cmbfast_ov.cfm}}, además
-depende de las propiedades específicas de la especie asociada a la
-perturbación. Como un ejemplo, en el caso de perturbaciones de materia 
-oscura debe ser especificado el tipo de partículas que la componen, ya 
-sean partículas livianas relativistas (materia oscura caliente) o 
-partículas pesadas no relativistas (materia oscura fría). Entre ambos 
-casos la función de transferencia y el espectro procesado 
-\ref{eq:PkTransferFunction} difieren bastante debido a las diferentes 
-ecuaciones de estado asociadas a cada tipo.
+%Reviewed
+Calculating the transfer function is generally a complex process and 
+requires numerical computations \footnote{\texttt{CMBFAST} is a 
+widely known software for this purpose 
+\url{http://lambda.gsfc.nasa.gov/toolbox/tb_cmbfast_ov.cfm}}, 
+furthermore, it depends on the specific properties of the specie that 
+composes the perturbation. For instance, in the case of dark matter 
+perturbations, it must be specified what specific type of particles 
+compose the perturbation, either relativistic lightweight particles (hot 
+dark matter) or non-relativistic heavy particles (cold dark matter). In
+both cases the transfer function and the processed spectrum 
+\ref{eq:PkTransferFunction} are quite different due to the equations of
+state associated to each type.
 
 
-En el caso de perturbaciones adiabáticas (isoentrópicas) de materia 
-oscura fría puede usarse la siguiente aproximación analítica para la 
-época actual \cite{longair2008}
+%Reviewed
+In the case of adiabatic perturbations (isentropic) of cold dark matter,
+it can be used the next analytic approximation for the current epoch
+\cite{longair2008}
 
 
+%Reviewed
 %.........................................................................
 %Transfer Function CDM
 \eq{eq:TransferFunctionCDM}
 { T_k \approx \frac{ \ln\pr{ 1 + 2.34 q } }{2.34 q}
 \cor{ 1 + 3.89 q + \pr{ 1.61 q }^2 + \pr{ 5.46 q }^3 + \pr{ 6.71 q }^4}^{-1/4} }
 %.........................................................................
-donde $q \equiv k/\Omega_0 h^{2} \mbox{ Mpc}^{-1} $.
+where $q \equiv k/\Omega_0 h^{2} \mbox{ Mpc}^{-1} $.
 
 
-En la siguiente figura se ilustra la función de transferencia 
-\ref{eq:TransferFunctionCDM} junto con el espectro de potencia procesado
+%Reviewed
+The next figure illustrates the transfer function 
+\ref{eq:TransferFunctionCDM} along with the processed power spectrum
 
+
+%Reviewed
 %.........................................................................
 %Transfer Function CDM
 \begin{figure}[htbp]
@@ -1750,21 +1776,23 @@ En la siguiente figura se ilustra la función de transferencia
 	\includegraphics[width=0.9\textwidth]
 	{./figures/2_theoretical_framework/Transfer_Function.pdf}
 
-	\caption{\small{Función de transferencia para materia oscura fría en la
-	época actual \cite{longair2008} (Izquierda). Comparación entre el 
-	espectro de potencia inicial, Harrison-Zeldovich, y el espectro de 
-	potencia procesado (derecha).}}
+	\caption{\small{Transfer function for cold dark matter perturbations at 
+	the current	epoch \cite{longair2008} (left panel). Comparison between 
+	the initial	power spectrum, Harrison-Zeldovich spectrum and the processed 
+	power spectrum (right panel).}}
 	
 	\label{fig:TransferFunctionCDM}
 \end{figure}
 %.........................................................................	
 
 
-De todo el formalismo desarrollado en esta sección se concluye que el 
-objetivo final para la caracterización del régimen lineal es obtener la 
-función de transferencia, ya que esta determina completamente la 
-evolución del universo en épocas tempranas donde hay alta homogeneidad e
-isotropía en todas las escalas.
+%Reviewed
+From all the formalism developed so far in this section, it is concluded 
+that the final objective to characterize the lineal regime is to obtain 
+the transfer function, since it determines completely the evolution of the
+universe at early stages, where there were conditions of high isotropy and 
+homogeneity at all the scales.
+
 
 
 %*************************************************************************
@@ -1774,7 +1802,7 @@ isotropía en todas las escalas.
 
 %*************************************************************************
 %NonLinear Structure Formation
-\section{Régimen No Lineal de Formación de Estructuras}
+\section{Non-Linear Regime of Structure Formation}
 \label{sec:NonLinearStructureFormation}
 
 
