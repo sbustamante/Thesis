@@ -1,8 +1,8 @@
 %qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
 %Quote
 \begin{savequote}[50mm]
-‘‘Todos los efectos de la Naturaleza son sólo la consecuencia matemática 
-de un pequeño número de leyes inmutables’’
+‘‘All the effects of Nature are only the mathematical consequences of a 
+small number of immutable laws’’
 \qauthor{Pierre Simon Laplace}
 \end{savequote}
 %qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
@@ -11,29 +11,31 @@ de un pequeño número de leyes inmutables’’
 
 
 %#########################################################################
-\chapter{Métodos Computacionales en Cosmología}
+\chapter{Computational Methods in Cosmology}
 \label{cha:N-BodySimulations}
 
 
-En los últimos años la física computacional ha adquirido un papel 
-importante en física, permitiendo modelar diversos sistemas complejos sin
-necesidad de recurrir a la experimentación u observación. Entre los 
-métodos abarcados por la física computacional destaca el problema de 
-N-cuerpos debido a que muchos fenómenos requieren el cómputo de 
-interacciones entre una gran cantidad de cuerpos. Algunos ejemplos muy 
-representativos son la modelación de sistemas moleculares, física de 
-plasmas y especialmente problemas gravitacionales en astrofísica. El 
-desarrollo de los métodos específicos para la solución de este tipo de 
-problemas antecede la aparición de los ordenadores y sistemas de cómputo 
-en general, aún así, el desarrollo de estos potenció enormemente esta área
-al punto de ser la física computacional una nueva rama de la física.
+%Reviewed
+In recent years, computational physics has acquired an important role in
+physics, allowing modelling a lot of high-complexity systems without the
+necessity of recurring to experiments and/or observations. Among the methods
+covered by computational physics is highlighted the N-body problem since 
+many phenomenons require the computation of the interactions between a
+large number of bodies. Some illustrative examples of this are the 
+modelling of molecular systems, plasma physics and specially gravitational
+problems in astrophysics. The development of specific methods to solve 
+this type of problems precedes the advent of computer systems, even so, 
+their development has powered enormously this discipline such that it is
+considered a new branch of physics.
 
 
-En este capítulo se desarrollan métodos específicos para la solución de 
-proble\-mas gravitacionales en astrofísica, en especial para la simulación
-del universo a gran escala en régimen no lineal, partiendo de algoritmos 
-básicos para el cómputo de fuerzas, métodos de detección de halos, hasta 
-esquemas de clasificación para el entorno cosmológico.
+%Reviewed
+In this chapter will be covered in detail some specific methods for solving
+gravitational problems in astrophysics, specially those related with 
+simulations of the large-scale universe in the non-linear regime, ranging 
+from basic algorithms to compute forces, methods to detect dark halos, to
+basic classification schemes for the cosmological environment.
+
  
 
 %#########################################################################
@@ -43,19 +45,22 @@ esquemas de clasificación para el entorno cosmológico.
 
 %*************************************************************************
 %N-body Simulations
-\section{Simulaciones de N-Cuerpos}
+\section{N-body Simulations}
 \label{sec:N-bodySimulations}
 
 
-En general, el tipo de fenómenos más promisorios para ser modelados con 
-simulaciones N-cuerpos son aquellos donde las interacciones son 
-fuertemente ligadas entre las partículas, tales como fuerzas de largo 
-alcance o correlaciones no locales. En la figura \ref{fig:NbodyProblem}
-se ilustra un conjunto de partículas puntuales que interactúan mutuamente 
-bajo alguna campo de fuerza $\bds f$, estas condiciones conforman la 
-formulación clásica del problema de N-cuerpo.
+%Reviewed
+Generally, the best type of phenomenons that can be modelled through N-body
+simulations is those where the interactions are strongly correlated between
+the constituent particles, such as long-range forces or non-local 
+interactions. Figure \ref{fig:NbodyProblem} illustrates an arbitrary set of
+point particles which interact each other under the influence of a force 
+field $\bds f$. Those conditions shape the classical formulation of the
+N-body problem.
+
 
 \
+%Reviewed
 %.........................................................................
 %N-Body Problem
 \begin{figure}[htbp]
@@ -63,28 +68,31 @@ formulación clásica del problema de N-cuerpo.
 	\includegraphics[width=0.50\textwidth]
 	{./figures/3_nbody_simulations/Nbody_Problem.png}
 
-	\caption{\small{Formulación del problema de N-cuerpos.}}
+	\caption{\small{Formulation of the N-body problem.}}
 	
 	\label{fig:NbodyProblem}
 \end{figure}
 %.........................................................................
 
 
-Asumiendo interacciones que dependen de la posición\footnote{En el 
-problema generalizado las interacciones pueden depender de otros 
-parámetros tales como velocidad o grados de libertan intrínsecos como 
-espín.}, la ecuación de movimiento para la partícula $i$ de la figura
-\ref{fig:NbodyProblem} queda \cite{pfalzner1996} \cite{binney2008}
+%Reviewed
+Assuming interactions that depends on the position\footnote{ In the 
+generalized problem, interactions can depend on other parameters like 
+velocity or intrinsic degrees of freedom like the spin.}, it is obtained
+for the equation of movement for the $i$-th particle of Figure 
+\ref{fig:NbodyProblem} \cite{pfalzner1996} \cite{binney2008} 
 
 
+%Reviewed
 %.........................................................................
 %Movement Equation
 \eq{eq:MovementEquation}
 { \ddot{ \bds r}_i = \sum_{j=1}^N \bds f( \bds r_i, \bds r_j ) = -\nabla 
 \phi( \bds r_i )\ \ \ \ \ \ \ i=1,2,\cdots,N }
 %.........................................................................
-donde se ha introducido la función potencial $\Phi(\bds r)$. Para el caso 
-de interacción gravitacional el potencia adquiere la forma
+where it has been introduced the potential function $\Phi(\bds r)$. For
+the case of gravitational interactions, the potential acquires the form
+
 
 
 %.........................................................................
@@ -94,63 +102,68 @@ de interacción gravitacional el potencia adquiere la forma
 %.........................................................................
 
 
-La solución se obtiene a partir del conjunto $\{ \bds r_1(t),\cdots, 
-\bds r_N(t) \}$ determinado a partir de las ecuaciones 
-\ref{eq:MovementEquation}, para lo cual es necesario implementar 
-aproximaciones numéricas debido a la no solubilidad analítica del 
-problema.
+%Reviewed
+The general solution to the problem is obtained from the set $\{ \bds 
+r_1(t),\cdots, \bds r_N(t) \}$ that is determined from the equations
+\ref{eq:MovementEquation}. For this it is necessary to implement numerical
+approximations due to the non-solvable (analytically) nature of the 
+problem.
+
 
 
 	%---------------------------------------------------------------------
 	%Direct sum
-	\subsection{Método P-P}
+	\subsection{P-P Method}
 	\label{subsec:PPMethos}
 	%---------------------------------------------------------------------
 	
 	
-La primera aproximación para la solución de las ecuaciones de movimiento
-\ref{eq:MovementEquation} es computar todas las $N-1$ interacciones de la 
-$i$-ésima partícula con todas las demás en un cierto tiempo $t$ y esto 
-para $i=1,2,\cdots N$, luego a partir de un esquema numérico de 
-integración se calculan las posiciones en un tiempo posterior discretizado
-$t+\Delta t$ y así hasta un tiempo máximo $t_{\submath{max}}$ deseado. 
-Este método se denomina P-P (Partícula a Partícula) y es uno de los tres 
-métodos estándar desa\-rrollados para la solución del problema de 
-N-cuerpos.
+%Reviewed
+The first approximation for the solution of the equations of movement
+\ref{eq:MovementEquation} is to compute all the $N-1$ interactions of the
+$i$-th particle with all of the others in a specific time $t$ and this for
+$i=1,2,\cdots N$, then, from a numerical integration scheme it is 
+calculated the positions in a discretized later time $t+\Delta t$ and thus
+until a given maximum time $t_{\submath{max}}$. This method is called P-P 
+(Particle to Particle) and is one of the three standard methods for 
+solving the N-body problem.
 
 
-Cuando las interacciones poseen singularidades, tal como los potenciales
-Cou\-lombianos de la electrostática y la gravitación (ecuación 
-\ref{eq:GravitationalPotential}), la integración de las ecuaciones de 
-movimiento se hace sensible a encuentro cercanos entre partículas y por 
-tanto debe aumentarse la resolución en la discretización temporal, 
-llevando a un aumento considerable en el tiempo de cómputo. Una solución 
-común es introducir un parámetro de suavizado que elimine estas 
-singularidades, aunque a costa de una pérdida en la precisión de la 
-solución. Para el potencial gravitacional \ref{eq:GravitationalPotential} 
-queda
+%Reviewed
+When interactions present singularities, such as Coulombic potentials in
+electrostatic and gravitational problems (equation 
+\ref{eq:GravitationalPotential}), the integration of the equation of 
+movement is very sensitive to close encounters between particles and 
+therefore the resolution of the time step must be increased, thereby 
+implying a considerable increasing of the computing time. A standard 
+solution is to introduce a softening parameter that removes these 
+singularities, but at the cost of losing accuracy in the solution. For the
+gravitational potential \ref{eq:GravitationalPotential}, this leads to
 
 
+%Reviewed
 %.........................................................................
 %Gravitational Potential
 \eq{eq:SoftPotential}
 { \phi_{s}(\bds r) = -\sum_{j=1}^N  \frac{G m_j}{|\bds r - \bds r_j| 
 + \epsilon_j^2} }
 %.........................................................................
-donde $\epsilon_j$ es el parámetro de suavizado y puede interpretarse como 
-una medida de la dimensión física real de la partícula.
+where $\epsilon_j$ is the softening parameter and can be interpreted as a
+measure of the physical dimension of the particle.
 
 
-A pesar de la alta precisión lograda con este método, el tiempo de cómputo
-escala como $t_{\submath{comp}}\propto N^2$, lo que lo hace altamente 
-inviable para un gran número de partículas (generalmente 
-$N\gtrsim 10^4-10^5$ \cite{padmanabhan1995}). Para la simulación de 
-sistemas planetarios, órbitas de cuerpos menores y cúmulos estelares este 
-método resulta ser muy adecuado, pero para problemas cosmológicos y de 
-galaxias, donde el número de partículas debe ser el máximo posible para 
-poder reproducir la verdadera naturaleza continua de las distribuciones de 
-materia, es necesario desarrollar métodos menos costosos 
-computacionalmente.
+
+In spite of the high precision achieved by this method, the computing time
+scales as $t_{\submath{comp}}\propto N^2$, what makes it highly non-viable
+to apply for a large number of particles (generally $N\gtrsim 10^4-10^5$ 
+\cite{padmanabhan1995}). For simulations of planetary systems, computation
+of orbits of minor bodies and studies of star clusters dynamics, this 
+methods is good enough, but for cosmology and galaxy astrophysics, where 
+the number of implicated particles must be the maximum possible in order 
+to reproduce the real continuous nature of the matter distribution, it 
+becomes necessary to develop methods lesser computational 
+cost.
+
 
 
 	%---------------------------------------------------------------------
