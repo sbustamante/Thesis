@@ -50,13 +50,13 @@ basic classification schemes for the cosmological environment.
 
 
 %Reviewed
-Generally, the best type of phenomenons that can be modelled through N-body
-simulations is those where the interactions are strongly correlated between
-the constituent particles, such as long-range forces or non-local 
-interactions. Figure \ref{fig:NbodyProblem} illustrates an arbitrary set of
-point particles which interact each other under the influence of a force 
-field $\bds f$. Those conditions shape the classical formulation of the
-N-body problem.
+Generally, the most suitable type of phenomena that can be modelled through 
+N-body simulations is those where the interactions are strongly correlated 
+between the constituent particles, such as long-range forces or non-local 
+interactions. Figure \ref{fig:NbodyProblem} illustrates an arbitrary set 
+of point particles which interact each other under the influence of a 
+force field $\bds f$. Those conditions shape the classical formulation of 
+the N-body problem.
 
 
 \
@@ -78,9 +78,9 @@ N-body problem.
 %Reviewed
 Assuming interactions that depends on the position\footnote{ In the 
 generalized problem, interactions can depend on other parameters like 
-velocity or intrinsic degrees of freedom like the spin.}, it is obtained
-for the equation of movement for the $i$-th particle of Figure 
-\ref{fig:NbodyProblem} \cite{pfalzner1996} \cite{binney2008} 
+the velocity or intrinsic degrees of freedom like the spin.}, it is 
+obtained the below equation of movement of the $i$-th particle shown in 
+the Figure \ref{fig:NbodyProblem} \cite{pfalzner1996} \cite{binney2008} 
 
 
 %Reviewed
@@ -104,7 +104,7 @@ the case of gravitational interactions, the potential acquires the form
 
 %Reviewed
 The general solution to the problem is obtained from the set $\{ \bds 
-r_1(t),\cdots, \bds r_N(t) \}$ that is determined from the equations
+r_1(t),\cdots, \bds r_N(t) \}$, which is determined from the equations
 \ref{eq:MovementEquation}. For this it is necessary to implement numerical
 approximations due to the non-solvable (analytically) nature of the 
 problem.
@@ -114,12 +114,12 @@ problem.
 	%---------------------------------------------------------------------
 	%Direct sum
 	\subsection{P-P Method}
-	\label{subsec:PPMethos}
+	\label{subsec:PPMethod}
 	%---------------------------------------------------------------------
 	
 	
 %Reviewed
-The first approximation for the solution of the equations of movement
+The first approximation to find a solution of the equations of movement
 \ref{eq:MovementEquation} is to compute all the $N-1$ interactions of the
 $i$-th particle with all of the others in a specific time $t$ and this for
 $i=1,2,\cdots N$, then, from a numerical integration scheme it is 
@@ -152,7 +152,7 @@ where $\epsilon_j$ is the softening parameter and can be interpreted as a
 measure of the physical dimension of the particle.
 
 
-
+%Reviewed
 In spite of the high precision achieved by this method, the computing time
 scales as $t_{\submath{comp}}\propto N^2$, what makes it highly non-viable
 to apply for a large number of particles (generally $N\gtrsim 10^4-10^5$ 
@@ -168,22 +168,23 @@ cost.
 
 	%---------------------------------------------------------------------
 	%Tree codes
-	\subsection{Método PM}
+	\subsection{PM Method}
 	\label{subsec:PMMethod}
 	%---------------------------------------------------------------------
 	
 	
-Un segundo esquema para el cómputo del problema de N-cuerpos es el método 
-PM\footnote{PM viene de la siglas en inglés \textit{Particle Mesh} y 
-una traducción adecuada sería malla de partículas.}\cite{dawson1983}, este 
-consiste en determinar una distribución continua del campo de densidad a 
-partir de las masas y posiciones de las partículas, para esto se divide el 
-espacio de la simulación en una malla de $M\times M\times M$ celdas y se 
-hace un conteo del número de partículas por celda para asociar un valor 
-específico de masa y por tanto de densidad. Un esquema ilustrativo es 
-mostrado en la figura \ref{fig:MP_Method}
+%Reviewed
+A second scheme used for solving the N-body problem is the PM scheme 
+(Particle Mesh) \cite{dawson1983}, this consists of determining a 
+continuous distribution for the density field from the position and the
+mass value of each particle, for this it is divided the space of the 
+simulation into a grid of $M\times M\times M$ cells and then a count of
+particles per cell is made in order to associate a specific mass value and
+therefore a density to each cell. An illustrative diagram is shown in 
+Figure \ref{fig:MP_Method}
 
 
+%Reviewed
 %.........................................................................
 %PM Method
 \begin{figure}[htbp]
@@ -191,31 +192,33 @@ mostrado en la figura \ref{fig:MP_Method}
 	\includegraphics[width=1.00\textwidth]
 	{./figures/3_nbody_simulations/PM_Method.pdf}
 
-	\caption{\small{Diagrama ilustrativo del método P$^3$M. El mapa 
-	dibujado sobre la distribución de partículas corresponde a la densidad
-	asociada a cada celda de la malla. Las zonas oscuras corresponden a 
-	regiones de sobredensidad mientras las zonas blancas a regiones de 
-	menor densidad, acorde a la cantidad de partículas por celda y sus 
-	masas individuales.}}
+	\caption{\small{Illustrative diagram of the PM method. The map that is
+	plotted over the distribution of particles corresponds to the density
+	field evaluated in each cell of the grid. Dark cells corresponds to
+	overdensity regions whereas white cells to lower values of the density 
+	field, which agrees with the amount of mass of the particles per cell.}}
 	
 	\label{fig:MP_Method}
 \end{figure}
 %.........................................................................
-
+%Reviewed
 \newpage
-El método puede ser resumido en los siguientes pasos
+The method can be summarized into the next steps
 
 
+%Reviewed
 %.........................................................................
 %Particle Mesh steps
 \begin{itemize}
-\item[\textbf{1.}] A partir de la malla establecida sobre la simulación es
-calculado un campo de densidad continuo $\rho(\bds r)$ interpolado entre 
-cada celda.
+\item[\textbf{1.}] From the grid established over all the simulation, it
+is calculated a continuous density field $\rho(\bds r)$, interpolating the
+value between adjacent cells.
 
-\item[\textbf{2.}] Con el campo de densidad se procede a computar el 
-potencial en la ecuación de movimiento \ref{eq:MovementEquation} a través 
-de la ecuación de Poisson
+%Reviewed
+\item[\textbf{2.}] Once it is obtained the density field, it is calculated
+the potential of the equation of movement \ref{eq:MovementEquation} by 
+using the Poisson's equation
+
 
 
 %.........................................................................
@@ -225,56 +228,69 @@ de la ecuación de Poisson
 %.........................................................................
 
 
-Para esto generalmente son usados esquemas de integración basados en la
-transformada de Fourier, tales como la transformada rápida de Fourier 
-(FFT por su siglas en inglés).
+%Reviewed
+In order to reach this, it is usually used integration schemes based upon
+Fourier transform, such as the Fast Fourier Transform (FFT).
 
-\item[\textbf{3.}] Usando el campo de potencial anterior se calcula la 
-posición de cada partícula en el tiempo siguiente $t+\Delta t$, y se 
-repite el esquema completo hasta un tiempo máximo deseado.
 
+%Reviewed
+\item[\textbf{3.}] Finally, using the previous potential field, it is 
+calculated the position of each particle in the next discrete time
+$t+\Delta t$, and it is repeated over and over again until a given
+final time.
 \end{itemize}
 %.........................................................................
 
 
-Este método es menos preciso que el método de suma directa, aún así es 
-posible demostrar que el tiempo de cómputo escala como $t_{\submath{comp}} 
-\propto N + M \log M$, con un comportamiento asintótico de 
-$t_{\submath{comp}} \propto N$ para altas resoluciones $M$ de la malla y 
-$t_{\submath{comp}} \propto N$ para bajas resoluciones \cite{pfalzner1996}.
-En todos los casos la eficiencia es mucho mayor que el método PM 
-\ref{subsec:PMMethod} cuando el número de partículas es relativamente 
-grande $N\ll 10^4 - 10^5$, lo que hace a este método bastante competente 
-para problemas de muchas partículas.
+%Reviewed
+This method is less precise than the direct sum, but it is possible to 
+demonstrate that the computing time scales as $t_{\submath{comp}} 
+\propto N + M \log M$, with an asymptotic behaviour as $t_{\submath{comp}} 
+\propto N$ for high resolutions $M$ of the grid and as $t_{\submath{comp}} 
+\propto N$ for low resolutions \cite{pfalzner1996}. In any case, its 
+efficiency is much better than the PP method \ref{subsec:PPMethod} when
+the number of particles of the simulation is large enough $N\ll 10^4 - 
+10^5$, which makes this method very useful to tackle problems with a large
+number of particles.
 
 
-Existen algunas situaciones patológicas para las cuales el método presenta
-dificultades \cite{pfalzner1996}
+%Reviewed
+However, there are some pathological situations where this method can not
+be applied satisfactory \cite{pfalzner1996}.
 
 
+%Reviewed
 %.........................................................................
 %Difficulties of PM Method
 \begin{itemize}
-\item Distribuciones de partículas altamente inhomogéneas.
-\item Sistemas fuertemente correlacionados.
-\item Sistemas con geometrías no triviales.
+\item Highly non-homogeneous distributions of particles.
+\item Strongly correlated systems.
+\item Systems with non-trivial geometries.
 \end{itemize}
 %.........................................................................
 
 
-Debido a las altas inhomogeneidades y fuertes correlaciones locales por 
-acople gravitacional entre de los diferentes modos en el universo tardío 
-($z\gtrsim 8$), este método resulta poco preciso para la simulación del 
-régimen no lineal. 
+%Reviewed
+Because those conditions are satisfied in the non-linear universe, like 
+strong gravitational couplings for modes of the density field after 
+$z\gtrsim 8$, this methods is not very useful for solving the late 
+universe.
+
 
 
 	%---------------------------------------------------------------------
 	%Hidrodynamical and dark matter simulations
-	\subsection{Método P$^3$M}
+	\subsection{P$^3$M Method}
 	\label{subsec:P3Method}
 	%---------------------------------------------------------------------
 	
 	
+
+The last of the three standard scheme for solving N-body simulations is 
+the P$^3$M method (PP $+$ PM) \cite{hockney1988}. This method can be 
+though
+
+
 El último los tres esquemas estándar para simulaciones de N-Cuerpos es el 
 método P$^3$M (PP $+$ PM) \cite{hockney1988}, este es una combinación de 
 los métodos anteriores, haciendo uso de las ventajas de cada uno.
