@@ -285,17 +285,14 @@ universe.
 	%---------------------------------------------------------------------
 	
 	
-
+%Reviewed
 The last of the three standard scheme for solving N-body simulations is 
 the P$^3$M method (PP $+$ PM) \cite{hockney1988}. This method can be 
-though
+thought as a combination of the previous methods, making the most of each
+one of them.
 
 
-El último los tres esquemas estándar para simulaciones de N-Cuerpos es el 
-método P$^3$M (PP $+$ PM) \cite{hockney1988}, este es una combinación de 
-los métodos anteriores, haciendo uso de las ventajas de cada uno.
-
-
+%Reviewed
 %.........................................................................
 %P3M Method
 \begin{figure}[htbp]
@@ -303,33 +300,34 @@ los métodos anteriores, haciendo uso de las ventajas de cada uno.
 	\includegraphics[width=1.00\textwidth]
 	{./figures/3_nbody_simulations/P3M_Method.pdf}
 
-	\caption{\small{Diagrama ilustrativo del método P$^3$M. Para la 
-	partícula de referencia en el centro la interacción con partículas 
-	lejanas es calculada con el método PM, mientras que para las 
-	partículas cercanas en la región gris y blanca es usado el método de 
-	suma directa PP.}}
+	\caption{\small{Illustrative diagram of the P$^3$M method. For the 
+	reference particle, shown in the center, interactions with distant 
+	particles is calculated through the PM method, whereas for close
+	particles (gray and white regions), the interaction is calculated 
+	by using the PP method.}}
 	
 	\label{fig:P3M_Method}
 \end{figure}
 %.........................................................................
 
 
-En la figura \ref{fig:P3M_Method} se ilustra el método P$^3$M, en cada
-paso de integración del sistema se hace un grid jerárquico respecto a cada
-partícula, las jerarquías son definidas de acuerdo a la distancias 
-relativas y determinan la aproximación usada para el cómputo de la 
-ecuación de movimiento. Para partículas cercanas (primera jerarquía) se 
-usa el método de suma directa, lo que permite dar cuenta de correlaciones
-locales y dar un tratamiento adecuado a zonas con altas inhomogeneidades.
-En las siguientes jerarquías se descompone el potencial en sus componentes
-multipolares, tomando las contribuciones de más alto orden acorde al nivel 
-de la jerarquía, así por ejemplo la segunda jerarquía tiene en cuenta las 
-contribuciones dipolares, la tercera las cuadrupolares, etc. Finalmente 
-para la última jerarquía se usa el esquema PM, interpolando el campo de 
-densidad y resolviendo la ecuación de Poisson \ref{eq:Poisson} para el 
-potencial.
+%Reviewed
+Figure \ref{fig:P3M_Method} illustrates the P$^3$M method. For each one of
+the integration step of the system, it is calculated a hierarchical grid 
+for each particle. Hierarchies are defined with respect to the relative
+distance between particles and they determines which approximation should
+be used for computing the equation of movement. For close particles (first
+hierarchy) it is used the PP method, what allows tackling strong local 
+correlations and highly non-homogeneous regions. Interactions with 
+particles embedded into the next hierarchies are calculated by decomposing 
+the potential field into its multipolar terms, i.e. the second hierarchy
+corresponds to the dipolar contribution of the potential (if applicable), 
+and so on. Finally for more distant cells (last hierarchy), it is used the
+PM scheme, interpolating the density field and solving the Poisson's 
+equation \ref{eq:Poisson} for the potential.
 
 
+%Reviewed
 %.........................................................................
 %Tree Code Building
 \begin{figure}[htbp]
@@ -337,41 +335,44 @@ potencial.
 	\includegraphics[width=0.72\textwidth]
 	{./figures/3_nbody_simulations/TreeCode.png}
 
-	\caption{\small{Ejemplo de construcción de un código de árbol para
-	una simulación de N-cuerpos. En los paneles superiores se muestran
-	iteraciones del método para un problema 2D. En la parte inferior se
-	ilustra el árbol construido con cada partícula de la simulación.}}
+	\caption{\small{An illustrative example of the building of a tree code
+	for a N-body simulation. Upper panels show the iterations for a 2D 
+	problem whereas lower panel illustrates the resultant tree built using 
+	each particle of the simulation.}}
 	
 	\label{fig:Tree_Code}
 \end{figure}
 %.........................................................................
 \newpage
 
-Uno de los principales inconvenientes de este método radica en la 
-construcción de la estructura jerárquica para la evaluación de las 
-interacciones. El esquema original propuesto simultáneamente por 
-\cite{appel1985} \cite{jernigan1985} y \cite{porter1985} presenta
-inconsistencias debido a la falta de fundamentación física en la 
-construcción de la estructura jerárquica \cite{pfalzner1996}.
+
+%Reviewed
+One of the main disadvantages of this method lies in the building of the
+hierarchical structure for evaluating which scheme must be used. The 
+original scheme proposed simultaneously by \cite{appel1985} 
+\cite{jernigan1985} and \cite{porter1985} has some inconsistencies 
+produced by the lack of physical basis in the building of the hierarchical
+structure \cite{pfalzner1996}.
 
 
-Uno de los métodos propuestos para la construcción de la estructura 
-jerárquica y que carece en gran medida de las inconsistencias mencionados 
-se denomina código de árbol octante y fue inicialmente desarrollado por 
-\cite{barnes1986}. En este algorítmo el espacio de la simulación es 
-embebido en una celda cúbica denominada raíz (\textit{root}) y luego se 
-divide en 8 regiones de igual tamaño denominadas octantes, estas componen 
-la primera jerarquía del árbol. El método se repite de forma recursiva 
-hasta obtener a lo sumo una partícula por celda, construyendo de esta 
-forma un conjunto de jerarquías que determinan las vecindades de todas las 
-partículas. En la figura \ref{fig:Tree_Code} se ilustra las iteraciones 
-requeridas para la construcción del árbol en una simulación (por 
-simplicidad se ha tomado en dos dimensiones) y en la parte inferior de la 
-misma figura se muestra esquemáticamente la estructura del árbol. De esta 
-forma es posible computar por ejemplo la interacción entre las partículas 
-7, 8 y 9 con suma directa, por ser vecinas próximas, mientras que su 
-interacción con las demás partículas, pertenecientes a otras ramas, por 
-medio de PM.
+%Reviewed
+A better physically based method for constructing the hierarchical 
+structure of a N-body simulation is the so-called octant tree code. It was
+initially developed by \cite{barnes1986}. In this algorithm, the space of 
+the simulation is embedded into a cubic volume denominated \textit{root},
+then this volume is divided into 8 regions of equal size which are 
+denominated octant, these are the first hierarchy of the tree. This 
+procedure is repeated recursively until each cell or octant has only one
+particle inside, thereby constructing a set of hierarchies that determines
+the neighbourhood of all the particles of the simulation. Figure 
+\ref{fig:Tree_Code} illustrates the iterations needed in order to construct
+the tree of a simulation (with the aim of simplicity, it is 2D), the lower
+panel of the same figure shows the structure of the tree. In this way it
+is possible to compute, for instance, the interaction between particles 7,
+8 and 9 by using direct sum, because they are the closer neighbours, 
+whereas the interaction with other particles that belong to other branches
+is calculated through the PM scheme.
+
 
 
 %*************************************************************************
