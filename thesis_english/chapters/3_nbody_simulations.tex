@@ -349,8 +349,8 @@ equation \ref{eq:Poisson} for the potential.
 %Reviewed
 One of the main disadvantages of this method lies in the building of the
 hierarchical structure for evaluating which scheme must be used. The 
-original scheme proposed simultaneously by \cite{appel1985} 
-\cite{jernigan1985} and \cite{porter1985} has some inconsistencies 
+original scheme, proposed simultaneously by \cite{appel1985} 
+\cite{jernigan1985} and \cite{porter1985}, has some inconsistencies 
 produced by the lack of physical basis in the building of the hierarchical
 structure \cite{pfalzner1996}.
 
@@ -366,12 +366,12 @@ procedure is repeated recursively until each cell or octant has only one
 particle inside, thereby constructing a set of hierarchies that determines
 the neighbourhood of all the particles of the simulation. Figure 
 \ref{fig:Tree_Code} illustrates the iterations needed in order to construct
-the tree of a simulation (with the aim of simplicity, it is 2D), the lower
+the tree of a simulation (with the aim of simplicity, it is 2D). The lower
 panel of the same figure shows the structure of the tree. In this way it
 is possible to compute, for instance, the interaction between particles 7,
-8 and 9 by using direct sum, because they are the closer neighbours, 
-whereas the interaction with other particles that belong to other branches
-is calculated through the PM scheme.
+8 and 9 by using direct sum, because they are the closer neighbours each 
+other, whereas the interaction with other particles that belong to other 
+branches is calculated through multipolar expansion or the PM scheme.
 
 
 
@@ -382,58 +382,63 @@ is calculated through the PM scheme.
 
 %*************************************************************************
 %Types of simulations
-\section{Tipos de Simulación}
+\section{Types of Simulations}
 \label{sec:Types of Simulations}
 
 
-Usando los métodos descritos en la anterior subsección es posible realizar
-simulaciones del universo en régimen no lineal y estudiar su comportamiento 
-de forma numérica. Debido a que en régimen no lineal los procesos 
-astrofísicos de grandes escalas son dominados principalmente por materia 
-oscura, es habitual no consi\-derar la contribución de las componentes de 
-radiación y materia bariónica, además de que los procesos físicos que 
-involucran estás componentes aumentarían conside\-rablemente los tiempos 
-de cómputo. Este tipo de simulaciones son denominadas \textit{simulaciones 
-de materia oscura}.
+%Reviewed
+Using the methods above described, it is possible to carry out simulations
+of the late universe in the non-linear regime and studying its behaviour 
+numerically. Because in the non-linear regime all the large-scale 
+astrophysical processes are dominated mainly by dark matter, it is usual 
+not considering the contribution of other components like radiation or 
+baryonic matter, furthermore, including the different physical processes
+dominated by these other contributions would increase considerably the 
+computing time of the simulation without much profit regarding physical
+understanding. This specific type of simulations is called \textit{dark 
+matter simulations}.
 
 
-En esta subsección son presentadas las simulaciones de materia oscura que 
-son usadas, además son clasificadas acorde al criterio adoptado para la 
-elección de las condiciones iniciales. Estas pueden ser no restringidas
-cuando las condiciones iniciales son escogidas de forma completamente 
-aleatoria, o restringidas cuando son escogidas de tal forma que la 
-simulación satisfaga alguna condición impuesta a priori, tal como la 
-reproducción del universo local en una escala de algunas decenas de 
-Mpc$/h$.
+%Reviewed
+In this subsection are shown the dark matter simulations that are used
+throughout this work, moreover they are classified with respect to the
+adopted criterion for setting the initial conditions, thus, simulations
+can be unconstrained when the initial conditions are set in a completely 
+random way, or constrained when they are chosen such that they satisfy 
+some conditions fixed a priori like observational constrains or 
+reproducing the very local structure ($\sim 10$ Mpc$/h$) of the real 
+universe.
 
 
 	%---------------------------------------------------------------------
 	%Unconstrained simulations (Bolshoi)
-	\subsection{Simulaciones No Restringidas (Bolshoi)}
+	\subsection{Unconstrained Simulations (Bolshoi)}
 	\label{subsec:UnconstrainedSimulations}
 	%---------------------------------------------------------------------
 
 
-Puesto que la evolución del universo en régimen lineal es conocida a 
-través de la función de transferencia (ver sección 
-\ref{sec:LinearStructureFormation}), las simulaciones cosmológicas solo 
-son usadas para el estudio del régimen no lineal, aún así es necesario
-fijar un conjunto de condiciones iniciales para la integración del sistema.
-Generalmente estas condiciones son determinadas a partir del cómputo del 
-régimen lineal, para esto a su vez es requerido otro conjunto de condiciones 
-iniciales primordiales para el campo de densidad homogéneo de fondo, 
-es debido a esto que estas últimas condiciones serán referidas simplemente 
-como condiciones iniciales.
+%Reviewed
+Since the evolution of the universe in the linear regime is well-know 
+through the transfer function (see section 
+\ref{sec:LinearStructureFormation}), dark matter cosmological simulations 
+are only used for studying the non-linear regime, however it is necessary 
+to establish a set of initial conditions in order to evolve the system 
+properly. Generally these conditions are determined from computing the 
+linear regime, so that it is required another set of primordial conditions 
+for the homogeneous background density field. Because of that, the last 
+set will be henceforth called simply the initial conditions.
 
 
-Como ha sido mencionado en la subsección \ref{subsec:StatisticalProperties},
-las propiedades estadísticas del campo de densidad inicial corresponden a 
-una distribución Gaussiana de los modos de Fourier con un espectro de
-potencia de Harrison-Zeldovich, acorde con el modelo inflacionario y 
-observaciones cosmológicas (subsección \ref{sec:CosmologicalObservations}).
-Los modos del campo de densidad $\delta_{\bds k} = 
-r_{\bds k}e^{i\phi_{\bds k}}$ siguen entonces las distribuciones 
-determinadas en la ecuación \ref{eq:GaussianDistribution}
+%Reviewed
+As has been mentioned in the subsection \ref{subsec:StatisticalProperties},
+the statistical properties of the initial density field correspond to a
+Gaussian distribution of the Fourier modes with a Harrison-Zeldovich 
+power spectrum, which agrees with the inflationary model and cosmological
+observations (see subsection \ref{sec:CosmologicalObservations}). The 
+modes of the density field $\delta_{\bds k} = r_{\bds k}e^{i\phi_{\bds k}}$
+follow then the distributions given by the equation 
+\ref{eq:GaussianDistribution}
+
 
 
 %.........................................................................
@@ -451,30 +456,33 @@ determinadas en la ecuación \ref{eq:GaussianDistribution}
 %.........................................................................
 
 
-El carácter no restringido de este tipo de simulaciones radica en la 
-elección aleatoria de las fases $\phi_{\bds k}$ acorde a la distribución
-\ref{eq:PhiModeDistribution}, sin ningún tipo de restricción observacional
-sobre el resultado final de la simulación.
+%Reviewed
+The unconstrained nature of this type of simulations lies in the 
+randomness of the phases $\phi_{\bds k}$ according to the distribution
+\ref{eq:PhiModeDistribution}, without any kind of observational 
+constrained for the final stage of the simulation.
+
 
 \
-
-\textbf{\textit{Bolshoi}} es una simulación cosmológica del universo 
-a gran escala con condiciones iniciales no restringidas, la página 
-oficial del proyecto es \url{http://hipacc.ucsc.edu/Bolshoi/}. 
+%Reviewed
+\textbf{\textit{Bolshoi}} is a cosmological simulation of the large-scale
+universe with unconstrained initial conditions, the official website of
+the project is \url{http://hipacc.ucsc.edu/Bolshoi/}. 
 
 \newpage
+%Reviewed
 %.........................................................................
 %Bolshoi Simulation Evolution
-\begin{figure}[htbp]
+\begin{figure}
 	\centering
-	\includegraphics[width=0.85\textwidth]
+	\includegraphics[width=0.80\textwidth]
 	{./figures/3_nbody_simulations/Bolshoi_Evolution.png}
 
-	\caption{\small{Evolución de la simulación Bolshoi. Se ilustran el
-	campo de densidad de una región rectangular de 16 Mpc$/h$ de grosor y 
-	250 Mpc$/h$	de lado para diferentes estadios de evolución. $z=9.5$ 
-	(superior izquierda), $z=3$ (superior derecha), $z=1$ (inferior 
-	izquierda) y $z=0$ (inferior derecha). Tomado de 
+	\caption{\small{Evolution of the Bolshoi simulation. It is illustrated
+	the density field in a rectangular volume of $16$ Mpc$/h$ of thick and
+	$250$ Mpc$/h$ of side for different stages of the evolution. $z=9.5$ 
+	(upper left), $z=3$ (upper right), $z=1$ (lower left) y $z=0$ (lower
+	right). Taken from 
 	\url{http://spectrum.ieee.org/aerospace/astrophysics/the-cosmological-supercomputer} }}
 	
 	\label{fig:Bolshoi_Evolution}
@@ -482,19 +490,22 @@ oficial del proyecto es \url{http://hipacc.ucsc.edu/Bolshoi/}.
 %.........................................................................
 
 
-Debido a su mayor tamaño comóvil comparada con las simulaciones 
-restringidas (un cubo de $250$ Mpc$/h$ de lado), esta es usada para 
-obtener estadística más fina en los resultados del capítulo 
-\ref{cha:Results}. El modelo cosmológico usado para esta simulación 
-corresponde al WMAP7 (ver tabla \ref{tab:CosmologicalParameters}), el número 
-de partículas es de $2048^3$, lo que implica una masa promedio por partícula 
-de $1.35 \times 10^8 h^{-1}$ M$_{\odot}$. Una descripción técnica más 
-detallada de la simulación puede ser consultada en \cite{klypin2011}.
+%Reviewed
+Due to its larger comoving size compared to constrained simulations (a
+cubic volume of $250$ Mpc$/h$), Bolshoi is used for obtaining the 
+fine-grained statistics for the results computed in the chapter
+\ref{cha:Results}. The cosmological model used in this simulation is the 
+WMAP7 universe (see table \ref{tab:CosmologicalParameters}), the number of
+particles used is $2048^3$, what implies a mean mass per particle of 
+$1.35 \times 10^8 h^{-1}$ M$_{\odot}$. More precise and technical 
+information about can be consulted in \cite{klypin2011}.
 \newpage
+
+
 
 	%---------------------------------------------------------------------
 	%Constrained simulations (CLUES)
-	\subsection{Simulaciones Restringidas (CLUES)}
+	\subsection{Constrained Simulations (CLUES)}
 	\label{subsec:ConstrainedSimulations}
 	%---------------------------------------------------------------------
 
