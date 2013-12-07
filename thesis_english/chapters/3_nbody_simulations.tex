@@ -17,7 +17,7 @@ small number of immutable laws’’
 
 %Reviewed
 In recent years, computational physics has acquired an important role in
-physics, allowing modelling a lot of high-complexity systems without the
+physics, allowing modelling many high-complexity systems without the
 necessity of recurring to experiments and/or observations. Among the methods
 covered by computational physics is highlighted the N-body problem since 
 many phenomenons require the computation of the interactions between a
@@ -405,7 +405,7 @@ throughout this work, moreover they are classified with respect to the
 adopted criterion for setting the initial conditions, thus, simulations
 can be unconstrained when the initial conditions are set in a completely 
 random way, or constrained when they are chosen such that they satisfy 
-some conditions fixed a priori like observational constrains or 
+some conditions fixed a priori like observational constraints or 
 reproducing the very local structure ($\sim 10$ Mpc$/h$) of the real 
 universe.
 
@@ -510,57 +510,59 @@ information about can be consulted in \cite{klypin2011}.
 	%---------------------------------------------------------------------
 
 
-Como fue mencionado en el capítulo \ref{cha:Theoretical Framework}, la forma
-estándar de comparar el resultado de simulaciones cosmológicas con 
-observaciones es a través de las propiedades estadísticas de las 
-distribuciones, tales como funciones de correlación de dos puntos o 
-espectros de potencia. A pesar de esto, algunos estudios requieren una 
-descripción detalla del universo local en un contexto cosmológico. Debido 
-a dificultades técnicas como la medida directa de la distribución de materia
-oscura o la falta de datos en altos corrimientos al rojo, es necesario 
-recurrir a simulaciones cosmológicas que reproduzcan el universo local.
-Uno de los primeros trabajos dirigidos a la reproducción específica del
-entorno local se debe a \cite{Klypin2003}. En este se intenta reproducir las 
-principales estructuras observadas en el universo local, como el grupo local,
-el Supercúmulo Local y el cúmulo de Virgo.
+%Reviewed
+As has been mentioned in the chapter \ref{cha:Theoretical Framework}, the
+standard way to compare the results produced by cosmological simulations 
+and observations is through the statistical properties of the 
+distributions, such as the two-point correlation functions or the power 
+spectrum. In spite of that, some studies require more detailed description
+of the local universe in a cosmological context. Due to technical issues, 
+like the direct measuring of the dark matter distribution or the lack of 
+data in high redshifts, it is necessary to appeal to cosmological 
+simulations that reproduce properly the local universe. One of the first 
+work aimed to reproduce the local universe is \cite{Klypin2003}. Here it 
+is reproduced our local group of galaxies along with the local 
+supercluster and the Virgo cluster.
 
 
+%Reviewed
 %.........................................................................
 %Constrained Simulation
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.60\textwidth]
+	\includegraphics[width=0.70\textwidth]
 	{./figures/3_nbody_simulations/Constrained_Construction.png}
 
-	\caption{\small{Campo de densidad y campo de velocidad peculiar inicial
-	construidos a partir de restricciones para la reproducción del entorno
-	local en una escala de $160\ h^{-1}$Mpc. Algunas estructuras 
-	identificadas son: \textit{Coma}, cúmulo de coma, \textit{PP}, supercúmulo 
-	de Perseus-Pisces, \textit{LS}, supercúmulo local, \textit{GA}, gran 
-	atractor. La flecha superior derecha indica la escala del campo de 
-	velocidad peculiar en $1000$ km/s. Tomado de \cite{Klypin2003}.}}
+	\caption{\small{Initial density and peculiar velocity field built by 
+	using constraints in order to reproduce the local environment at a 
+	scale of $160\ h^{-1}$Mpc. Some of the identified structures are:
+	\textit{Coma}, coma cluster, \textit{PP}, Perseus-Pisces supercluster,
+	\textit{LS}, local supercluster, \textit{GA}, the great attractor. 
+	The upper arrow indicates the scale of the peculiar velocities field 
+	as $1000$ km/s. Taken from \cite{Klypin2003}.}}
 	
 	\label{fig:Constrained_Construction}
 \end{figure}
 %.........................................................................
 
 
-El método propuesto en \cite{Klypin2003} y \cite{Hoffman1991} consiste en 
-la construcción el campo de densidad y de velocidad peculiar inicial a 
-partir de surveys de velocidades radiales y de corri\-mientos al rojo (ver 
-sección \ref{sec:CosmologicalObservations}). Para el tratamiento y 
-reducción del ruido y errores de medida en los datos, se usa un método 
-bayesiano de filtros de Wiener (para más detalles técnicos ver 
-\cite{Zaroubi1999}). A pequeñas escalas este método es limitado debido a 
-que los filtros aplicados suprimen algunos modos en el espectro de potencia 
-inicial y por tanto deben ser generados de forma aleatoria acorde con la 
-distribución Gaussiana \ref{eq:GaussianDistribution} para garantizar 
-consistencia con el modelo cosmológico estándar. En la figura 
-\ref{fig:Constrained_Construction} se ilustran las condiciones iniciales 
-obtenidas con este método para el universo local en una escala de 
-$160\ h^{-1}$Mpc.
+%Reviewed
+The method proposed by \cite{Klypin2003} and \cite{Hoffman1991} consists in
+building the initial density and peculiar velocities field from surveys of 
+radial velocities and redshifts (see section 
+\ref{sec:CosmologicalObservations}). For the treatment and reduction of 
+noise and measuring errors of data, it is used a Bayesian method, 
+Wiener filters (for more detailed information, see \cite{Zaroubi1999}).
+At small scales, this method is limited because the applied filters 
+suppress some modes in the initial power spectrum and therefore they must
+be generated randomly according to the Gaussian distribution 
+\ref{eq:GaussianDistribution} in order to guarantee consistency with the
+standard cosmological model. Figure \ref{fig:Constrained_Construction} 
+illustrates the initial conditions obtained by this method for the local
+universe at a scale of $160\ h^{-1}$Mpc.
 
 
+%Reviewed
 %.........................................................................
 %CLUES Right Simulation
 \begin{figure}[htbp]
@@ -568,35 +570,38 @@ $160\ h^{-1}$Mpc.
 	\includegraphics[width=1.0\textwidth]
 	{./figures/3_nbody_simulations/CLUES_Simulations.pdf}
 
-	\caption{\small{Tres simulaciones restringidas del proyecto CLUES 
-	en las se identifican sistemas tipo grupo local. Se ilustra el campo 
-	de densidad de cada simulación junto con los halos de materia oscura
-	(puntos negros), y los grupos locales encontrados (puntos rojos).}}
+	\caption{\small{Three constrained simulations of the CLUES project 
+	where it is possible to identify systems like the local group. It is
+	illustrated the density field of each simulations along with the dark
+	matter halos (black points), and the LG-like systems found (red 
+	points).}}
 	
 	\label{fig:CLUES_Right}
 \end{figure}
 %.........................................................................
 
 
-\textbf{CLUES} (Constrained Local UniversE Simulations) es un proyecto 
-orientado a la reproducción del universo local con la mejor resolución 
-en la actualidad. La página oficial es \url{http://www.clues-project.org}. 
-En estas simulaciones las condiciones iniciales son construidas con el 
-algoritmo Hoffman-Ribak \cite{Hoffman1991} para la reproducción de un 
-volumen comóvil de $(64\ h^{-1}$Mpc$)^{3}$. Debido a la no restricción en
-escalas pequeñas ($\sim 5\ h^{-1}$Mpc) es necesario realizar $200$ 
-diferentes simulaciones de las cuales $3$ resultan satisfactorias 
-respecto a las restricciones observacionales (ver figura 
-\ref{fig:CLUES_Right}). Para la evolución se usa el paquete 
-\texttt{GADGET2}\footnote{\texttt{GADGET2} es un popular código para la 
-simulación de N-cuerpos en cosmología y formación de galaxias. Está 
-disponible de forma gratuita en la página oficial del proyecto 
-\url{http://www.mpa-garching.mpg.de/gadget/}} con $1024^3$ partículas de
-materia oscura y una cosmología consistente con el WMAP7 (ver tabla 
-\ref{tab:CosmologicalParameters}). Más detalles técnicos del proyecto
-pueden ser consultados en \cite{Gottloeber2010}.
+%Reviewed
+\textbf{CLUES} (Constrained Local UniversE Simulations) is a project aimed
+to reproduce the local universe with the best resolution up to date. The 
+official webpage of the project is \url{http://www.clues-project.org}. In 
+this simulations, initial conditions are built by using the Hoffman-Ribak
+algorithm \cite{Hoffman1991} for reproducing a comoving volume of $(64\ 
+h^{-1}$Mpc$)^{3}$. Due to the unconstrained nature of initial conditions at
+small scales ($\sim 5\ h^{-1}$Mpc), it becomes necessary to carry out $200$
+different simulations, of which only $3$ are successful regarding the 
+imposed observational constraints (see figure \ref{fig:CLUES_Right}).
+For the evolution it is used the package \texttt{GADGET2}\footnote{
+\texttt{GADGET2} is a very popular code for N-body simulations developed
+by Volker Springel. It is available for free download in the official 
+webpage of the project \url{http://www.mpa-garching.mpg.de/gadget/}}
+with $1024^3$ particles of dark matter and a cosmology consistent with
+the WMAP7 (see table \ref{tab:CosmologicalParameters}). More technical 
+details  and further information of the project can be found in
+\cite{Gottloeber2010}.
 
 
+%Reviewed
 %.........................................................................
 %CLUES Simulation Overview
 \begin{figure}[htbp]
@@ -604,14 +609,16 @@ pueden ser consultados en \cite{Gottloeber2010}.
 	\includegraphics[width=0.90\textwidth]
 	{./figures/3_nbody_simulations/CLUES_Overview.png}
 
-	\caption{\small{Simulación obtenida en el proyecto CLUES. En esta se 
-	muestran las estructuras a gran escala del universo local y se aprecian
-	con claridad los miembros más significativos del grupo local. Tomado de 
-	la 	página oficial del proyecto \url{http://www.clues-project.org}}}
+	\caption{\small{An example of a simulation of the CLUES project. In 
+	this figure it is shown the large-scale structures of the local 
+	universe and it can be appreciated clearly the most significant members
+	of the Local Group. Taken from the official webpage of the project
+	\url{http://www.clues-project.org}}}
 	
 	\label{fig:CLUES_Overview}
 \end{figure}
 %.........................................................................
+
 
 
 %*************************************************************************
