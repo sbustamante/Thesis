@@ -590,7 +590,7 @@ algorithm \cite{Hoffman1991} for reproducing a comoving volume of $(64\
 h^{-1}$Mpc$)^{3}$. Due to the unconstrained nature of initial conditions at
 small scales ($\sim 5\ h^{-1}$Mpc), it becomes necessary to carry out $200$
 different simulations, of which only $3$ are successful regarding the 
-imposed observational constraints (see figure \ref{fig:CLUES_Right}).
+imposed observational constraints (see Figure \ref{fig:CLUES_Right}).
 For the evolution it is used the package \texttt{GADGET2}\footnote{
 \texttt{GADGET2} is a very popular code for N-body simulations developed
 by Volker Springel. It is available for free download in the official 
@@ -664,13 +664,15 @@ recently developed classification schemes.
 	%---------------------------------------------------------------------
 
 
-El primero de los métodos fue propuesto por \cite{Hahn2007} y consiste el
-uso de la teoría de sistemas dinámicos para el análisis de la estabilidad 
-local de órbitas de prueba alrededor de halos de materia oscura y de esta 
-forma cuantificar su entorno para un tiempo (corrimiento al rojo) fijo 
-dado. Para esto se asume válida la aproximación Newtoniana (ver subsección 
-\ref{subsec:Newtonian Approximation}) y la ecuación de movimiento de una 
-partícula de prueba en el potencial peculiar de la distribución es
+%Reviewed
+The first of these methods was proposed by \cite{Hahn2007} and it consists
+in using the theory of dynamical systems in order to perform an analysis
+of the local stability of test orbits around dark matter halos, thereby
+quantifying their environment for a set time (or set redshift). For this,
+the Newtonian approximation is assumed to be correct (see subsection 
+\ref{subsec:Newtonian Approximation}) and the equation of movement of a 
+test particle embedded into a peculiar potential of the distribution is
+
 
 
 %.........................................................................
@@ -681,18 +683,22 @@ partícula de prueba en el potencial peculiar de la distribución es
 %.........................................................................
 
 
-Es razonable asumir que en el centro de masa $\bar{\bds r}_i$ de cada halo
-existe un mínimo del potencial $\nabla \phi = 0$, formando así un pozo de 
-potencial local. Esto permite linea\-lizar la ecuación de movimiento 
-\ref{eq:Tweb_Movement} entorno a estos puntos, obteniendo
+%Reviewed
+It is reasonable to assume that in the center of mass $\bar{\bds r}_i$ of 
+each halo there is a minimum of the potential, i.e. $\nabla \phi = 0$, 
+thereby forming a local potential well. This allows linearizing the 
+equation of movement \ref{eq:Tweb_Movement} around these points, obtaining
 
 
+%Reviewed
 %.........................................................................
 %Lineal Equation of Movement 
 \eq{eq:Lineal_Tweb}
 { \ddot{r}_i = - T_{ij}(\bar{\bds r}_i)( r_j - \bar{ r}_{k,j})}
 %.........................................................................
-donde se define el tensor de marea como el Hessiano del potencial peculiar
+where it is defined the tidal tensor as the Hessian matrix of the peculiar
+potential
+
 
 
 %.........................................................................
@@ -702,45 +708,51 @@ donde se define el tensor de marea como el Hessiano del potencial peculiar
 %.........................................................................
 
 
-Acorde a la teoría de sistemas dinámicos, un autovalor negativo indica que
-el punto es inestable en la dirección del respectivo autovector, implicando 
-un flujo de materia hacia el exterior de la región. Para autovalores 
-positivos se presenta una situación completamente análoga. Con base en la 
-aproximación de Zeldovich (subsección \ref{subsec:Zeldovich'sApproximation})
-se propone un esquema de clasificación del entorno cosmológico a partir de 
-los autovalores del tensor de marea $T_{ij}$ 
-(ver figura \ref{fig:ClassificationSchemeTweb}).
+%Reviewed
+According the theory of dynamical systems, a negative eigenvalue 
+indicates an unstable point in the direction of the respective eigenvector, 
+thereby implying an outward flux of matter. For positive eigenvalues, it is
+presented a completely analogous situation. Base upon the Zeldovich 
+approximation (see subsection \ref{subsec:Zeldovich'sApproximation}), it is
+proposed a classification scheme for the cosmological environment from the
+eigenvalues of the tidal tensor $T_{ij}$ 
+(see Figure\ref{fig:ClassificationSchemeTweb}). 
 
 
+%Reviewed
 %.........................................................................
 %Classification of Cosmological Environment
 \begin{itemize}
-\item \textbf{Vacío (Vacuum):} en este caso los tres autovalores son positivos, 
-indicando una expansión en todas las direcciones.
-\item \textbf{Hoja (Sheet):} para este caso $\lambda_1\geq\lambda_2>0$ y 
-$\lambda_3<0$, indicando un colapso en una sola dirección, dando lugar a una 
-zona con geometría local plana.
-\item \textbf{Filamento (Filament):} para estas zonas solo el $\lambda_1$ es
-positivo, indicando un colapso en dos direcciones y expansión e una, formando
-así una región con geometría unidimensional.
-\item \textbf{Nudo (Knot):} para este último tipo de región, los tres 
-autovalores son negativos, indicando un colapso en todas las direcciones y 
-dando lugar a una zona comprimida.
+\item \textbf{Vacuum:} in this case, the three eigenvalues are positive,
+thereby indicating an expansion into all directions of space.
+\item \textbf{Sheet:} in this case $\lambda_1\geq\lambda_2>0$ and 
+$\lambda_3<0$, thereby implying an one-dimensional collapse, and leading 
+to a region with a planar local geometry.
+\item \textbf{Filament:} for this type of regions, only the value of 
+$\lambda_1$ is positive, implying a collapse into two directions and an 
+expansion into the other one, thereby forming a region with a linear 
+geometry.
+\item \textbf{Knot:} finally, for this type of region, the three 
+eigenvalues are negative, so there is a collapse into all the directions,
+leading a highly compressed zone.
 \end{itemize}
 %.........................................................................
 
 
-Lo más destacable de este método respecto a los métodos geométricos es su 
-naturaleza dinámica, permitiendo diferenciar zonas con iguales valores 
-densidad pero con propiedades de estabilidad diferentes. A pesar de lo 
-anterior, la asunción de mínimo local solo es justificada en el centro de 
-cada halo, careciendo así de significado y precisión generalizar este 
-esquema en cualquier punto del espacio. Otro inconveniente es que bajo el 
-esquema de clasificación original con los signos de cada autovalor no se 
-reproduce la impresión visual que se obtiene en la distribución de materia
-de las simulaciones (ver figura \ref{fig:TwebVwebComparison}).
+%Reviewed
+The most remarkable of this scheme compared to geometric methods is
+its dynamical nature, since it allows differentiating regions with the 
+same density value but with different stability properties. In spite of
+the latter, assuming a local minimum is only justified in the center of
+each halo, therefore it is meaningless to generalize this scheme for any
+other region of the space. Another inconvenient is that, according to the
+original scheme, using the sign of each eigenvalue instead of using the
+threshold value, it is not reproduced the visual impression obtained 
+from the dark matter distribution of the simulations (see figure
+\ref{fig:TwebVwebComparison}).
 
 
+%Reviewed
 %.........................................................................
 %Classification Scheme
 \begin{figure}[htbp]
@@ -748,20 +760,23 @@ de las simulaciones (ver figura \ref{fig:TwebVwebComparison}).
 	\includegraphics[width=0.9\textwidth]
 	{./figures/2_theoretical_framework/EnvironmentClassification.png}
 
-	\caption{\small{Esquema de clasificación del entorno cosmológico 
-	para los esquemas T-web y V-web. El valor umbral $\lambda_{th}$ es 
-	tomado como un parámetro libre.}}
+	\caption{\small{Classification scheme for the cosmological environment for
+	both T-web and V-web schemes. The threshold value $\lambda_{th}$ is taken as
+	free parameter.}}
 	
 	\label{fig:ClassificationSchemeTweb}
 \end{figure}
 %.........................................................................
 
 
-Una significativa mejora de este método se logra generalizando el esquema 
-de clasificación respecto a un cierto valor umbral $\lambda_{th}^T$, que 
-es tomado como parámetro libre y se ajusta acorde a la impresión visual 
-obtenida \cite{forero2008}, en especial el esquema original se recupera 
-fijando $\lambda_{th}^T=0$.
+
+%Reviewed
+A significant improvement of this method is reached by generalizing the
+classification scheme respect to a certain threshold value $\lambda_{th}^T$,
+which is taken as a free parameter and is adjusted according to the visual 
+impression obtained \cite{forero2008}, specially, the original scheme is 
+recovery by setting $\lambda_{th}^T=0$.
+
 
 
 	%---------------------------------------------------------------------
