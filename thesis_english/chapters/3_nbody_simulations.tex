@@ -748,7 +748,7 @@ each halo, therefore it is meaningless to generalize this scheme for any
 other region of the space. Another inconvenient is that, according to the
 original scheme, using the sign of each eigenvalue instead of using the
 threshold value, it is not reproduced the visual impression obtained 
-from the dark matter distribution of the simulations (see figure
+from the dark matter distribution of the simulations (see Figure
 \ref{fig:TwebVwebComparison}).
 
 
@@ -774,42 +774,46 @@ from the dark matter distribution of the simulations (see figure
 A significant improvement of this method is reached by generalizing the
 classification scheme respect to a certain threshold value $\lambda_{th}^T$,
 which is taken as a free parameter and is adjusted according to the visual 
-impression obtained \cite{forero2008}, specially, the original scheme is 
+impression obtained \cite{forero2008}. Specially, the original scheme is 
 recovery by setting $\lambda_{th}^T=0$.
 
 
 
 	%---------------------------------------------------------------------
 	%The V-web Method
-	\subsection{Método V-web}
+	\subsection{V-web Scheme}
 	\label{subsec:TheV-webMethod}
 	%---------------------------------------------------------------------
 
 
-El segundo método dinámico presentado para la clasificación de la red 
-cósmica es presentado en \cite{hoffman2012} y está basado en el tensor de 
-velocidad de peculiar (shear velocity tensor)
+%Reviewed
+The second dynamical scheme to classify the cosmic web presented in this 
+chapter is due to \cite{hoffman2012} and it is based upon the peculiar 
+shear velocity tensor
 
 
+%Reviewed
 %.........................................................................
 %Vweb Tensor
 \eq{eq:Vweb_Definition}
 { \Sigma_{ij} = -\frac{1}{2 H_0}\pr{ \der{v_i}{r_j} + \der{v_j}{r_i} } }
 %.........................................................................
-de forma análoga al esquema T-web, en este esquema son calculados los 
-auto\-valores del tensor $\Sigma_{ij}$ y se define el entorno acorde a un 
-valor umbral $\lambda_{th}^V$ (ver figura \ref{fig:ClassificationSchemeTweb}).
+analogously to the T-web scheme, the eigenvalues of the tensor $\Sigma_{ij}$
+are calculated and the environment is defined according to a threshold 
+value $\lambda_{th}^V$ (see Figure \ref{fig:ClassificationSchemeTweb}).
 
 
-Como es mostrado en \cite{hoffman2012}, en el régimen lineal los tensores
-$T_{ij}$ y $\Sigma_{ij}$ son proporcionales, siendo ambos métodos 
-completamente equivalentes en este régimen. Esto es parcialmente 
-evidenciado en la impresión visual de ambos esquemas de clasificación que 
-se obtiene a grandes escalas para la simulación Bolshoi (figura 
-\ref{fig:TwebVwebComparison}), y se debe a la menor no linealidad de los 
-modos a mayores escalas. 
+%Reviewed
+As it has been demonstrated by \cite{hoffman2012}, in the linear regime 
+both tensors $T_{ij}$ and $\Sigma_{ij}$ are proportional, therefore both
+schemes are completely equivalent in this time. This fact is partially 
+evidenced through the visual impression obtained for both schemes from
+the large-scale structure in the Bolshoi simulation (see Figure
+\ref{fig:TwebVwebComparison}), and that is due to the linearity of
+individual Fourier modes at very large scales.
 
 
+%Reviewed
 %.........................................................................
 %Tweb Vweb Comparison
 \begin{figure}[htbp]
@@ -819,40 +823,41 @@ modos a mayores escalas.
 	{./figures/3_nbody_simulations/Vweb_Tweb.pdf}}
 	\end{center}
 
-	\caption{\small{Se ilustra para cada una las simulaciones
-	(CLUES 1, CLUES 2, CLUES 3, Bolshoi) la diferencia entre los 
-	esquemas de clasificación T-web y V-web para diferentes valores de 
-	$\lambda_{th}$ (Negro - Nudo, Gris oscuro - Filamento, Gris - Hoja, 
-	Blanco - Vacío). En las gráficas superiores se muestra la impresión 
-	visual obtenida a partir de los respectivos campos de contraste de 
-	densidad ($\log (\delta+1)$), usadas para la calibración de los valores 
-	$\lambda_{th}$. La resolución para una de las mallas construidas es 
-	aproximadamente $1.0 h^{-1}$ Mpc/celda y para todas se realiza un
-	suavizado Gaussiano del tamaño de una celda, el grosor de cada slide
-	es de una celda de la malla.}}
+	\caption{\small{It is illustrated for each one of the simulations
+	(CLUES 1, CLUES 2, CLUES 3, Bolshoi) the difference between both 
+	classification schemes, T-web and V-web, and for different threshold
+	values $\lambda_{th}$ (Black - Knot, Dark gray - Filament, Gray - Sheet,
+	White - Vacuum). In the upper figures it is shown the visual impression
+	obtained from the respective density fields ($\log (\delta+1)$), these
+	impressions are used to calibrate the threshold value $\lambda_{th}$.
+	The resolution of the used grid in each simulation is approximately 
+	$1.0 h^{-1}$ Mpc/cell and for each one it is performed a Gaussian 
+	softening of one cell size. The width of each slide is one cell.}}
 	
 	\label{fig:TwebVwebComparison}
 \end{figure}
 %.........................................................................
 
 
-En el caso de modos pequeños, donde los efectos no lineales son más 
-do\-minantes, ambos esquemas difieren notablemente, tal como puede verse en 
-la impresión visual de las simulaciones CLUES. Específicamente, el esquema 
-V-web cuantifica de forma más precisa la estructura fina de la red 
-cósmica a pequeñas escalas, permitiendo definir un entorno más apropiado 
-para pequeñas estructuras a nivel cosmológico como halos de materia oscura 
-o pequeños grupos de ellos.
+%Reviewed
+For small modes, where non-linear effects are more dominant, both schemes
+differ significantly, as it can be seen in the visual impression of
+the CLUES simulations. Specifically, the V-web scheme quantifies in a more
+precise way the fine structure of the cosmic web at small scales, thereby 
+allowing defining a more appropriate environment for cosmologically small 
+structures like dark matter halos or small groups of them.
 
 
-Otra ventaja del esquema V-web respecto al T-web radica en que está basado 
-en el campo de velocidades peculiares en vez del campo de densidad, aportando 
-así más información dinámica del entorno y haciendo posible dar cuenta de una
-forma más directa de efectos no locales, como flujos de materia o influencia 
-de estructuras cercanas. Debido a esto, este esquema será adoptado como 
-estándar para la cuantificación del entorno de halos y pares de halos 
-(sistemas como el grupo local) y de las distribuciones de entorno 
-cosmológico en el capítulo \ref{cha:Results}.
+%Reviewed
+Another advantage of the V-web scheme regarding the T-web is because the 
+V-web is based upon the shear velocity field instead of the density field, 
+thereby giving more information about the dynamic of the local environment
+and making possible to quantify more directly non-local effects, like fluxes
+of matter or the influence of neighbour structures. Because of this, this 
+scheme will be adopted as standard for quantifying the environment of halos
+and pairs (Local Group-like systems) and statistical distributions of the 
+cosmic environment in the chapter \ref{cha:Results}.
+
 
 
 %*************************************************************************
@@ -862,25 +867,26 @@ cosmológico en el capítulo \ref{cha:Results}.
 
 %*************************************************************************
 %Halos detection and sample definitions
-\section{Detección de Halos y Definición de Muestras}
+\section{Detecting Halos and Defining the Samples}
 \label{sec:HalosDetectionAndSampleDefinitions}
 
 
-Una vez caracterizado el entorno cosmológico, el siguiente paso es encontrar 
-las estructuras que se forman en las simulaciones, específicamente halos de 
-materia oscura. Debido a la naturaleza continua de la distribución de materia 
-en el universo, es complicado y subjetivo definir estructuras discretas y 
-limitadas espacialmente, como los halos de materia oscura o las galaxias en 
-ellos. A pesar de esto, el carácter aproximado de las soluciones numéricas 
-exige a priori uan construcción discreta del campo de densidad a partir de 
-partículas puntuales con una cierta masa representativa (generalmente del 
-orden de $10^7 \sim 10^9 h^{-1}$ M$_{\odot}$, aunque depende específicamente 
-de la resolución de la simulación), esto implica que la detección de 
-estructuras físicas discretas\footnote{A pesar de que las partículas que 
-mapean la distribución de densidad también tienen un carácter discreto, su 
-individualidad carece de sentido físico y solo es consecuencia de los 
-métodos numéricos implementados.} se reduce a encontrar agrupaciones de 
-partículas que representen estos sistemas.
+%Reviewed
+Once the cosmological environment has been characterized, the next step is
+to find the structures formed in the simulations, specifically dark matter
+halos. Due to the continuous nature of the matter distribution of the 
+universe, it is complicated and subjective to define discrete and spatially
+limited structures, like dark matter halos and the embedded galaxies within
+them. In spite of this, the rough nature of numerical solutions requires a 
+priori discretization of the density field through point particles with an
+associated representative mass (generally in the order of $10^7 
+\sim 10^9 h^{-1}$ M$_{\odot}$, though this depends specifically on the 
+resolution of the simulation). The latter implies that the selection of 
+discrete physical structures\footnote{ In spite of the particles that maps 
+the density distribution have also a discrete nature, their individuality 
+lacks of physical sense and it is only a consequence of the used numerical 
+schemes.} is reduced to find clusters of particles which represents these
+systems.
 
 
 	%---------------------------------------------------------------------
