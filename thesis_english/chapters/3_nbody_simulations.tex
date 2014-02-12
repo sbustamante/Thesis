@@ -889,18 +889,21 @@ schemes.} is reduced to find clusters of particles which represents these
 systems.
 
 
+
 	%---------------------------------------------------------------------
 	%FOF method
-	\subsection{Método FOF}
+	\subsection{FOF Method}
 	\label{subsec:FOFMethod}
 	%---------------------------------------------------------------------
 	
+	
+%Reviewed
+One of the most used methods for detecting structures in N-body simulations
+is the FOF (Friend of Friend method).
 
-Uno de los métodos más utilizados para la detección de estructuras en 
-simulaciones de N-cuerpos se denomina FOF (por sus siglas en inglés
-\textit{Friend of Friend}).
 
-\
+%Reviewed
+\newpage
 %.........................................................................
 %FOF Method
 \begin{figure}[htbp]
@@ -908,46 +911,50 @@ simulaciones de N-cuerpos se denomina FOF (por sus siglas en inglés
 	\includegraphics[width=0.9\textwidth]
 	{./figures/3_nbody_simulations/FOF_Method.png}
 
-	\caption{\small{Diagrama ilustrativo del método FOF. Los círculos grises
-	entorno a cada partícula representa la zona de vinculación y la curva 
-	roja representa una de las estructuras encontradas.}}
+	\caption{\small{Illustrative diagram of the FOF method. Gray circles 
+	around each particle represents the linking region and the red curve
+	represents one of the bounded structures found by the method.}}
 	
 	\label{fig:FOF_Method}
 \end{figure}
 %.........................................................................
 
 
-En este método se asocia un volumen finito a cada partícula, denominada 
-región de vinculación, luego las estructuras son halladas a partir de 
-intersecciones contiguas de estas regiones. Un ejemplo ilustrativo es 
-presentado en la figura \ref{fig:FOF_Method}, donde la estructura de la curva
-roja, correspondiente a un halo de materia oscura, es construida a partir
-de 11 regiones de vinculación adyacentes que se intersectan mutuamente.
-La geometría de las regiones de vinculación son generalmente esféricas, con
-un radio $R_i$ dado por la siguiente expresión
+%Reviewed
+In this method, it is associated a finite volume to each particle which
+is called the linking region. Once defined these volumes, the structures
+are found by detecting intersections between them. An illustrative example
+is shown in the Figure \ref{fig:FOF_Method}, where the structure enclosed 
+by the red curve, corresponding to a dark matter halo, is made of the 11
+adjacent linking regions which intercept each other. The geometry of the
+linking regions is generally spherical, with a radius $R_i$ given by the
+next expression
 
 
+%Reviewed
 %.........................................................................
 %FOF Diameter
 \eq{eq:FOF_Diameter}
 { R_i = \frac{1}{2}b\ \bar l }
 %.........................................................................
-donde $b$ es el parámetro de vinculación y $\bar l$ el camino libre medio 
-de las partículas en la simulación. El parámetro de vinculación $b$ es libre 
-y depende de cada simulación, siendo especificado a priori en la construcción 
-de catálogos de halos.
+where $b$ is the linking parameter and $\bar l$ the mean free path of the 
+particles of the simulation. The linking parameter $b$ is free and depends
+on each simulation particularly, being given a priori before the 
+construction of the catalogue of halos.
 
 
-En la figura \ref{fig:CLUES_FOF} se muestra el resultado del método FOF en
-la construcción de un catálogo de halos de materia oscura para la simulación
-CLUES 3. La distribución de los halos está acorde con la distribución de 
-densidad (ver figura \ref{fig:TwebVwebComparison}), siguiendo el mismo patrón
-de filamentos y nodos de la red cósmica. En el subsección 
-\ref{subsec:SampleOfPairsToUse}, las muestras de halos definidas en cada 
-simulación se hallan a partir de este esquema, con un parámetro de 
-vinculación $b = 0.17$.
+
+%Reviewed
+Figure \ref{fig:CLUES_FOF} shows the result of applying the FOF method to
+construct a catalogue of halos for the CLUES 3 simulation. The distribution
+of the halos is in accordance with the density distribution (see Figure 
+\ref{fig:TwebVwebComparison}), following the same pattern of filaments and
+knots that the cosmic web. In the subsection \ref{subsec:SampleOfPairsToUse}
+the defined samples of halos in each simulation are built by using this 
+scheme, with a linking parameter $b = 0.17$.
 
 
+%Reviewed
 %.........................................................................
 %FOF method in CLUES simulation
 \begin{figure}[htbp]
@@ -955,9 +962,9 @@ vinculación $b = 0.17$.
 	\includegraphics[width=0.5\textwidth]
 	{./figures/3_nbody_simulations/Halos_Spatial_Distribution(CLUES_16953).png}
 
-	\caption{\small{Halos encontrados a partir del esquema FOF en una de 
-	las	simulaciones CLUES. El gradiente de color indica la profundidad 
-	respecto al eje $x$, donde los halos negros son los más cercanos.}}
+	\caption{\small{Halos detected by using the FOF scheme for one of the 
+	CLUES simulations. The color gradient indicates the depth with respect to 
+	the	$x$ axe, where black point are the nearest halos.}}
 	
 	\label{fig:CLUES_FOF}
 \end{figure}
