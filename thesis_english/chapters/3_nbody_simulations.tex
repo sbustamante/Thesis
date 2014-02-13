@@ -495,7 +495,7 @@ Due to its larger comoving size compared to constrained simulations (a
 cubic volume of $250$ Mpc$/h$), Bolshoi is used for obtaining the 
 fine-grained statistics for the results computed in the chapter
 \ref{cha:Results}. The cosmological model used in this simulation is the 
-WMAP7 universe (see table \ref{tab:CosmologicalParameters}), the number of
+WMAP7 universe (see Table \ref{tab:CosmologicalParameters}), the number of
 particles used is $2048^3$, what implies a mean mass per particle of 
 $1.35 \times 10^8 h^{-1}$ M$_{\odot}$. More precise and technical 
 information about can be consulted in \cite{klypin2011}.
@@ -596,7 +596,7 @@ For the evolution it is used the package \texttt{GADGET2}\footnote{
 by Volker Springel. It is available for free download in the official 
 webpage of the project \url{http://www.mpa-garching.mpg.de/gadget/}}
 with $1024^3$ particles of dark matter and a cosmology consistent with
-the WMAP7 (see table \ref{tab:CosmologicalParameters}). More technical 
+the WMAP7 (see Table \ref{tab:CosmologicalParameters}). More technical 
 details  and further information of the project can be found in
 \cite{Gottloeber2010}.
 
@@ -971,80 +971,92 @@ scheme, with a linking parameter $b = 0.17$.
 %.........................................................................
 
 
+
+
 	%---------------------------------------------------------------------
 	%Sample of pairs to use
-	\subsection{Definición de Muestras}
+	\subsection{Defining the Samples}
 	\label{subsec:SampleOfPairsToUse}
 	%---------------------------------------------------------------------
 	
 
-En esta subsección se presentan las diferentes muestras definidas que serán 
-usadas en el capítulo \ref{cha:Results} para la determinación de los efectos 
-del entorno en los sistemas de grupos locales y la caracterización de cada 
-simulación. Estas corresponde a una versión ampliada de las muestras 
-definidas en \cite{forero2011}.
+%Reviewed
+In this subsection, it is presented the samples that will be used in the 
+chapter \ref{cha:Results} for determining the effects of the environment on
+LG-like systems and the characterization of each simulation. These samples 
+are an extended version of the samples defined by \cite{forero2011}.
+
 
 
 %.........................................................................
 %Samples in All Simulations
 \begin{itemize}
-\item \textbf{Halos Generales} \textit{(GH)}\textbf{:} estos corresponden a
-todos los halos hallados en las simulaciones a partir del esquema FOF, 
-independiente de su rango de masa.
+%Reviewed
+\item \textbf{General Halos} \textit{(GH)}\textbf{:} these halos correspond
+to all halos found in the simulations by using the FOF method, independently
+of the mass range.
 
-\item \textbf{Halos Individuales} \textit{(IH)}\textbf{:} son un subconjunto 
-de la anterior muestra, y representan todos los halos de materia oscura que 
-están en el rango de masas $5.0 \times 10^{11}\Msun - 5.0\times 10 ^{12}\Msun$. 
-Este rango de masa es escogido debido a que corresponde al rango en el cual 
-se forman galaxias de disco, tal como los principales miembros del grupo local,
-Andrómeda y la Vía Láctea.
+%Reviewed
+\item \textbf{Individual Halos} \textit{(IH)}\textbf{:} they are a subset of
+the previous sample and represent all halos that are within the mass range
+$5.0 \times 10^{11}\Msun - 5.0\times 10 ^{12}\Msun$. This mass range is 
+selected because it corresponds to the range in which disc galaxies form,
+such as the main members of the local group, Andromeda and the Milky Way.
 
-\item \textbf{Pares} \textit{(P)}\textbf{:} esta es construida a partir de 
-la muestra \textit{IH} y está compuesta por pares de halos que satisfacen el 
-criterio de ser mutuamente el halo más cercano al otro. Se construye como una 
-muestra primigenia para encontrar sistemas de pares aislados y similares al 
-grupo local.
-
-\item \textbf{Pares Aislados} \textit{(IP)}\textbf{:} esta muestra se construye
-a partir de los sistemas en la muestra de pares que además satisfacen las 
-siguientes condiciones \cite{forero2011} \cite{forero2013}.
+%Reviewed
+\item \textbf{Pairs} \textit{(P)}\textbf{:} this sample is built from the 
+\textit{IH} sample and is composed by all halos that satisfy the criterion
+to be the closest neighbour to each other. It is constructed as a primitive
+sample in order to find isolated pairs and LG-like systems.
 
 
+%Reviewed
+\item \textbf{Isolated Pairs} \textit{(IP)}\textbf{:} this sample is built
+from the systems of the Pair sample which furthermore satisfy the next 
+conditions \cite{forero2011} \cite{forero2013}.
+
+
+%Reviewed
 %.........................................................................
 %CLG conditions
 	\begin{itemize}
-	\item La distancia entre el centro de los halos debe ser menor a 
-	$0.7 h^{-1}$ Mpc, consistente con la distancia entre la Vía Láctea
-	y Andrómeda.
-	\item La velocidad radial relativa entre ambos halos debe ser negativa.
-	\item No debe haber ningún objeto más masivo que alguno de los dos halos
-	a una distancia menor que $2.0 h^{-1}$ Mpc de ambos.
-	\item No debe existir ningún objeto más masivo que $5.0 \times 10^{13}\Msun$
-	a una distancia menor que $5h^{-1}$ Mpc respecto a ambos halos.
+	\item The distance between the center of each halo should be less than
+	$0.7 h^{-1}$ Mpc, what is consistent with the distance between Andromeda
+	and the Milky Way.
+	\item The relative radial velocity of the pair system should be negative.
+	\item There should be no objects more massive than both halos at a distance
+	less than $2.0 h^{-1}$ Mpc with respect to the position of the pair.
+	\item There should be no objects more massive than $5.0 \times 10^{13}
+	\Msun$ at a distance less than $5h^{-1}$ with respect to both halos.
 	\end{itemize}
 %.........................................................................	
 	
 
-Estas condiciones garantizan el aislamiento de los pares respecto a la 
-influencia gravitacional de estructuras mayores y otros halos 
-
-\item \textbf{Grupos Locales} \textit{(LG)}\textbf{:} esta muestra es 
-definida en la simulaciones CLUES y corresponde a los pares de halos 
-construidos a priori para la reproducción del grupo local. Por definición, 
-solo existe un sistema \textit{LG} por cada una de las tres simulaciones 
-CLUES.
-
-\item \textbf{Grupos Locales Construidos} \textit{(CLG)}\textbf{:} con el
-objetivo de obtener una muestra de sistemas tipo \textit{LG} en 
-simulaciones no restringidas, se propone un método de construcción basado
-en el entorno cosmológico de la muestra \textit{LG} en las simulaciones 
-CLUES (ver figura \ref{fig:LG_Sample_Environment}). Para esto se calculan
-los 3 campos de autovalores del \textit{shear velocity tensor} en una malla
-con resolución de $1.0 h^{-1}$ Mpc/celda y un suavizado Gaussiano de una 
-celda. En la siguiente tabla se tabulan los valores obtenidos para los 
-autovalores del entorno de los sistemas \textit{LG}.
+%Reviewed
+These conditions guarantee the isolation of the pairs with respect to the
+gravitational influence of larger structures and other halos.
 
 
+%Reviewed
+\item \textbf{LG-like Systems} \textit{(LG)}\textbf{:} this sample is 
+defined in the CLUES simulations and corresponds to the halo pairs built
+a priori for reproducing the local group. By definition, there is only a
+\textit{LG} system in each one of three simulations.
+
+
+%Reviewed
+\item \textbf{Constructed Local Groups} \textit{(CLG)}\textbf{:} with the
+aim to obtain a \textit{LG}-like sample in unconstrained simulations, it 
+is proposed a novel construction method base upon the cosmological 
+environment of the \textit{LG} sample previously defined in the CLUES
+simulations (see Figure \ref{fig:LG_Sample_Environment}). For this it is
+computed the three eigenvalues fields of the shear velocity tensor onto a
+grid with a resolution of $1.0 h^{-1}$ Mpc/cell and a Gaussian softening
+of one cell size. In the next Table is tabulated the obtained values for 
+the eigenvalues of the environment for the \textit{LG}-like systems.
+
+
+%Reviewed
 %.........................................................................
 %Table of extreme values of LG environment
 \begin{table}[htbp]
@@ -1053,7 +1065,7 @@ autovalores del entorno de los sistemas \textit{LG}.
 \begin{small}
   \centering
   \begin{tabular}{| c | c | c | c |} \hline
-	\cellc{\textbf{Descripción} } 				 				       & 
+	\cellc{\textbf{Description} }		 				     & 
 	\cellc{$\bds{\lambda_{1}}$ \footnotesize{$[10^{-1}]$}}   & 
 	\cellc{$\bds{\lambda_{2}}$ \footnotesize{$[10^{-1}]$}}   & 
 	\cellc{$\bds{\lambda_{3}}$ \footnotesize{$[10^{-1}]$}}   \\ \hline
@@ -1064,11 +1076,12 @@ autovalores del entorno de los sistemas \textit{LG}.
 	{CLUES 2 H2} & 2.19		& 4.45$\times 10^{-2}$   & -1.29 \\ \hline
 	{CLUES 3 H1} & 3.23 		& -6.29$\times 10^{-2}$  & -1.98 \\
 	{CLUES 3 H2} & 3.49 		& 1.21 					 & -1.29 \\ \hline
-	{Valor mínimo} & 1.78 	& -6.29$\times 10^{-2}$  & -1.98 \\
-	{Valor máximo} & 3.49 	& 1.21					 & -8.85$\times 10^{-1}$ \\ \hline
+	{Maximum value} & 1.78 	& -6.29$\times 10^{-2}$  & -1.98 \\
+	{Minimum value} & 3.49 	& 1.21					 & -8.85$\times 10^{-1}$ \\ \hline
   \end{tabular}
   
-  \caption{Autovalores asociados al entorno de cada grupo local en las simulaciones CLUES.}  
+  \caption{Eigenvalues associated to the environmental properties of each
+  Local Group found in the CLUES simulations.}  
   \label{tab:Lambdas_LG}
 \end{small}
 \end{minipage}
@@ -1077,6 +1090,7 @@ autovalores del entorno de los sistemas \textit{LG}.
 %.........................................................................
 
 
+%Reviewed
 %.........................................................................
 %LG Environment in CLUES simulation
 \begin{figure}[htbp]
@@ -1086,9 +1100,9 @@ autovalores del entorno de los sistemas \textit{LG}.
 	\includegraphics[width=0.75\textwidth]
 	{./figures/3_nbody_simulations/LG_Environment.png}
 
-	\caption{\small{Entorno cosmológico a partir del esquema V-web (con 
-	$\lambda_{th} = 0.3$) para 	cada uno de los LG de las simulaciones 
-	CLUES, indicados por los puntos	rojos.}}
+	\caption{\small{Cosmological environment obtained by using the V-web
+	scheme (with $\lambda_{th} = 0.3$) for each one of the LG-like systems
+	in the CLUES simulations (red dots).}}
 	\label{fig:LG_Sample_Environment}
 \end{minipage}
 \end{flushright}
@@ -1096,23 +1110,27 @@ autovalores del entorno de los sistemas \textit{LG}.
 %.........................................................................
 
 
-Finalmente, a partir de los autovalores extremos hallados se define la 
-muestra \textit{CLG} como aquellos pares \textit{IP} cuyos autovalores 
-de entorno asociados se encuentran en el intervalo fijado. Para garantizar
-autoconsistencia, esta muestra también es definida en las simulaciones 
-CLUES.
+%Reviewed
+Finally, from the extreme values of the eigenvalues previously found, it
+is defined the \textit{CLG} sample as all the pairs \textit{IP} whose 
+respective eigenvalues are within the set range. In order to guarantee
+self-consistency, it is constructed a \textit{CLG} sample in the CLUES
+simulations.
+
+
 
 \end{itemize}
 %.........................................................................
 
 
+%Reviewed
 %.........................................................................
 %Table of samples numbers
 \begin{table}[htbp]
 \begin{small}
   \centering
   \begin{tabular}{| c | c | c | c | c |} \hline
-	\cellc{\textbf{Muestra}}		& 
+	\cellc{\textbf{Sample}}		& 
 	\cellc{\textbf{CLUES 1}}		& 
 	\cellc{\textbf{CLUES 2}} 		& 
 	\cellc{\textbf{CLUES 3}}		& 
@@ -1125,22 +1143,22 @@ CLUES.
 	\textit{CLG}	& 1 	& 2 	& 3 	 & 30		\\ \hline
   \end{tabular}
   
-  \caption{Tamaños de las muestras definidas para cada una de las 
-  simulaciones. }  
+  \caption{Size of the defined samples in each one of the simulations. }  
   \label{tab:Samples}
 \end{small}
 \end{table}
 %.........................................................................
 
 
-Para finalizar, en la tabla \ref{tab:Samples} se tabula el tamaño de cada 
-una de las muestras definidas para cada simulación. Puede notarse que 
-los tamaños escalan aproxi\-madamente en la misma proporción que el 
-volumen entre las simulaciones ($1/60$ -- CLUES /Bolshoi). En especial 
-la muestra \textit{CLG} para Bolshoi tiene un tamaño proporcional
-a la muestra \textit{LG} de las CLUES, indicando que el esquema de 
-construcción propuesto reproduce sistemas tipo LG en simulaciones no 
-restringidas.
+%Reviewed
+To finish, in Table \ref{tab:Samples} is tabulated the size of each one
+of the defined samples in each simulation. It can be noticed that their 
+sizes scale approximately in the same proportion that the volume of the 
+simulations ($1/60$ -- CLUES /Bolshoi). Specially, the \textit{CLG} sample 
+in Bolshoi has a proportional size that the \textit{LG} in CLUES, thereby
+indicating that the proposed construction scheme reproduces LG-like systems
+in unconstrained simulations.
+
 
 
 	%---------------------------------------------------------------------
