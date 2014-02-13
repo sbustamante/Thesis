@@ -1163,45 +1163,54 @@ in unconstrained simulations.
 
 	%---------------------------------------------------------------------
 	%Sample Detection Method
-	\subsection{Método de Detección de Pares}
+	\subsection{Method to Detect Pairs}
 	\label{subsec:Pairs_Detection}
 	%---------------------------------------------------------------------
 	
 
-A continuación se describe el algoritmo desarrollado para la detección de 
-cada una de las muestras de pares en cada simulación (\texttt{Pair Finder})
-\footnote{Una versión actualizada del código puede encontrarse en 
+%Reviewed
+Next, it shall be described the algorithm developed for detecting each one
+of the samples of pair in the simulations (\texttt{Pair Finder}) \footnote{
+An updated version of this code can be found in the next github repository
 \url{https://github.com/sbustamante/Thesis/tree/master/codes/Halo_Finder}}.
+
+
 
 %.........................................................................
 %Algorithm of pair finder
 \begin{itemize}
-\item Se particiona el espacio de la simulación en $N\times N \times N$
-celdas, luego para cada celda se realiza un indexado de los halos que están 
-dentro de ella, almacenando los identificadores de cada uno de ellos.
+%Reviewed
+\item It is partitioned the space of the simulation into $N\times N \times
+N$ cells, then for each cell it is performed an indexation of the Halos 
+within, storing the identification of each one of them.
 
-\item Posteriormente, para cada una de las celdas se identifican los 
-primeros vecinos, teniendo en cuenta condiciones de frontera periódicas,
-tal como la celda $i$ en la figura \ref{fig:Pair_Finder}.
+%Reviewed
+\item Next, for each cell it is identified the first neighbours, taking 
+into account periodic boundary conditions, such as the cell $i$ in the 
+Figure \ref{fig:Pair_Finder}.
 
-\item Para un halo de una celda dada se calcula la distancia a todos los
-halos de la misma celda y de las celdas vecinas, luego se almacena la 
-distancia al halo más cercano, la distancia al halo más cercano con una 
-masa mayor y la distancia al halo más cercano con una masa mayor a 
-$5.0 \times 10^{13}\Msun$.
+%Reviewed
+\item For a halo within a given cell, it is calculated the distance to 
+all the other halos within the same cell and the neighbour cells, then
+it is stored the distance to the closest halo, the distance to the closest
+halo with a mass greater than the current mass and finally the distance to 
+the closest halo with a mass grater than $5.0 \times 10^{13}\Msun$.
 
-\item Repitiendo el anterior paso para todos los halos, si dos halos son
-mutuamente los dos más cercanos, estos se catalogan como un par, 
-construyendo así la muestra \textit{P} definida en la subsección anterior 
+%Reviewed
+\item Repeating the previous step for all the halos, if two halos are the
+closest to each other, they are catalogued as a pair system, constructing
+in that way the \textit{P} sample defined in the previous subsection
 \ref{subsec:SampleOfPairsToUse}.
 
-\item Finalmente, para cada uno de los sistemas de pares se evalúan las 
-condiciones definitorias de los \textit{IP}, determinando así esta 
-muestra.
+%Reviewed
+\item Finally, for each one of the pair systems it is evaluated the 
+defining conditions for the \textit{IP} systems, thereby determining 
+this sample.
 \end{itemize}
 %.........................................................................
 
 
+%Reviewed
 %.........................................................................
 %Pair Finder Diagram
 \begin{figure}[htbp]
@@ -1209,28 +1218,29 @@ muestra.
 	\includegraphics[width=0.6\textwidth]
 	{./figures/3_nbody_simulations/PairFinder.png}
 
-	\caption{\small{Ilustración 2D del método para la detección de las 
-	muestras de pares. Distribución de halos de materia oscura (izquierda), 
-	definición de zonas (derecha).}}
+	\caption{\small{Two-dimensional of the method for detecting the pair 
+	samples. Random distribution of a set of dark matter halos (left), 
+	definition of cells (right).}}
 	\label{fig:Pair_Finder}
 \end{figure}
 %.........................................................................
 
 
-La eficiencia de este método radica en que evita evaluar distancias entre 
-todos los halos de la simulación, siendo necesario solo para los 
-vecinos cercanos. La estructura de celdas lo hace similar a un 
-código de árbol (ver subsección \ref{subsec:P3Method}), a excepción de la 
-estructura jerárquica de este último. En principio, el código debe ser más
-eficiente a medida que se aumenta la resolución $N$ de la malla, pero 
-existen dos limitaciones que a esto. La primera tiene que ver con el 
-número de halos por celda, este no puede ser demasiado grande, pero tampoco 
-puede ser tal que solo hallan unos pocos halos por celda \footnote{Este
-umbral no es bien definido y depende de cada simulación, por ejemplo para
-las simulaciones usadas (Bolshoi y CLUES), un valor de $N=8$ es generalmente 
-adecuado.}. La segunda limitación tiene que ver con las condiciones de 
-distancia usadas en la definición de la muestra \textit{IP}, el tamaño 
-físico de cada celda no puede ser menor a ninguna de estas distancias.
+%Reviewed
+The efficiency of this method lies in avoiding evaluating distances between
+all the halos of the simulations, being only necessary just for the closest
+neighbours. The structure of the grid makes this scheme similar to a tree 
+code (see subsection \ref{subsec:P3Method}), excepting the hierarchical
+structure performed in the latter. At first, this code should be more 
+efficient as it is increased the resolution $N$ of the grid, but there are
+two limitations to this. Firstly, the number of halos per cell should not
+be very large, but neither such that there are just a few halos per cell
+\footnote{This threshold is not well-defined and depends on each simulation
+particularly, for instance for the used simulation (Bolshoi and CLUES), a
+value of $N=8$ is generally enough.} The second limitation is related with
+the conditions of distance used for defining the \textit{IP} sample, the
+physical size of each cell cannot be less than any of these distances.
+
 
 
 %*************************************************************************
