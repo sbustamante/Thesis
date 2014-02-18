@@ -1,7 +1,8 @@
 %qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
 %Quote
 \begin{savequote}[50mm]
-‘‘The most incomprehensible thing about the universe is comprehensible’’
+‘‘The most incomprehensible thing about the universe is that it is 
+comprehensible’’
 \qauthor{Albert Einstein}
 \end{savequote}
 %qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
@@ -15,14 +16,14 @@
 
 
 %Reviewed
-Next, it is presented the results obtained from the simulations described 
-in the previous chapter \ref{cha:N-BodySimulations} for the dependence
-of the properties of LG-like systems on the cosmological environment in 
-which they are embedded. It is firstly characterized each one of the used
-simulations (CLUES and Bolshoi) with the aim to guarantee consistency 
-between the used cosmologies and between the distribution of the 
-environmental properties (see section 
-\ref{sec:StatisticalPropertiesOfAllSimulations}). After of this, in the 
+In this chapter, it is presented the results obtained from the simulations 
+des\-cribed in the previous chapter \ref{cha:N-BodySimulations} for the 
+dependence of the properties of LG-like systems on the cosmological 
+environment in which they are embedded. It is firstly characterized each 
+one of the used simulations (CLUES and Bolshoi) with the aim to guarantee 
+consistency between the used cosmologies and between the distribution of 
+the environmental properties (see section 
+\ref{sec:StatisticalPropertiesOfAllSimulations}). After this, in the 
 section \ref{sec:PropertiesOfSamplePairs} it is determined the physical
 and statistical properties of each one of the defined samples in
 \ref{subsec:SampleOfPairsToUse} and it is analysed the correlations 
@@ -38,66 +39,74 @@ simulation.
 
 %*************************************************************************
 %Statistical properties of all simulations
-\section{Propiedades de las Simulaciones}
+\section{Properties of the Simulations}
 \label{sec:StatisticalPropertiesOfAllSimulations}
 
 
-Uno de los principales objetivos para determinar la influencia del entorno
-sobre sistemas tipo grupo local es construir una muestra \textit{CLG} 
-en simulaciones no res\-tringidas y así obtener estadística significativa. 
-Para garantizar la consistencia de esta muestra es necesario
-establecer la equivalencia entre las entre las distribuciones de halos 
-oscuros y analizar las distribuciones de entorno cosmológico para cada 
-simulación.
+%Reviewed
+One of the first steps for determining the influence of the 
+environment on LG-like systems is to construct a \textit{CLG} sample in
+unconstrained simulations and thereby obtaining a more robust statistics.
+In order to guarantee the consistency of this sample is necessary to 
+stablish the equivalence between the distributions of dark matter halos
+and analyse the distributions of the cosmological environment of each 
+simulation.
+
 
 
 	%---------------------------------------------------------------------
 	%Halos Properties
-	\subsection{Función de Masa de los Halos}
+	\subsection{Halo Mass Function}
 	\label{subsec:Halos_Properties}
 	%---------------------------------------------------------------------
 
 
-La distribución espacial de los halos refleja la fina estructura de la red 
-cósmica formada por la materia oscura, tanto en simulaciones (ver figura 
-\ref{fig:Halos_Web}) como en observaciones cosmológicas (ver sección 
-\ref{sec:CosmologicalObservations}). Esto sugiere posibles correlaciones 
-entre las propiedades de los halos y el entorno en el cual están embebidos, 
-tal como es mostrado para la forma de los halos, el parámetro de espín y 
-alineación de subhalos en \cite{libeskind2013}, y para la masa de los halos 
-\cite{lemson1999}. En especial el trabajo de \cite{libeskind2013} demuestra 
-que el esquema de clasificación V-web es el más apropiado para estudios de 
-correlaciones con propiedades direccionales, tal como el momento angular de 
-los sistemas \textit{IP} o \textit{CLG} en la sección
+%Reviewed
+The spatial distribution of the halos exhibits the fine structure of the 
+cosmic web, which it is constituted by dark matter. This is exhibited both 
+in simulations (see Figure \ref{fig:Halos_Web}) and in cosmological 
+observations (see section \ref{sec:CosmologicalObservations}). This 
+suggests possible correlations between the properties of the halos and the
+environment in which they are embedded, such as it has been demonstrated 
+for dark matter halo shapes, the spin parameter and the alignment of 
+satellite halos in \cite{libeskind2013}, and for the halo mass 
+\cite{lemson1999}. Specially, in the work of \cite{libeskind2013} it is
+demonstrated that the V-web classification scheme is more appropriated for
+studying correlations with respect to directional properties, like the 
+angular momentum of \textit{IP} or \textit{CLG} systems in the section 
 \ref{sec:PropertiesOfSamplePairs}.
 
+
+%Reviewed
 \
 %.........................................................................
 %FOF method in CLUES simulation
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.55\textwidth]
+	\includegraphics[width=0.58\textwidth]
 	{./figures/3_nbody_simulations/Halos_Spatial_Distribution(CLUES_16953).png}
 
-	\caption{\small{Distribución espacial de los halos de materia oscura, 
-	reflejando la estructura de la red cósmica. El gradiente de color 
-	indica la profundidad respecto al eje $x$, donde los halos negros son 
-	los más cercanos.}}
+	\caption{\small{Spatial distribution of dark matter halos, exhibiting
+	the	characteristic structure of the cosmic web. The colour gradient 
+	indicates the depth with respect to the $x$ axis, where black points 
+	are the nearest halos.}}
 	
 	\label{fig:Halos_Web}
 \end{figure}
 %.........................................................................
 
 
-Acorde a las condiciones definitorias de las muestras \textit{IP} y 
-\textit{CLG} presentadas en la subsección \ref{subsec:SampleOfPairsToUse}, 
-la principal propiedad de los halos necesaria para la construcción de estas 
-muestras es la masa. Por esta razón es importante establecer la equivalencia 
-entre las distribuciones de masa en cada simulación. En la siguiente figura 
-\ref{fig:IMF} se calculan las funciones integradas de masa para la simulación 
-Bolshoi y para las tres simulaciones CLUES.
+%Reviewed
+According to the defining conditions of the \textit{IP} and \textit{CLG} 
+samples, presented in the subsection \ref{subsec:SampleOfPairsToUse}, the
+main property of the halos that is necessary for cons\-tructing these samples
+is the halo mass. Therefore it is important to stablish the equivalence 
+between the mass distribution of each simulation. The next Figure 
+\ref{fig:IMF} shows the results of calculating the cumulative mass 
+functions for the Bolshoi simulation and for the three CLUES simulations.
 
 
+%Reviewed
 %.........................................................................
 %Integrated Mass Fraction
 \begin{figure}[htbp]
@@ -105,108 +114,120 @@ Bolshoi y para las tres simulaciones CLUES.
 	\includegraphics[width=0.70\textwidth]
 	{./figures/4_results/Halos_IMF.pdf}
 	
-	\caption{\small{Funciones de masa integrada de halos de materia oscura 
-	(muestra GH) para cada simulación.}}
+	\caption{\small{Cumulative mass functions of the dark matter halos
+	(\textit{GH} sample) for each simulation.}}
 	\label{fig:IMF}
 \end{figure}
 %.........................................................................
 
 
-Para valores de masa altos las distribuciones son ligeramente diferentes 
-debido a la menor cantidad de datos en las simulaciones CLUES, lo que hace
-menos significativa la estadística en este caso. A pesar de esto, en el
-rango masa donde son definidas las muestras \textit{IH} 
-($5.0 \times 10^{11}\Msun - 5.0\times 10 ^{12}\Msun$) las distribuciones 
-son consistentes con el formalismo Press-Schechter \cite{press1974} para 
-los parámetros cosmológicos WMAP7, indicando así la equivalencia de las 
-muestras definidas entre las simulaciones.
+%Reviewed
+For high mass values, the distributions are slightly different due to the 
+smaller number of halos in the CLUES simulations, what makes the statistics
+less significant in this case. In spite of this, within the mass range 
+where the \textit{IH} samples are defined ($5.0 \times 10^{11}\Msun - 
+5.0\times 10 ^{12}\Msun$), the distributions are consistent with the 
+Press-Schechter mass function formalism \cite{press1974} using the 
+cosmological parameters of WMAP7, thereby indicating the equivalence 
+between the defined samples for all the used simulations.
+
+
 
 
 	%---------------------------------------------------------------------
 	%Environment Properties
-	\subsection{Distribución del Entorno Cosmológico}
+	\subsection{Distributions of the Cosmological Environment}
 	\label{subsec:Environment_Properties}
 	%---------------------------------------------------------------------
 
 
-Como fue mostrado en la sección \ref{sec:EnvironmentCharacterization}, 
-la caracterización del entorno cosmológico se logra a partir de cantidades
-físicas que indiquen el carácter geométrico o dinámico local de una región
-de la distribución de materia. En especial el esquema V-web permite dar 
-cuenta de la dinámica a pequeñas escalas de la estructura de la red cósmica,
-permitiendo definir un entorno adecuado para los halos y otros sistemas.
-En la siguiente figura son calculadas las distribuciones para cada uno de 
-los autovalores de la V-web (distribuciones de entorno), tanto para las 
-celdas de las simulaciones, como para los entornos de los halos de la 
-muestra \textit{GH}.
+
+%Reviewed
+As it has been shown in the section \ref{sec:EnvironmentCharacterization},
+the characterization of the cosmological environment is reached by using
+physical quantities that indicate the geometric or the dynamical local 
+nature of a certain region in the spatial matter distribution. Specially, 
+the V-web scheme allows to give account of the dynamics at smaller scales 
+of the cosmic web, thereby allowing to characterize and define an adequate 
+host environment for halos and other cosmological structures. The next 
+Figure shows the results of calculating the distributions for each one of
+the eigenvalues of the shear velocity tensor (distributions of 
+environment), for both, the cells of the simulations, and the host cells
+of the halos of the \textit{GH} sample.
 
 
+%Reviewed
 %.........................................................................
 %1D Distribution of Vweb eigenvalues in cells
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.4\textwidth]
+	\includegraphics[width=0.38\textwidth]
 	{./figures/4_results/Cells_Distro_L1.pdf}
-	\includegraphics[width=0.4\textwidth]
+	\includegraphics[width=0.38\textwidth]
 	{./figures/4_results/Cells_Distro_L2.pdf}
-	\includegraphics[width=0.4\textwidth]
+	\includegraphics[width=0.38\textwidth]
 	{./figures/4_results/Cells_Distro_L3.pdf}
 
-	\caption{\small{ Distribución de los autovalores en el esquema V-web
-	para cada una de las celdas de volumen (línea continua) y para los 
-	entornos de los halos de materia oscura en los catálogos FOF (línea 
-	discontinua). Las distribuciones están normalizadas tal que su área es
-	la unidad. Resolución de $1.0 h^{-1}$ Mpc/celda y suavizado Gaussiano
-	de una celda.}}
+	\caption{\small{ Distributions of eigenvalues of the V-web scheme 
+	calculated over all the volume cells (continuous lines) and over the 
+	host cells of the dark matter halos defined in the FOF catalogue (dashed 
+	lines). All the distributions are normalized such that their area is
+	the unity. Resolution of $1.0 h^{-1}$ Mpc/cell and softening parameter
+	of one cell size.}}
 	\label{fig:1D_Cells_Eigenvalues}
 \end{figure}
 %.........................................................................
 
 
-El principal resultado de la figura \ref{fig:1D_Cells_Eigenvalues} consiste 
-en la diferencia de las distribuciones para las celdas de volumen (líneas 
-continuas) entre la simulación Bolshoi y las simu\-laciones CLUES
-\footnote{Debido a la alta semejanza entre las distribuciones de las tres
-simulaciones CLUES, y con el fin de obtener estadística más significativa,
-se han fusionado las distribuciones.}. El efecto de varianza cósmica 
-(regiones rojas) es incluido a partir del cálculo de distribuciones de 
-entorno en $64$ subvolúmenes de la simulación Bolshoi, con un tamaño similar 
-a una simulación CLUES. A pesar de esto, las distribuciones de CLUES están 
-por fuera de la región de varianza cósmica, indicando así una estructura 
-cosmológica a gran escala que difiere entre ambas simulaciones.
+%Reviewed
+The main result of the Figure \ref{fig:1D_Cells_Eigenvalues} consists in 
+the difference of the distributions for all the volume cells (continuous 
+lines) between the Bolshoi simulation and the CLUES simulations \footnote{ 
+Because of the high similitude between the distributions of the three 
+CLUES simulations, and with the aim of obtaining a more significant 
+statistics, they have been merged.}. The effect of the cosmic variance 
+(red regions) is included from the calculation of the distributions of 
+environment over $64$ sub-volumes of the Bolshoi simulation, with a 
+similar size than the CLUES simulations. In spite of this, the 
+distributions of environment of the CLUES simulations are outside the 
+region of cosmic variance, thereby indicating a different cosmological 
+large-scale structure between both simulations.
 
 
-Un segundo resultado importante de la figura \ref{fig:1D_Cells_Eigenvalues}
-se obtiene a partir de las distribuciones de entorno para los halos 
-(líneas discontinuas). En el caso de Bolshoi, se nota un importante
-sesgo entre la distribución de entorno de las celdas y de los halos, 
-indicando así que la distribución espacial de los halos no es un buen 
-trazador de la estructura a gran escala del campo de densidad. Este 
-resultado es consistente con el trabajo de \cite{libeskind2013}, donde 
-hallan importantes sesgos en las distribuciones de entorno acorde a 
-diferentes rangos de masa de los halos, también usando Bolshoi. En el 
-caso de las simulaciones CLUES, las distribuciones de entorno de los 
-halos son significativamente menos sesgadas respecto a las de celdas de 
-volumen, indicando para este caso que los halos si se distribuyen 
-espacialmente acorde al entorno cosmológico cuantificado por el esquema 
-V-web.
+%Reviewed
+A second important result shown by the Figure 
+\ref{fig:1D_Cells_Eigenvalues} it is obtained from the distributions of
+environment for halos (continuous lines). In the case of Bolshoi, it is
+noticed an important bias between the distribution of environment 
+associated to the volume cells and the host cells of the halos, thereby 
+indicating that the spatial distribution of the halos is not a good tracer
+of the large-scale structure of the matter field. This result is 
+consistent with the work of \cite{libeskind2013}, where it has been found
+an important bias in the distributions of environment according to 
+different mass ranges of the halos, also using the Bolshoi simulation. In
+the case of the CLUES simulations, the distributions of environment of the
+halos are significantly less bia\-sed regarding the volume cells, thus 
+indicating for this case that halos do distribute spatially according to
+the cosmological environment quantified by using the V-web scheme.
 
 
-Por último, en la figura \ref{fig:Vol_Fraction} son calculadas las 
-densidades medias y las fracciones de volumen para cada uno de los tipos 
-de regiones (ver sección \ref{sec:EnvironmentCharacterization}) acorde al 
-valor umbral $\lambda_{th}$. Las funciones de fracción de volumen son 
-diferentes entre las simulaciones CLUES y Bolshoi, en especial la región 
-en torno a $\lambda_{th} = 0.1$ para las regiones tipo hoja (sheet). Esto se 
-debe al desplazamiento relativo entre los picos de las distribuciones de 
-entorno para cada simulación (ver figura \ref{fig:1D_Cells_Eigenvalues}), 
-lo que implica un comportamiento diferente al criterio de selección de 
-regiones a partir del valor $\lambda_{th}$. A pesar de esto, las fracciones 
-de volumen se mantienen más o menos consistentes para ambas simulaciones 
-en el rango  $0.2 \leq \lambda_{th} \leq 0.4$, que corresponde al rango 
-donde mejor se reproduce visualmente la distribución global del campo de 
-densidad.
+%Reviewed
+Finally, in the Figure \ref{fig:Vol_Fraction} it is shown the calculated
+mean densities and the vo\-lume fractions for each type of region (see 
+section \ref{sec:EnvironmentCharacterization}) according to the threshold
+value $\lambda_{th}$. The volume fraction functions are different between
+the CLUES and Bolshoi simulations, specially for values close to 
+$\lambda_{th} = 0.1$, corresponding to sheet regions. This is due to the 
+relative displacement of the peaks of the distributions of environment for
+each simulation (see Figure \ref{fig:1D_Cells_Eigenvalues}), what implies
+a different behaviour before the criterion to classify the type of region 
+from the $\lambda_{th}$ value. In spite of this, the volume fractions are
+more or less consistent for both simulations within the range $0.2 \leq 
+\lambda_{th} \leq 0.4$ that corresponds to the range where the visual 
+impression of the overall density field is better reproduced.
 
+
+%Reviewed
 \newpage
 %.........................................................................
 %Volume Fraction
@@ -217,98 +238,107 @@ densidad.
 	\includegraphics[width=0.43\textwidth]
 	{./figures/4_results/Volume_Regions.pdf}
 	
-	\caption{\small{Parámetro de densidad medio para diferentes tipos
-	de regiones en función del valor umbral $\lambda_{th}$ (paneles 
-	izquierda). Fracciones de volumen normalizadas para diferentes tipos
-	de regiones, también acorde al valor umbral $\lambda_{th}$.}}
+	\caption{\small{Mean density parameter for different type of 
+	regions in terms of the thre\-shold value $\lambda_{th}$ (left panels).
+	Volume fractions normalized for different type of regions, also 
+	according to the threshold value $\lambda_{th}$ (right panels).}}
 	\label{fig:Vol_Fraction}
 \end{figure}
 %.........................................................................
 
 
-Las gráficas de densidad media para cada tipo de región muestran 
-importantes resultados respecto al entorno cosmológico. Lo primero que 
-puede notarse es la diferencia entre las densidades medias de ambas 
-simulaciones en cada una de las regiones. Por ejemplo para regiones de 
-vacío, en Bolshoi estas corresponden a zonas con densidad promedio mucho 
-menor a la densidad media de la simulación, mientras que para las CLUES 
-estas zonas de subdensidad no son tan marcadas. Debido a la pequeña 
-fracción de volumen de las regiones tipo nudo (knot) en ambas 
-simu\-laciones, asociado a su dimensionalidad puntual, la estructura 
-global del entorno puede entenderse bien solo en términos de la 
-distribución espacial de vacíos, hojas y filamentos, siendo los 
-filamentos la contraparte de los vacíos respecto al parámetro de densidad. 
-De esto se espera que la diferencia en la subdensidad de los vacíos entre
-cada simulación se extienda a una marcada diferencia entre las 
-sobredensidades de los filamentos en cada simulación. Esto último es 
-obtenido en la misma figura, donde puede verse que los filamentos de 
-Bolshoi son notablemente más densos que aquellos de las CLUES. En el caso
-de las hojas, estas corresponden a regiones de densidad intermedias entre
-los filamentos y los vacíos, por tanto se espera que la diferencia de
-la densidad media de estas regiones no sea tan marcada entre ambas 
-simulaciones, tal como se nota en la misma figura.
+%Reviewed
+In the figures of the mean density for each type of region, it is shown 
+important results regarding the cosmological environment. The first thing
+that can be noticed is the difference between the mean densities of both 
+simulations for each type of region. For instance for vacuum regions, in
+Bolshoi these correspond to regions with a mean density much less than 
+the mean density of the entire simulation, whereas in the CLUES 
+simulations, the sub-density of vacuum regions is not very pronounced.
+Due to the small fraction of knot regions in both simulations (because 
+their zero-dimensional geometry), the global structure of the cosmic web
+can be understood just in terms of the spatial distribution of vacuums,
+sheets and filaments, being filaments the counterpart of vacuums regarding
+the density parameter. From this it is expected that the difference 
+of the sub-density values of vacuum regions between both simulations 
+becomes compensated with a pronounced difference of the over-density 
+values of filament regions between both simulations too. The latter has been 
+obtained in the same figure, where it can be seen that filament regions of
+the Bolshoi simulation are notably denser than filaments in CLUES. In the
+case of sheet regions, these correspond to regions with intermediate 
+values of density, within a range between filaments and vacuums, therefore
+it is expected that the difference of the mean density of these 
+regions between both simulation is not very pronounced, such as it can be 
+noticed in the same figure.
 
 
+%Reviewed
 %.........................................................................
 %Vweb Comparison
 \begin{figure}[htbp]
 	\begin{center}
 	\makebox[\textwidth]{\includegraphics[trim = 10mm 10mm 10mm 9mm, clip,
-	width=0.66\paperwidth,angle=0]
+	width=0.63\paperwidth,angle=0]
 	{./figures/4_results/Vweb_Comparison.pdf}}
 	\end{center}	
 	
-	\caption{\small{Comparación de la impresión visual obtenida con el  
-	método V-web para varios valores del parámetro $\lambda_{th}$.
-	Se usa el siguiente esquema de clasificación (Negro - Nudo, Gris 
-	oscuro - Filamento, Gris - Hoja, Blanco - Vacío). La resolución de 
-	cada malla es $1.0 h^{-1}$ Mpc/celda, con un suavizado Gaussiano de 
-	una celda. El grosor de cada slide es de una celda.}}
+	\caption{\small{Comparison between the visual impression obtained by 
+	the	V-web scheme for several values of the threshold parameter 
+	$\lambda_{th}$. It is used the next classification scheme (Black - Knot,
+	Dark gray - Filament, Gray - Sheet, White - Vacuum). The resolution of
+	each grid is $1.0 h^{-1}$ Mpc/cell with a Gaussian softening of one cell
+	size. The width of each slide is one cell.}}
 	\label{fig:Vweb_Comparison}
 \end{figure}
 %.........................................................................
 
 
-Un segundo resultado de la figura \ref{fig:Vol_Fraction} consiste en la 
-determinación de un parámetro $\lambda_{th}$ óptimo para la reproducción 
-visual de la red cósmica. Como se muestra en esta gráfica, las fracciones
-de volumen asociadas a vacíos y hojas son relativamente altas respecto a 
-las de filamentos y nudos, esto para todo el rango barrido de valores de 
-$\lambda_{th}$. De esto se espera que la impresión visual a gran escala
-del campo de materia sea completamente dominada por la distribución de 
-vacíos y en menor medida por la distribución de hojas y filamentos. En el 
-caso de un valor bajo del parámetro $\lambda_{th}$, por ejemplo 
-$\lambda_{th}<0.2$, el parámetro de densidad media de las hojas es negativo, 
-indicando que posiblemente estas regiones están invadiendo zonas que deberían 
-ser vacíos, tal como se ve en la figura \ref{fig:Vweb_Comparison} para 
-$\lambda_{th} = 0$ o $\lambda_{th} = 0.1$. En el caso de valores altos, 
-$\lambda_{th} > 0.4\sim 0.5$, el parámetro de densidad medio para los vacíos 
-comienza a aumentar, indicando que estas regiones están invadiendo zonas
-que de mayor densidad, que en principio deberían ser hojas o filamentos. 
-Esto puede ser notado en la figura \ref{fig:Vweb_Comparison} para 
-$\lambda_{th} = 0.5$, donde todo el volumen es ampliamente dominado por 
-vacíos, perdiendo la estructura característica de la red cósmica. Este 
-análisis sugiere que el valor óptimo de $\lambda_{th}$ podría ser aquel 
-donde se minimice la densidad media de los vacíos, al ser estos el entorno
-dominante. Un resultado que apoya este criterio es que el $\lambda_{th}$ 
-encontrado es similar para ambas simulaciones $\lambda_{th}\approx 0.3$,
-y coincide con el valor obtenido a partir de un análisis cualitativo de 
-la impresión visual del entorno.
+%Reviewed
+The second result shown in the Figure \ref{fig:Vol_Fraction} consists in
+determining an optimal threshold parameter $\lambda_{th}$ for reproducing
+the visual impression of the cosmic web. As it is shown in this figure,
+the volume fractions associated to vacuums and sheets are relatively high
+regarding the values of filaments and knots, and this for all the swept 
+range of threshold values $\lambda_{th}$. From this it is expected that 
+the visual impression of the large-scale matter field is completely 
+dominated by the spatial distribution of vacuums and slightly less by 
+filaments and sheets. In the case of a low value of the $\lambda_{th}$ 
+parameter, e.g. $\lambda_{th}<0.2$, the mean density parameter of sheet 
+regions becomes negative, thereby indicating that possibly these regions 
+are invading zones that should be catalogued as vacuums, such as it can be 
+noticed in the Figure \ref{fig:Vweb_Comparison} for $\lambda_{th} = 0$ o 
+$\lambda_{th} = 0.1$. In the case of high values, e.g. $\lambda_{th} > 
+0.4\sim 0.5$, the mean density parameter for vacuums is increasing, thus 
+indicating that these regions are invading high density zones, which at 
+first should be sheets or filaments. This can be noticed in the Figure 
+\ref{fig:Vweb_Comparison} for $\lambda_{th} = 0.5$, where all the volume 
+is widely dominated by vacuums, thereby loosing the characteristic 
+structure of the cosmic web. This analysis suggests that the optimal value
+of $\lambda_{th}$ may be that where is minimized the mean density of 
+vacuum regions, since this type of region is the most dominant. A result
+that supports this hypothesis is that the found value of $\lambda_{th}$
+for both simulations is quite similar $\lambda_{th}\approx 0.3$, and
+coincides with the value obtained qualitatively by fitting at first glance 
+the visual impression of the cosmological environment.
 
 \
 
-Para concluir esta sección se discuten los resultados obtenidos para las 
-distribuciones de entorno. A pesar de existir un notable sesgo entre
-la distribución de los halos y la del campo de densidad en la simulación 
-Bolshoi, caso contrario a las simulaciones CLUES, y haber una marcada 
-diferencia entre las densidades medias de las regiones en ambas 
-simulaciones, la esencia de construir una muestra \textit{CLG} en la 
-simulación Bolshoi a partir de los grupos locales de las CLUES, como se 
-menciona en el capítulo \ref{cha:N-BodySimulations}, es obtener una muestra 
-de pares aislados más fiel que también reproduzcan el entorno local de los 
-\textit{LG}. Se espera entonces que la dinámica local cuantificada por la 
-V-web se independiente del diferente resultado global de las distribuciones,
-manteniéndose así la validez del esquema de construcción de los \textit{CLG}.
+%Reviewed
+To conclude this section, it is discussed the results obtained for the 
+distributions of environment. In spite of there is a significant bias 
+between the spatial distribution of dark matter halos and the distribution
+of the matter field in the Bolshoi simulation, contrary case in the CLUES 
+simulations, and there is a marked difference between the mean densities
+associated to each type of region for both simulations, the objective of 
+constructing a \textit{CLG} sample in the Bolshoi simulation from the 
+\textit{LG} systems found in CLUES, as it was mentioned in the chapter 
+\ref{cha:N-BodySimulations}, it is to obtain a more faithful sample of 
+isolated pairs that also reproduces the same local environment of those
+\textit{LG} systems. Then, it is expected that the local dynamic, 
+quantifying by the V-web scheme, is independent of the difference between
+the distributions mentioned above, retaining the validity of the proposed
+construction scheme for the \textit{CLG} sample.
+
 
 
 %*************************************************************************
