@@ -88,7 +88,7 @@ angular momentum of \textit{IP} or \textit{CLG} systems in the section
 
 	\caption{\small{Spatial distribution of dark matter halos, exhibiting
 	the	characteristic structure of the cosmic web. The colour gradient 
-	indicates the depth with respect to the $x$ axis, where black points 
+	indicates the depth with respect to the $x$ axis, where black dots 
 	are the nearest halos.}}
 	
 	\label{fig:Halos_Web}
@@ -98,7 +98,7 @@ angular momentum of \textit{IP} or \textit{CLG} systems in the section
 
 %Reviewed
 According to the defining conditions of the \textit{IP} and \textit{CLG} 
-samples, presented in the subsection \ref{subsec:SampleOfPairsToUse}, the
+samples presented in the subsection \ref{subsec:SampleOfPairsToUse}, the
 main property of the halos that is necessary for cons\-tructing these samples
 is the halo mass. Therefore it is important to stablish the equivalence 
 between the mass distribution of each simulation. The next Figure 
@@ -314,14 +314,13 @@ first should be sheets or filaments. This can be noticed in the Figure
 \ref{fig:Vweb_Comparison} for $\lambda_{th} = 0.5$, where all the volume 
 is widely dominated by vacuums, thereby loosing the characteristic 
 structure of the cosmic web. This analysis suggests that the optimal value
-of $\lambda_{th}$ may be that where is minimized the mean density of 
-vacuum regions, since this type of region is the most dominant. A result
-that supports this hypothesis is that the found value of $\lambda_{th}$
-for both simulations is quite similar $\lambda_{th}\approx 0.3$, and
+of $\lambda_{th}$ may be that where the mean density of vacuum regions is 
+minimized , since this type of region is the most dominant. A result that 
+supports this hypothesis is that the found value of $\lambda_{th}$ for 
+both simulations is quite similar $\lambda_{th}\approx 0.3$, and 
 coincides with the value obtained qualitatively by fitting at first glance 
 the visual impression of the cosmological environment.
 
-\
 
 %Reviewed
 To conclude this section, it is discussed the results obtained for the 
@@ -348,47 +347,55 @@ construction scheme for the \textit{CLG} sample.
 
 %*************************************************************************
 %Properties of sample pairs
-\section{Propiedades de la Muestra \textit{CLG}}
+\section{Properties of the \textit{CLG} Sample}
 \label{sec:PropertiesOfSamplePairs}
 
 
-Una vez determinada la consistencia entre las muestras definidas en CLUES
-y Bolshoi, el siguiente paso es determinar sus propiedades. Es de especial
-interés analizar la muestra \textit{CLG} de Bolshoi, tomando como muestra 
-de control la \textit{IP} y como muestra de referencia la \textit{LG} de 
-las simulaciones CLUES.
+%Reviewed
+Once it has been determined the consistency between the defined samples 
+for both simulations, the next step is to determine their properties. It 
+is of special interest to analyse the \textit{CLG} sample in Bolshoi, 
+taking as the control sample the \textit{IP} sample, and as the reference 
+sample the \textit{LG} sample in CLUES.
+
 
 
 	%---------------------------------------------------------------------
 	%Determination of their host environment
-	\subsection{Determinación del Entorno}
+	\subsection{Determining the Environment}
 	\label{subsec:DeterminationOfTheirHostEnvironment}
 	%---------------------------------------------------------------------
 
-Como fue definido en la subsección \ref{subsec:SampleOfPairsToUse} del 
-capítulo pasado, la muestra \textit{CLG} en la simulación Bolshoi se 
-construye imponiendo a la muestra \textit{IP} la condición extra de 
-reproducir el entorno cosmológico de los grupos locales de las simulaciones 
-CLUES. La principal motivación de esto es encontrar una muestra en Bolshoi 
-análoga a las muestras \textit{LG}, tanto en sus propiedades físicas 
-como en su abundancia. Respecto a esto último es natural asumir, 
-considerando la ya determinada consistencia entre las simulaciones, que la 
-abundancia escala aproximadamente como el volumen simulado. Esto puede 
-ser considerado el primer logro de este esquema, ya que reproduce 
-aproximadamente esta ley de escalamiento para el tamaño de las muestras 
-en cuestión (ver tabla \ref{tab:Samples} para \textit{CLG} de Bolshoi y
-\textit{LG} de CLUES).
+
+%Reviewed
+As it has been defined in the subsection \ref{subsec:SampleOfPairsToUse} of
+the last chapter, the \textit{CLG} sample in the Bolshoi simulation is 
+constructed by imposing on the \textit{IP} sample the extra condition of 
+reproducing the cosmological environment of the LG-like systems found into 
+the CLUES simulations. The main aim of doing this, it is to find a sample 
+in the Bolshoi simulation analogous to the \textit{LG} sample, regarding 
+their physical properties as well as their abundance. With respect to the 
+latter, it is natural to assume, considering the consistency between the 
+simulation already determined, that the abundance of a certain sample 
+should scale approximately as the volume of the simulation. This fact can
+be considered as the first success of the proposed construction scheme, 
+since it is reproduced approximately this scale law for the \textit{CLG} 
+sample in Bolshoi and the \textit{LG} samples in CLUES (see Table 
+\ref{tab:Samples}).
 
 
-A pesar de lo anterior, este método de construcción no es más que corte
-de la muestra \textit{IP} respecto a los autovalores de la V-web de la 
-celda donde están embedidos, lo cual no implica la reproducción 
-adecuada de las propiedades físicas ni el entorno cosmológico de los 
-sistemas tipo grupo local. Por esta razón, a conti\-nuación son analizados
-posibles sesgos producidos en las distribuciones del entorno cosmológico
-para los sistemas \textit{CLG}.
+%Reviewed
+In spite of the latter, this construction scheme just consists of a cut
+in the \textit{IP} sample with respect to the eigenvalues of the shear
+velocity tensor of the V-web, evaluated over the host cells of the pair 
+systems, which does not imply an adequate reproduction of neither the 
+physical properties nor the local cosmological environment of LG-like
+systems. For this reason, below it will be analysed possible bias in the 
+distributions of environment for the host cells of the \textit{CLG} 
+systems.
 
-	
+
+%Reviewed	
 %.........................................................................
 %Pathogenic Situation
 \begin{figure}[htbp]
@@ -396,20 +403,24 @@ para los sistemas \textit{CLG}.
 	\includegraphics[width=0.5\textwidth]
 	{./figures/4_results/Pathogenic_Situation.png}
 	
-	\caption{\small{Situación patológica respecto al entorno de los sistemas
-	de pares de halos.}}
+	\caption{\small{Pathological situation regarding the environment of a
+	pair system.}}
 	\label{fig:Pathogenic_Situation}
 \end{figure}
 %.........................................................................
 
 
-Una de las primeras consideraciones que debe tenerse en cuenta en la 
-cuantificación del entorno para pares de halos (muestras \textit{P}, 
-\textit{IP}, \textit{CLG} y \textit{LG}), es que cada uno de ellos puede 
-estar embebido en celdas diferentes, tal como es mostrado en la figura 
-\ref{fig:Pathogenic_Situation}. Esta situación patológica se presenta debido 
-al carácter no puntual de este tipo de sistemas y el tamaño finito de la malla.
+%Reviewed
+One of the first considerations that should be taken into account for 
+quantifying the environment of pair systems (\textit{P}, \textit{IP}, 
+\textit{CLG} and \textit{LG} samples), it is that the two halos of the 
+pair may be embedded into different cells, such as it is shown in the 
+Figure \ref{fig:Pathogenic_Situation}. This pathological situation is 
+presented due to the non-point nature of this type of systems and the 
+finite resolution of the grid.
 
+
+%Reviewed
 \
 %.........................................................................
 %Comparison of Lambda in each Halos of Pairs systems
@@ -422,30 +433,34 @@ al carácter no puntual de este tipo de sistemas y el tamaño finito de la malla
 	\includegraphics[width=0.46\textwidth]
 	{./figures/4_results/CLG_L31_L32.pdf}
 
-	\caption{\small{Comparación entre las distribuciones de los autovalores de 
-	la V-web para los dos halos en los sistemas de pares (muestras \textit{LG},
-	\textit{CLG} y \textit{IP}).}}
+	\caption{\small{Comparison between the distributions of the 
+	eigenvalues	of the V-web for the two halos of each pair system of
+	the \textit{LG}, \textit{CLG} and \textit{IP} samples.}}
 	\label{fig:Lambda_Comparison_Pairs}
 \end{figure}
 %.........................................................................
 
 
-Para cuantificar este efecto, en la figura \ref{fig:Lambda_Comparison_Pairs}
-son graficadas las distribuciones de cada uno de los autovalores de la V-web
-para cada halo de las muestras de pares. La situación ideal, donde ambos
-halos comparten una misma celda, correspondería a un línea perfecta 
-con pendiente de $45^o$, mientras las situaciones patológicas son responsables 
-de dispersiones en las gráficas. Una manera de solucionar esto es disminuir la
-resolución de la malla tal que ambos halos estén embebidos en una misma celda, 
-pero esto ocasiona una perdida de información del entorno local propio del 
-sistema. Debido al suavizado Gaussiano de una celda ($\sim 1 h^{-1}$ Mpc) 
-que es aplicado a priori a cada campo de autovalores, la variación de estos 
-entre celdas vecinas es menor, tal como es mostrado para la mayoría de 
-sistemas \textit{IP} en la gráfica. Teniendo en cuenta esto último y que la 
-dinámica local de los pares estará dominada por el halo más masivo, por 
-convención será tomada la celda asociada a este halo para la cuantificación
-del entorno de todo el sistema.
+%Reviewed
+In order to quantify this effect, in the Figure 
+\ref{fig:Lambda_Comparison_Pairs} are plotted the distributions of each 
+eigenvalue of the V-web for each one of the halos in the pair samples. The
+ideal situation, where both halos share the same cell, it would correspond
+to a straight line with a slope of $45^o$, whereas the pathological 
+situations are responsible of the observed dispersion. A way to solve this 
+issue is to decrease the resolution of the grid, such that both halos are 
+embedded in the same cell, but this would cause a losing of information 
+regarding the local environment of the pair system. Due to the Gaussian 
+softening of one cell size ($\sim 1 h^{-1}$ Mpc) that has been applied a 
+priori over the eigenvalues fields, possible variations between neighbour
+cells are neglected, such as it is shown for the most of \textit{IP} 
+systems in the figure. Taking into account the latter and the local 
+dynamic of pair systems is dominated by the more massive dark halo, by 
+convention it will be taken the host cell of this halo as the 
+representative of the entire system.
 
+
+%Reviewed
 \
 %.........................................................................
 %2D Distribution of Vweb eigenvalues in sairs samples
@@ -456,105 +471,113 @@ del entorno de todo el sistema.
 	\includegraphics[trim = 0mm 0mm 15mm 0mm, clip, width=0.49\textwidth]
 	{./figures/4_results/CLG_Environmet_L1L2.pdf}
 	
-	\caption{\small{Distribuciones 2D del entorno cosmológico para 
-	diferentes muestras, $\lambda_1$--$\lambda_3$ (izquierda) y 
-	$\lambda_1$--$\lambda_2$ (derecha). El histograma de fondo, graficado
-	en colores, corresponde a la distribución de entorno para todos los 
-	halos de Bolshoi (muestra \textit{GH}), su resolución es de $100\times 100$ 
-	para el rango mostrado y están normalizados respecto a su área. Los 
-	puntos negros corresponden a la distribución de la muestra \textit{IP} 
-	y finalmente los puntos blancos a la muestra \textit{CLG}.}}
+	\caption{\small{2D distributions of the cosmological environment for
+	the defined samples, $\lambda_1$--$\lambda_3$ (left panel) and 
+	$\lambda_1$--$\lambda_2$ (right panel). The background histogram, 
+	plotted in colours, corresponds to the distribution of environment
+	for all the halos in Bolshoi (\textit{GH} sample), its resolution is
+	$100\times 100$ for the shown range and it is normalized with respect 
+	to its area. The black dots corresponds to the distribution of the 
+	\textit{IP} sample and finally the white dots to the \textit{CLG}
+	sample.}}
 	\label{fig:2D_Samples_Eigenvalues}
 \end{figure}
 %.........................................................................
 
 
-Una vez determinada la forma de cuantificar el entorno de los sistemas de
-pares, en la figura \ref{fig:2D_Samples_Eigenvalues} se ilustra la 
-distribución de las muestras \textit{GH}, \textit{IP} y \textit{GCL}.
-Como fue mostrado en la subsección \ref{subsec:Environment_Properties}, 
-la distribución de entorno de los halos en Bolshoi está considerablemente
-sesgada respecto a la distribución de las celdas de volumen. A pesar de 
-esto y teniendo en cuenta que la construcción de los sistemas de pares se 
-hace a partir de los halos, es más interesante realizar comparaciones con las 
-distribuciones asociadas a los halos (histogramas de color en la misma figura).
-Como fue definido en la subsección \ref{subsec:SampleOfPairsToUse}, la 
-muestra \textit{IP} es construida de tal forma que se garantice su
-aislamiento gravitacional respecto a halos más masivos, por esta razón hay
-dos efectos que compiten en cuanto a la distribución de entorno de estos 
-sistemas. En el primero se espera que la abundancia de pares sea más 
-favorable en entornos donde la cantidad de halos es mayor, mientras en el
-segundo, precisamente la sobreabundancia de halos resulta desfavorable para
-los criterios de aislamiento gravitacional. El segundo efecto termina siendo
-dominante y produce un sesgo en la distribución de entorno
-de la muestra \textit{IP} respecto a la de los halos, mientras que para en 
-la muestra \textit{P} el sesgo no se presenta\footnote{Esto 
-último no es mostrado en la figura \ref{fig:2D_Samples_Eigenvalues}, pero
-es fácilmente calculado.}. 
+%Reviewed
+Once it has been determined how to quantify the environment of pair 
+systems, in the Figure \ref{fig:2D_Samples_Eigenvalues} is illustrated the
+distribution of the samples \textit{GH}, \textit{IP}, \textit{CLG}. As it
+has been shown in the subsection \ref{subsec:Environment_Properties}, the
+distribution of environment for halos in Bolshoi are considerably biased
+with respect to the distribution of the volume cells. In spite of this,
+and taking into account that the construction of pair systems it is made
+from the sample of halos, it is more interesting to perform comparisons
+between the distributions associated to halos (coloured histograms in
+the same figure). As it was defined in the subsection 
+\ref{subsec:SampleOfPairsToUse}, the \textit{IP} sample is constructed 
+such that it is guaranteed its gravitational isolation with respect to
+more massive halos and other structures, that is why there are two effects
+that compete regarding the distribution of environment of these systems.
+In the first effect, it is expected that the abundance of pairs is more
+favourable around environments where there are more halos, whereas in the 
+second effect, precisely the over-abundance of halos becomes unfavourable
+due to the criterion of gravitational isolation. According to the results, 
+the second effect is more dominant on the \textit{IP} sample with respect
+to all the halos, while for the \textit{P} sample the bias is not longer
+presented\footnote{ The latter is not shown in the Figure 
+\ref{fig:2D_Samples_Eigenvalues}, but it is easily computed.}
+ 
+
+%Reviewed
+In order to conclude the analysis of the previous figure, it is discussed 
+about the distribution of environment for the \textit{CLG} systems in the
+Bolshoi simulation. In spite of this distribution is artificially biased 
+because of the selection criterion, it is interesting to notice that the
+range of the eigenvalues that delimits this sample is relatively reduced, 
+thereby indicating that the three LG-like systems in the CLUES simulations
+share a similar local dynamic. Although the latter may be an effect 
+established a priori by construction due to the constrained nature of the
+CLUES simulations, it is still interesting the bias that this feature 
+produces on the distribution of environment of the \textit{CLG} sample
+regarding all the halos and the \textit{IP} sample.
 
 
-Para terminar el análisis de la anterior figura, se discute acerca de la 
-distribución de entorno para los \textit{CLG} de la simulación Bolshoi. A 
-pesar de que esta distribución es construida de forma artificial por 
-efecto de selección, es interesante notar que la región en el espacio de 
-autovalores que delimita esta muestra es relativamente reducida, indicando 
-que los tres grupos locales de las simulaciones CLUES comparten una 
-dinámica de entorno local muy similar. Aunque esto último puede ser un 
-efecto impuesto a priori por construcción debido al carácter restringido 
-de las simulaciones CLUES, no deja de ser interesante el sesgo que esta 
-característica produce en la distribución de entorno de los \textit{CLG} 
-respecto a los halos y a la muestra \textit{IP}.
+%Reviewed
+To quantify the produced biases in each sample regarding a specific type
+of environment (See Figure \ref{fig:ClassificationSchemeTweb}), in the 
+next Figure \ref{fig:Samples_Fraction} it is plotted the fractions of 
+objects into each type of region. In the optimal range of the threshold 
+value $0.2\leq \lambda_{th}\leq 0.4$, defined in the subsection 
+\ref{subsec:Environment_Properties}, it is noticed important differences
+between each one of the samples, specially for the \textit{CLG}. As it has
+been previously mentioned, the effect of the gravitational isolation 
+produces a bias between the distribution of environment of the halos 
+\textit{GH} and the distribution of the \textit{IP} systems. This can be 
+clearly noticed for each one of the number fractions in the optimal range 
+of $\lambda_{th}$. In the case of vacuums, the dominant fraction is that 
+associated to \textit{IP}, but in the case of sheet regions, the fraction
+of both samples are comparable, and even more, in the filament and knot 
+regions, the dominant fractions is that corresponding to halos \textit{GH}.
+This indicates that \textit{IP} systems are more abundant in regions of 
+low to middle density of halos, but even so, there are still a 
+considerable fraction within sheet and filament regions, so it is not 
+possible to associate a specific type of region to these systems. Finally,
+the \textit{CLG} systems present an important bias compared with the two
+previously discussed samples, being specially interesting that produces
+regarding the \textit{IP} sample, due to the \textit{CLG} sample is a 
+sub-sample of this. Again, taking into account the optimal range of
+$\lambda_{th}$, it is possible, in this case, to associate a certain type
+of region to the \textit{CLG} sample, being these systems preferentially
+in sheet and vacuum regions.
 
 
-Para cuantificar los sesgos producidos en cada muestra respecto a un tipo
-de entorno específico (ver figura \ref{fig:ClassificationSchemeTweb}),
-en la siguiente figura \ref{fig:Samples_Fraction} se grafican las 
-fracciones de objetos en las diferentes regiones. En el rango óptimo del 
-valor umbral $0.2\leq \lambda_{th}\leq 0.4$ definido en la subsección 
-\ref{subsec:Environment_Properties}, se notan importantes diferencias entre
-cada una de las muestras, especialmente para la \textit{CLG}. Como fue 
-mencionado anteriormente, el efecto de aislamiento gravitacional produce
-un sesgo entre la distribución de entorno de los halos \textit{GH} y de los 
-sistemas \textit{IP}, esto puede ser claramente notado para cada una de las 
-fracciones en el rango óptimo de $\lambda_{th}$. En el caso de vacíos, la 
-fracción dominante de estas dos muestras es la asociada a \textit{IP}, pero 
-en el caso de hojas ambas son comparables, y más aún, en la regiones tipo 
-filamento y nudo domina la fracción de halos \textit{GH}. Esto indica que
-los sistemas de pares aislados \textit{IP} se presentan con mayor 
-abundancia en regiones de media o baja densidad de halos, aún así la 
-considerable fracción de estos presentes en hojas y filamentos no permite 
-asociar un tipo de región de entorno específica para estos sistemas. 
-Finalmente, los sistemas \textit{CLG} presentan un importante sesgo 
-en comparación a las dos muestras anteriores, siendo de especial interés 
-aquella producida respecto a la \textit{IP} debido a que \textit{CLG} es 
-una submuestra de esta. De nuevo, apelando al rango óptimo de $\lambda_{th}$,
-es posible en este caso asociar tipos de regiones de entorno específicas 
-a la muestra \textit{CLG}, estando estos sistemas preferencialmente en 
-hojas y vacíos.
-
+%Reviewed
 \
 %.........................................................................
 %Number Fraction of each sample in differents type of regions
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[trim = 8mm 5mm 12mm 12mm, clip, width=0.9\textwidth]
+	\includegraphics[trim = 8mm 5mm 12mm 12mm, clip, width=0.85\textwidth]
 	{./figures/4_results/CLG_Classification_Env.pdf}
 	
-	\caption{\small{Fracciones de cantidad de objetos en diferentes
-	regiones en función del valor umbral $\lambda_{th}$. Para el caso de 
-	la muestra \textit{GH} se cuentan número de Halos, mientras que para
-	las muestras \textit{IP} y \textit{CLG} número de pares.}}
+	\caption{\small{Object fractions in different regions in terms of the
+	threshold value $\lambda_{th}$. In the case of the \textit{GH} sample,
+	it is counted the number of halos, whereas for the \textit{IP} and 
+	\textit{CLG} samples it is counted the number of pair systems.}}
 	\label{fig:Samples_Fraction}
 \end{figure}
 %.........................................................................
 
 
-A pesar del esquema de clasificación de regiones usado, las conclusiones 
-anteriores dependen de la elección del parámetro $\lambda_{th}$, que aunque
-ha sido razonablemente acotado en una región óptima que reproduce la 
-impresión visual, no deja de ser un parámetro libre. Para solventar esto se 
-introduce el fraccional de anisotropía (FA) con la normalización usada en
-\cite{libeskind2013}
+%Reviewed
+In spite of the classification scheme used, the above conclusions depend
+on the selected $\lambda_{th}$ parameter, and although it has been 
+reasonably bounded in an optimal region where it is reproduced de visual
+impression, it is still a free parameter. In order to solve this, it is 
+introduced the fractional of anisotropy (FA) with the normalization used
+in \cite{libeskind2013}
 
 
 %.........................................................................
@@ -566,17 +589,19 @@ introduce el fraccional de anisotropía (FA) con la normalización usada en
 %.........................................................................
 
 
-Esta cantidad cuantifica el grado de anisotropía del entorno cosmológico
-local, siendo $FA = 1$ una región altamente anisotrópica, mientras
-$FA = 0$ un región con alta isotropía, además es independiente de la
-elección a priori de algún parámetro libre. Acorde al resultado obtenido por
-\cite{libeskind2013}, regiones de baja anisotropía corres\-ponden a nudos
-debido a su colapso isotrópico, mientras que regiones de alta anisotropía 
-corresponden a vacíos debido a su expansión no uniforme. Para regiones
-filamentales y planas el fraccional de anisotropía está distribuido 
-de forma extendida en valores intermedios, indicando que la dinámica de
-este tipo de entornos es más compleja. Aún así, hay una tendencia a valores
-bajos en el caso de filamentos y valores altos para hojas.
+%Reviewed
+This quantity allows to quantify the anisotropy degree of the local cosmic
+environment, being $FA=1$ a highly anisotropic region, whereas $F=0$ is 
+instead a highly isotropic region. Furthermore this quantity is independent
+of any free parameter chosen a priori. According to the result obtained by
+\cite{libeskind2013}, regions of low isotropy would correspond to knots 
+due to their characteristic isotropic collapse, while regions of high 
+isotropy would correspond to vacuums due to their non-uniform expansion. 
+In the case of filament an sheet regions, the fractional anisotropy is 
+extendedly distributed over middle values, thus indicating that the 
+dynamic of these type of regions is more complex. Even so, there is a 
+slight tendency towards low values in the case of filaments and high 
+values for sheets.
 
 
 %.........................................................................
@@ -586,8 +611,8 @@ bajos en el caso de filamentos y valores altos para hojas.
 	\includegraphics[trim = 0mm 0mm 0mm 10mm, clip, width=0.8\textwidth]
 	{./figures/4_results/CLG_FA_Hist.pdf}
 	
-	\caption{\small{Histograma integrado del fraccional de anisotropía para
-	las muestras de pares \textit{IP} y \textit{CLG}.}}
+	\caption{\small{Integrated histogram of the fractional anisotropy for
+	the \textit{IP} and \textit{CLG} samples.}}
 	\label{fig:FA_samples}
 \end{figure}
 %.........................................................................	
