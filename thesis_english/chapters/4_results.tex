@@ -964,102 +964,112 @@ the constrained simulations.
 	
 %*************************************************************************
 %Conclusions
-\section{Conclusiones}
+\section{Conclusions}
 \label{sec:Conclusions}
 
 
-Esta sección está dedicada a compilar los principales resultados obtenidos
-en este capítulo. Estos serán enumerados y discutidos acorde al órden en
-que fueron obtenidos.
+%Reviewed
+This section is dedicated to compile the main results obtained throughout 
+this work. These results will be enumerated and discussed according to the
+order in which they were obtained.
 
 
 %.........................................................................
 %Main Results
 \begin{enumerate}
-\item[\textbf{1.}] La construcción de la muestra \textit{IP} fue 
-inicialmente propuesta en \cite{forero2011} con el objetivo de reproducir
-sistemas tipo grupo local. A pesar de esto, el número de estos sistemas 
-encontrados en la simulación Bolshoi es mucho mayor al que se espera acorde
-a la abundancia de \textit{LG} en simulaciones restringidas. El método 
-propuesto para la selección de la muestra \textit{CLG} en Bolshoi a partir 
-del entorno cosmológico de los \textit{LG}, produce un número de sistemas 
-que concuerda con los encontrados en la simulaciones restringidas, escalando 
-apro\-ximadamente como el volumen de las simulaciones. Más aún, aplicando 
-este mismo método en las simulaciones restringidas se halla una muestra
-con un tamaño similar a la \textit{LG}.
+%Reviewed
+\item[\textbf{1.}] The method for constructing the \textit{IP} sample was
+initially proposed by \cite{forero2011} with the aim of reproducing 
+LG-like systems. In spite of this, the number of these systems found in 
+the Bolshoi simulation is much bigger than that expected according to the 
+abundance of \textit{LG} systems in the constrained simulations. The 
+method proposed here for constructing the \textit{CLG} sample in Bolshoi 
+from the cosmological environment of \textit{LG} systems, produces a 
+number of systems that is in agreement with the systems found in the 
+constrained simulations. Moreover, applying this method to the constrained 
+simulations themselves, it is found a \textit{CLG} sample with a similar 
+size to the \textit{LG}.
 
 
-\item[\textbf{2.}] A partir de los valores medios de densidad en las 
-diferentes regiones del entorno cosmológico (figura \ref{fig:Vol_Fraction})
-se propone un esquema para la elección de un rango óptimo del parámetro
-$\lambda_{th}$ de la V-web con el objetivo de reproducir la 
-apariencia visual de la red cósmica. Este está basado en la 
-minimización de la densidad media en las regiones de vacío debido a que
-son las dominan la apariencia del campo de densidad a gran escala. Con
-esto se garantiza que las regiones vacías no invadan regiones de más alta
-densidad, que en principio deben ser clasificadas como hojas o filamentos.
-Este método da un rango de valores óptimos aproximadamente igual para 
-todas las simulaciones usadas ($0.2 \leq \lambda_{th} \leq 0.4$), además
-reproduce adecuadamente la apariencia visual (ver figura 
-\ref{fig:Vweb_Comparison} para $\lambda_{th} = 0.3$). A pesar de esto, 
-este parámetro sigue siendo libre y no es viable usar un esquema de 
-clasificación basado en este para determinar correlaciones con propiedades
-físicas, en vez de esto se introduce el fraccional de anisotropía 
-con la normalización usada en \cite{libeskind2013}.
+%Reviewed
+\item[\textbf{2.}] From the mean density values of different regions of
+the cosmological environment (Figure \ref{fig:Vol_Fraction}), it is 
+proposed a scheme to select an optimal range of the threshold parameter
+$\lambda_{th}$ for the V-web, with the aim of reproducing the visual 
+appearance of the cosmic web. This scheme is based upon the minimisation
+of the mean density in vacuum regions due to the visual impression at 
+large scales is dominated by this type of region. This criterion 
+guarantees that vacuum regions do not invade higher density zones, which
+at first should be classified as sheets or filaments. This method gives an
+estimative of the optimal value of the threshold parameter, within a range
+approximately similar for all the used simulations ($0.2 \leq \lambda_{th} 
+\leq 0.4$), furthermore it is properly reproduced the visual appearance
+(see Figure \ref{fig:Vweb_Comparison} for $\lambda_{th} = 0.3$). Despite
+of this, this parameter is still free, therefore it is not viable to use
+a classification scheme based upon it in order to determine possible 
+correlations over physical properties of pair systems or other 
+cosmological structures. Instead of this, it is introduced the fractional
+anisotropy normalized as \cite{libeskind2013}.
 
 
-\item[\textbf{3.}] La distribución del entorno cosmológico de las 
-simulaciones Bolshoi y CLUES difieren, existiendo un cambio de densidad 
-media muy pronunciado entre regiones de vacío y filamentos en Bolshoi, 
-mientras que es mucho más suave en las CLUES. A pesar de esto, las 
-fracciones de volumen asociadas a cada tipo de entorno son aproximadamente 
-iguales para ambas simulaciones en el rango óptimo determinado para 
-$\lambda_{th}$. A pesar de esto, se espera que la dinámica local 
-caracterizada por la V-web sea independiente de la estructura global 
-de la distribución de entorno, lo cual valida el esquema de selección 
-de la muestras \textit{CLG} en Bolshoi.
+%Reviewed
+\item[\textbf{3.}] The distributions of environment for the Bolshoi 
+simulation and for the CLUES simulations differ notably between themselves,
+existing a pronounced difference between the mean density of vacuums and
+filaments, whereas this difference is slighter in the CLUES simulations.
+Despite of this, the volume fractions associated to each type of 
+environment are approximately equal for both simulations in the optimal
+range of the threshold parameter $\lambda_{th}$. Though it is expected
+that the local dynamic characterized through the V-web scheme is 
+independent of the global structure of the distribution of environment, 
+so it is validated the proposed method to select \textit{CLG} samples in
+Bolshoi.
 
 
-\item[\textbf{4.}] El método de construcción de los 
-\textit{CLG} selecciona un entorno cosmológico común para estos 
-sistemas, siendo preferidas zonas de vacío y hojas no muy planas.
-Estas regiones presentan una alta anisotropía, cuantificada por el 
-fraccional de anisotropía FA. En el caso de los sistemas \textit{IP},
-estos se encuentran en zonas de media a alta anisotropía, asociadas 
-a valores de baja densidad, contrario a los halos que están en zonas 
-más densas y menos anisotrópicas como filamentos y nudos, aún así 
-la distribución de entorno de los \textit{IP} es amplia y no pueden
-ser asociados a un tipo de entorno específico. El sesgo producido
-entre los \textit{IP} y los halos generales se debe al criterio
-de aislamiento gravitacional usado para construir los \textit{IP},
-esto hace que zonas con mayor densidad de halos sean menos aptas por
-la alta influencia gravitacional.
+%Reviewed
+\item[\textbf{4.}] The method for constructing \textit{CLG} systems 
+selects a common cosmological environment for these systems, being 
+preferred sheet and vacuum regions. These regions present an high 
+anisotropy, quantified by the fractional anisotropy (FA). In the case of
+\textit{IP} systems, those lie preferentially within middle to high
+anisotropy regions, associated to low density zones, contrarily to halos, 
+which are within high density and less anisotropic regions, like filaments 
+and knots. Even so, the distribution of environment for \textit{IP} systems 
+is very wide and it cannot be associated to them a certain type of 
+environment. The bias presented between \textit{IP} systems and all the
+halos is due to the criterion of gravitational isolation used in order to
+construct the \textit{IP} sample, therefore regions with a high number 
+of halos are not suitable due to the strong gravitational influence.
 
 
-\item[\textbf{5.}] Se encuentra una correlación entre la masa total de 
-los pares de la muestra \textit{IP} y el fraccional de anisotropía del 
-entorno, donde masas mayores son más abundantes en regiones de 
-anisotropía media mientras masas menores se presentan con mayor 
-frecuencia en zonas de alta anisotropía. Esto implica que la selección
-de entorno realizada en los \textit{CLG} reproduce un rango de masa menor.
-En el caso de la razón de masa, no se encuentra ninguna correlación 
-significativa con el entorno, aún así se nota una ligera sobreabundancia 
-de razones de masa mayores en regiones más anisotrópicas, pero es 
-necesaria más estadística para poder ser algo concluyente.
+%Reviewed
+\item[\textbf{5.}] It is found a correlation between the total mass of
+\textit{IP} systems and the fractional anisotropy of the host environment,
+where higher values of mass are more abundant in middle anisotropy regions,
+whereas pairs with smaller values of mass are common in high anisotropy
+regions. This implies the selection of the environment performed on the
+\textit{CLG} systems biases the mass into a smaller range than \textit{IP}
+systems. In the case of the mass ratio, it is not found any significant 
+correlation with respect to the environment, even so, it can be noticed a
+slight over-abundance of high values of the mass ratio in high anisotropy
+regions, but it is necessary more data in order to have a robuster 
+statistic and a definitive conclusion.
 
 
-\item[\textbf{6.}] Se halla un correlación para la energía específica
-de los sistemas \textit{IP} respecto al entorno, obtiendo valores más
-altos en regiones más anisotrópicas y valores bajos en regiones de 
-anisotropía media. Esta correlación parece seleccionar un rango de 
-energía para los sistemas \textit{CLG}, aunque esta no es consistente
-con los valores obtenidos de los \textit{LG}. Para el momentum angular
-no se encuentra ninguna correlación con el entorno.
+%Reviewed
+\item[\textbf{6.}] It has been found a correlation between the specific
+energy of \textit{IP} systems and the host environment, obtaining high
+energy values in high anisotropy regions and lower values in middle 
+anisotropy zones. This correlation selects a range of energy for 
+\textit{CLG} systems, although this range is not consistent with the 
+range defined by the \textit{LG} in CLUES. For the angular momentum it is
+not found any correlation with respect to the environment
 
 
-\item[\textbf{7.}] Finalmente se encuentra que no existen alineaciones
-privilegiadas entre el momentun angular de los pares \textit{CLG} (o de 
-su plano orbital) y las direcciones de los autovectores de la V-web.
+%Reviewed
+\item[\textbf{7.}] Finally, it is found that there are not preferred 
+alignments between the angular momentum (orbital plane) for \textit{CLG} 
+pair systems and the directions defined by the eigen-vector of the V-web
 
 
 \end{enumerate}
